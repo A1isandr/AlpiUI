@@ -1,0 +1,140 @@
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:tabView="clr-namespace:ApiUI.Controls.TabView">
+    
+    <ControlTheme x:Key="{x:Type tabView:TabViewItem}" TargetType="{x:Type tabView:TabViewItem}">
+        <Setter Property="CornerRadius" Value="10"/>
+        <Setter Property="ClipToBounds" Value="True"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="Background" Value="{DynamicResource TabBoxItemBackgroundBrush}"/>
+        <Setter Property="Padding" Value="10, 0, 5, 0"/>
+        
+        <Setter Property="Transitions">
+            <Transitions>
+                <BrushTransition
+                    Property="Background"
+                    Duration="0:0:0.1"/>
+                    
+                <ThicknessTransition
+                    Property="Margin"
+                    Duration="0:0:0.1"/>
+                    
+                <CornerRadiusTransition
+                    Property="CornerRadius"
+                    Duration="0:0:0.1"/>
+            </Transitions>
+        </Setter>
+        
+        <Setter Property="Template">
+            <ControlTemplate>
+                <LayoutTransformControl x:Name="LayoutTransform">
+                    <Panel>
+                        <Border x:Name="Separator"
+                                BorderBrush="{DynamicResource WhiteBrush20}"
+                                Margin="0, 0, 0, 2"/>
+                    
+                        <Border x:Name="Border"
+                                CornerRadius="{TemplateBinding CornerRadius}"
+                                ClipToBounds="{TemplateBinding ClipToBounds}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                Background="{TemplateBinding Background}"
+                                Margin="5, 0, 5, 2">
+                            
+                            <Grid 
+                                ColumnDefinitions="*, Auto">
+                                
+                                <Grid
+                                    Grid.Column="0"
+                                    ColumnDefinitions="Auto">
+                                    
+                                    <ContentPresenter x:Name="PART_ContentPresenter"
+                                                      Width="200"
+                                                      Content="{TemplateBinding Content}"
+                                                      ContentTemplate="{TemplateBinding ContentTemplate}"
+                                                      HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                      VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                                                      Padding="{TemplateBinding Padding}"/>
+                                </Grid>
+                                
+                                <Button x:Name="PART_CloseButton"
+                                        Grid.Column="1"
+                                        HorizontalAlignment="Right"
+                                        VerticalAlignment="Center"
+                                        Opacity="0"
+                                        Margin="0, 0, 5, 0">
+                                
+                                    <TextBlock Classes="Glyph"
+                                               Text=""/>
+                                </Button>
+                            </Grid>
+                        </Border>
+                    </Panel>
+                </LayoutTransformControl>
+            </ControlTemplate>
+        </Setter>
+        
+        <Style Selector="^:pointerover">
+            <Setter Property="Background" Value="{DynamicResource TabBoxItemHoverBackgroundBrush}"/>
+            
+            <Style Selector="^ /template/ Button#PART_CloseButton">
+                <Setter Property="Opacity" Value="1"/>
+            </Style>
+        </Style>
+        
+        <Style Selector="^:pressed">
+            <Setter Property="Background" Value="{DynamicResource TabBoxItemPressedBackgroundBrush}"/>
+        </Style>
+        
+        <Style Selector="^:selected">
+            <Setter Property="CornerRadius" Value="10, 10, 0, 0"/>
+            <Setter Property="Background" Value="{DynamicResource TabBoxItemSelectedBackgroundBrush}"/>
+            
+            <Style Selector="^ /template/ Border#Border">
+                <Setter Property="Margin" Value="5, 0, 5, 0"/>
+            </Style>
+        </Style>
+        
+        <Style Selector="^:nth-child(even):not(:nth-last-child(1))">
+            <Style Selector="^ /template/ Border#Separator">
+                <Setter Property="BorderThickness" Value="2, 0, 2, 0"/>
+            </Style>
+        </Style>
+        
+        <Style Selector="^:nth-last-child(2):not(:nth-child(even))">
+            <Style Selector="^ /template/ Border#Separator">
+                <Setter Property="BorderThickness" Value="0, 0, 2, 0"/>
+            </Style>
+        </Style>
+        
+        <Style Selector="^">
+            <Style.Animations>
+                <Animation
+                    Duration="0:0:0.5"
+                    FillMode="Forward"
+                    IterationCount="1">
+                    
+                    <Animation.Easing>
+                        <QuinticEaseOut/>
+                    </Animation.Easing>
+                    
+                    <KeyFrame Cue="0%">
+                        <Setter Property="Opacity" Value="0"/>
+                        <Setter Property="ScaleTransform.ScaleX" Value="0"/>
+                        <Setter Property="ScaleTransform.ScaleY" Value="0"/>
+                    </KeyFrame>
+                    
+                    <KeyFrame Cue="100%">
+                        <Setter Property="Opacity" Value="1"/>
+                        <Setter Property="ScaleTransform.ScaleX" Value="1"/>
+                        <Setter Property="ScaleTransform.ScaleY" Value="1"/>
+                    </KeyFrame>
+                </Animation>
+            </Style.Animations>
+        </Style>
+    </ControlTheme>
+</ResourceDictionary>

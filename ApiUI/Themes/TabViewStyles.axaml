@@ -1,0 +1,29 @@
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:tabView="clr-namespace:ApiUI.Controls.TabView">
+    
+    <ControlTheme x:Key="{x:Type tabView:TabView}" TargetType="{x:Type tabView:TabView}">
+        <Setter Property="CornerRadius" Value="0"/>
+        <Setter Property="ClipToBounds" Value="True"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Padding" Value="0"/>
+        
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Border
+                    CornerRadius="{TemplateBinding CornerRadius}"
+                    ClipToBounds="{TemplateBinding ClipToBounds}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    Background="{TemplateBinding Background}"
+                    Padding="{TemplateBinding Padding}">
+                    
+                    <ItemsPresenter x:Name="PART_ItemsPresenter"
+                                    ItemsPanel="{TemplateBinding ItemsPanel}"/>
+                </Border>
+            </ControlTemplate>
+        </Setter>
+    </ControlTheme>
+</ResourceDictionary>

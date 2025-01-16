@@ -1,0 +1,35 @@
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:controls="clr-namespace:ApiUI.Controls">
+    
+    <ControlTheme x:Key="{x:Type controls:BlurCard}" TargetType="{x:Type controls:BlurCard}">
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Border
+                    CornerRadius="{TemplateBinding CornerRadius}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    BorderBrush="{TemplateBinding BorderBrush}">
+                    
+                    <Panel>
+                        <Image
+                            Source="{TemplateBinding BlurBitmap}"
+                            Stretch="Fill">
+                            
+                            <Image.Effect>
+                                <BlurEffect
+                                    Radius="{TemplateBinding BlurRadius}"/>
+                            </Image.Effect>
+                        </Image>
+                        
+                        <ContentPresenter x:Name="PART_ContentPresenter"
+                                          Content="{TemplateBinding Content}"
+                                          ContentTemplate="{TemplateBinding ContentTemplate}"
+                                          HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          Margin="{TemplateBinding Padding}"/>
+                    </Panel>
+                </Border>
+            </ControlTemplate>
+        </Setter>
+    </ControlTheme>
+</ResourceDictionary>
