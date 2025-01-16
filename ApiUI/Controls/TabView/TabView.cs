@@ -3,7 +3,8 @@ using Avalonia.Controls.Primitives;
 using Avalonia.Controls.Templates;
 using Avalonia.Input;
 
-namespace ApiUI.Controls.TabView;
+// ReSharper disable CheckNamespace
+namespace ApiUI.Controls;
 
 public class TabView : SelectingItemsControl
 {

@@ -1,7 +1,8 @@
 ﻿using Avalonia.Controls;
 using Avalonia.Input;
 
-namespace ApiUI.Controls.TabView;
+// ReSharper disable CheckNamespace
+namespace ApiUI.Controls;
 
 public class TabViewItem : ListBoxItem
 {
