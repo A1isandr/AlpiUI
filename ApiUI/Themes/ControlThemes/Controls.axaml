@@ -6,6 +6,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <MergeResourceInclude Source="/Themes/ControlThemes/ApiControls/TabViewStyles.axaml"/>
                 <MergeResourceInclude Source="/Themes/ControlThemes/ApiControls/TabViewItemStyles.axaml"/>
+                <MergeResourceInclude Source="/Themes/ControlThemes/ApiControls/BlurCard.axaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Styles.Resources>

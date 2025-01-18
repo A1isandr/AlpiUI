@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="ApiUI.Demo/App.axaml" value="ApiUI.Demo/ApiUI.Demo.csproj" />
+        <entry key="ApiUI.Demo/Views/MainWindow.axaml" value="ApiUI.Demo/ApiUI.Demo.csproj" />
+        <entry key="ApiUI/Themes/ApiUITheme.axaml" value="ApiUI.Demo/ApiUI.Demo.csproj" />
+        <entry key="ApiUI/Themes/BlurCardStyles.axaml" value="ApiUI.Demo/ApiUI.Demo.csproj" />
+        <entry key="ApiUI/Themes/ControlThemes/ApiControls/BlurCard.axaml" value="ApiUI.Demo/ApiUI.Demo.csproj" />
+        <entry key="ApiUI/Themes/ControlThemes/ApiControls/TabViewItemStyles.axaml" value="ApiUI.Demo/ApiUI.Demo.csproj" />
+        <entry key="ApiUI/Themes/ControlThemes/ApiControls/TabViewStyles.axaml" value="ApiUI.Demo/ApiUI.Demo.csproj" />
+        <entry key="ApiUI/Themes/ControlThemes/Controls.axaml" value="ApiUI.Demo/ApiUI.Demo.csproj" />
+        <entry key="ApiUI/Themes/TabViewItemStyles.axaml" value="ApiUI.Demo/ApiUI.Demo.csproj" />
+        <entry key="ApiUI/Themes/TabViewStyles.axaml" value="ApiUI.Demo/ApiUI.Demo.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
