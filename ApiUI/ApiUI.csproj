@@ -9,6 +9,7 @@
     <ItemGroup>
       <PackageReference Include="Avalonia" Version="11.2.3" />
       <PackageReference Include="Avalonia.Skia" Version="11.2.3" />
+      <PackageReference Include="Avalonia.Themes.Simple" Version="11.2.3" />
       <PackageReference Include="System.Reactive" Version="6.0.1" />
     </ItemGroup>
 
