@@ -11,7 +11,7 @@ public class BlurCard : ContentControl
     /// Defines the <see cref="BlurRadius"/> property.
     /// </summary>
     public static readonly StyledProperty<double> BlurRadiusProperty =
-        AvaloniaProperty.Register<BlurCard, double>(nameof(BlurRadius), defaultValue: 10.0);
+        AvaloniaProperty.Register<BlurCard, double>(nameof(BlurRadius));
 
     /// <summary>
     /// Background blur radius.

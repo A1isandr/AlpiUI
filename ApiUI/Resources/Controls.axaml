@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <!-- BlurCard -->
+    <x:Double x:Key="BlurCardBlurRadius">20</x:Double>
+    <CornerRadius x:Key="BlurCardCornerRadius">10</CornerRadius>
+    <Thickness x:Key="BlurCardBorderThickness">0</Thickness>
+    <Thickness x:Key="BlurCardPadding">10</Thickness>
+    
+</ResourceDictionary>
