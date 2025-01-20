@@ -7,6 +7,8 @@
         <entry key="ApiUI.Demo/Views/MainWindow.axaml" value="ApiUI.Demo/ApiUI.Demo.csproj" />
         <entry key="ApiUI/Themes/ApiUITheme.axaml" value="ApiUI.Demo/ApiUI.Demo.csproj" />
         <entry key="ApiUI/Themes/BlurCardStyles.axaml" value="ApiUI.Demo/ApiUI.Demo.csproj" />
+        <entry key="ApiUI/Themes/ControlThemes/ApiControls/ApiWndowStyles.axaml" value="ApiUI.Demo/ApiUI.Demo.csproj" />
+        <entry key="ApiUI/Themes/ControlThemes/ApiControls/AppWndowStyles.axaml" value="ApiUI.Demo/ApiUI.Demo.csproj" />
         <entry key="ApiUI/Themes/ControlThemes/ApiControls/BlurCard.axaml" value="ApiUI.Demo/ApiUI.Demo.csproj" />
         <entry key="ApiUI/Themes/ControlThemes/ApiControls/TabViewItemStyles.axaml" value="ApiUI.Demo/ApiUI.Demo.csproj" />
         <entry key="ApiUI/Themes/ControlThemes/ApiControls/TabViewStyles.axaml" value="ApiUI.Demo/ApiUI.Demo.csproj" />

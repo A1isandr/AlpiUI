@@ -1,0 +1,27 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <Design.PreviewWith>
+        <Border Padding="20">
+            <StackPanel
+                Orientation="Horizontal"
+                Spacing="10">
+                
+                <TextBlock Classes="GlyphIcon"
+                           Text=""/>
+                
+                <TextBlock Classes="GlyphIcon"
+                           Text=""/>
+                
+                <TextBlock Classes="GlyphIcon"
+                    Text=""/>
+            </StackPanel>
+        </Border>
+    </Design.PreviewWith>
+
+    <Style Selector="TextBlock.GlyphIcon">
+        <Setter Property="FontFamily" Value="Segoe Fluent Icons"/>
+        <Setter Property="FontSize" Value="10"/>
+        <Setter Property="FontWeight" Value="Thin"/>
+    </Style>
+</Styles>

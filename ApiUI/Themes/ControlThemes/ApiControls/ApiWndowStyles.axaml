@@ -1,0 +1,122 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:api="clr-namespace:ApiUI.Controls">
+
+	<Design.PreviewWith>
+		<api:ApiWindow
+			Width="400"
+			Height="300">
+			
+			<api:ApiWindow.TitleBarControls>
+                <Button
+                    Content="TitleBarControl"/>
+            </api:ApiWindow.TitleBarControls>
+
+            <TextBlock
+                Text="ConverseWindow"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"/>
+        </api:ApiWindow>
+    </Design.PreviewWith>
+
+    <ControlTheme x:Key="{x:Type api:ApiWindow}" TargetType="{x:Type api:ApiWindow}">
+		<Setter Property="CornerRadius" Value="0"/>
+	    <Setter Property="Background" Value="Transparent"/>
+		<Setter Property="Padding" Value="0"/>
+	    <Setter Property="TransparencyLevelHint" Value="AcrylicBlur"/>
+        <Setter Property="SystemDecorations" Value="Full"/>
+        <Setter Property="ExtendClientAreaChromeHints" Value="NoChrome"/>
+        <Setter Property="ExtendClientAreaTitleBarHeightHint" Value="-1"/>
+        <Setter Property="ExtendClientAreaToDecorationsHint" Value="True"/>
+        <Setter Property="WindowStartupLocation" Value="CenterScreen"/>
+        
+        <Setter Property="Template">
+            <ControlTemplate>
+	            <Panel>
+		            <VisualLayerManager x:Name="PART_VisualLayerManager"
+		                                IsHitTestVisible="True">
+			            
+			            <ExperimentalAcrylicBorder
+				            Material="{TemplateBinding BackgroundAcrylicMaterial}">
+				            
+				            <DockPanel>
+					            <Border x:Name="PART_TitleBarBackground"
+										DockPanel.Dock="Top"
+										Height="40"
+										Background="{TemplateBinding TitleBarBackground}">
+								        
+						            <Grid
+							            ColumnDefinitions="Auto, *, Auto, Auto">
+									        
+							            <ContentPresenter
+								            Grid.Column="0"
+								            Content="{TemplateBinding LogoContent}"/>
+									        
+							            <ItemsControl
+								            Grid.Column="1"
+								            ItemsSource="{TemplateBinding TitleBarControls}"
+								            HorizontalAlignment="Stretch">
+										        
+								            <ItemsControl.ItemsPanel>
+									            <ItemsPanelTemplate>
+										            <StackPanel
+											            Orientation="Horizontal"/>
+									            </ItemsPanelTemplate>
+								            </ItemsControl.ItemsPanel>
+							            </ItemsControl>
+									        
+							            <Border
+								            Grid.Column="2"
+								            Width="50"/>
+									        
+							            <StackPanel x:Name="WindowButtons"
+							                        Grid.Column="3"
+							                        Orientation="Horizontal">
+
+								            <Button x:Name="PART_MinimizeButton">
+									            <TextBlock Classes="GlyphIcon"
+									                       Text=""/>
+								            </Button>
+
+								            <Button x:Name="PART_MaximizeButton">
+									            <TextBlock Classes="GlyphIcon"
+									                       Text=""/>
+								            </Button>
+
+								            <Button x:Name="PART_CloseButton">
+									            <TextBlock Classes="GlyphIcon"
+									                       Text=""/>
+								            </Button>
+							            </StackPanel>
+						            </Grid>
+					            </Border>
+					            
+					            <ContentPresenter x:Name="PART_ContentPresenter"
+					                              DockPanel.Dock="Top"
+					                              Content="{TemplateBinding Content}"
+					                              ContentTemplate="{TemplateBinding ContentTemplate}"
+					                              CornerRadius="{TemplateBinding CornerRadius}"
+					                              HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+					                              VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+					                              Background="{TemplateBinding Background}"
+					                              Margin="{TemplateBinding Padding}"/>
+				            </DockPanel>
+			            </ExperimentalAcrylicBorder>
+		            </VisualLayerManager>
+	            </Panel>
+            </ControlTemplate>
+        </Setter>
+
+		<Style Selector="^[WindowState=Maximized] /template/ Button#PART_MaximizeButton">
+			<Style Selector="^ TextBlock">
+				<Setter Property="Text" Value=""/>
+			</Style>
+        </Style>
+
+        <Style Selector="^[WindowState=Normal] /template/ Button#PART_MaximizeButton">
+            <Style Selector="^ TextBlock">
+	            <Setter Property="Text" Value=""/>
+            </Style>
+        </Style>
+    </ControlTheme>
+</ResourceDictionary>
