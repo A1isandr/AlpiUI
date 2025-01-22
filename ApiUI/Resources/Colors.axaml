@@ -1,0 +1,24 @@
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <ResourceDictionary.ThemeDictionaries>
+        <ResourceDictionary x:Key="Light">
+            <Color x:Key="ApiTextColor">#000000</Color>
+            <Color x:Key="ApiBackgroundColor1">#fafafa</Color>
+            <Color x:Key="ApiBackgroundColor2">#dcdcdc</Color>
+        </ResourceDictionary>
+        
+        <ResourceDictionary x:Key="Dark">
+            <Color x:Key="ApiTextColor">#ffffff</Color>
+            <Color x:Key="ApiBackgroundColor1">#1c1c1c</Color>
+            <Color x:Key="ApiBackgroundColor2">#0f0f0f</Color>
+        </ResourceDictionary>
+    </ResourceDictionary.ThemeDictionaries>
+    
+    <Color x:Key="ApiAccentColor">#9046ff</Color>
+    
+    <SolidColorBrush x:Key="ApiAccentBrush" Color="{DynamicResource ApiAccentColor}"/>
+    <SolidColorBrush x:Key="ApiTextBrush" Color="{DynamicResource ApiTextColor}"/>
+    <SolidColorBrush x:Key="ApiBackgroundBrush1" Color="{DynamicResource ApiBackgroundColor1}"/>
+    <SolidColorBrush x:Key="ApiBackgroundBrush2" Color="{DynamicResource ApiBackgroundColor2}"/>
+</ResourceDictionary>

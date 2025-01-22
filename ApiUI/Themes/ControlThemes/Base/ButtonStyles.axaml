@@ -8,7 +8,8 @@
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="BorderBrush" Value="Transparent"/>
-        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="{DynamicResource ApiTextBrush}"/>
+        <Setter Property="Background" Value="{DynamicResource ApiBackgroundBrush2}"/>
         <Setter Property="Padding" Value="10"/>
         
         <Setter Property="Template">
@@ -31,6 +32,7 @@
                                       FontWeight="{TemplateBinding FontWeight}"
                                       FontStretch="{TemplateBinding FontStretch}"
                                       FontStyle="{TemplateBinding FontStyle}"
+                                      Foreground="{TemplateBinding Foreground}"
                                       RecognizesAccessKey="True"/>
                 </Border>
             </ControlTemplate>

@@ -21,7 +21,7 @@
 
     <ControlTheme x:Key="{x:Type api:ApiWindow}" TargetType="{x:Type api:ApiWindow}">
 		<Setter Property="CornerRadius" Value="0"/>
-	    <Setter Property="Background" Value="Transparent"/>
+	    <Setter Property="Background" Value="{DynamicResource ApiBackgroundBrush1}"/>
 		<Setter Property="Padding" Value="0"/>
 	    <Setter Property="TransparencyLevelHint" Value="AcrylicBlur"/>
         <Setter Property="SystemDecorations" Value="Full"/>
@@ -73,17 +73,17 @@
 							                        Grid.Column="3"
 							                        Orientation="Horizontal">
 
-								            <Button x:Name="PART_MinimizeButton">
+								            <Button x:Name="PART_MinimizeButton" Classes="ChromeButton">
 									            <TextBlock Classes="GlyphIcon"
 									                       Text=""/>
 								            </Button>
 
-								            <Button x:Name="PART_MaximizeButton">
+								            <Button x:Name="PART_MaximizeButton" Classes="ChromeButton">
 									            <TextBlock Classes="GlyphIcon"
 									                       Text=""/>
 								            </Button>
 
-								            <Button x:Name="PART_CloseButton">
+								            <Button x:Name="PART_CloseButton" Classes="ChromeButton">
 									            <TextBlock Classes="GlyphIcon"
 									                       Text=""/>
 								            </Button>
@@ -107,6 +107,12 @@
             </ControlTemplate>
         </Setter>
 
+		<Style Selector="^ /template/ Button.ChromeButton">
+			<Setter Property="Width" Value="50"/>
+			<Setter Property="CornerRadius" Value="0"/>
+			<Setter Property="Background" Value="Transparent"/>
+		</Style>
+		
 		<Style Selector="^[WindowState=Maximized] /template/ Button#PART_MaximizeButton">
 			<Style Selector="^ TextBlock">
 				<Setter Property="Text" Value=""/>
