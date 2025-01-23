@@ -149,26 +149,27 @@ namespace ApiUI.Controls
                                     break;
                                 // This doesn't work properly.
                                 case 0x0084:
-                                    //var point = new PixelPoint(
-                                    //(short)(ToInt32(lParam) & 0xffff),
-                                    //(short)(ToInt32(lParam) >> 16));
-                                    //var buttonLeftTop = maximize.PointToScreen(new Point(0, 0));
-                                    //var x = (buttonLeftTop.X - point.X) / RenderScaling;
-                                    //var y = (point.Y - buttonLeftTop.Y) / RenderScaling;
+                                    var point = new PixelPoint(
+                                        (short)(ToInt32(lParam) & 0xffff),
+                                        (short)(ToInt32(lParam) >> 16));
+                                    
+                                    var buttonLeftTop = maximize.PointToScreen(new Point(0, 0));
+                                    var x = (point.X - buttonLeftTop.X) / RenderScaling;
+                                    var y = (point.Y - buttonLeftTop.Y) / RenderScaling;
 
-                                    //if (new Rect(0, 0,
-                                    //    maximize.DesiredSize.Width,
-                                    //    maximize.DesiredSize.Height)
-                                    //    .Contains(new Point(x, y)))
-                                    //{
-                                    //    setter?.SetValue(maximize, true);
-                                    //    pointerOnMaxButton = true;
-                                    //    handled = true;
-                                    //    return 9;
-                                    //}
+                                    if (new Rect(0, 0,
+                                        maximize.Bounds.Width,
+                                        maximize.Bounds.Height)
+                                        .Contains(new Point(x, y)))
+                                    {
+                                        setter?.SetValue(maximize, true);
+                                        pointerOnMaxButton = true;
+                                        handled = true;
+                                        return 9;
+                                    }
 
-                                    //pointerOnMaxButton = false;
-                                    //setter?.SetValue(maximize, false);
+                                    pointerOnMaxButton = false;
+                                    setter?.SetValue(maximize, false);
                                     break;
                             }
 
@@ -183,24 +184,24 @@ namespace ApiUI.Controls
                     Win32Properties.AddWndProcHookCallback(this,
                         new Win32Properties.CustomWndProcHookCallback(proc));
                 }
-
-                if (e.NameScope.Get<Button>("PART_MinimizeButton") is { } minimize)
-                {
-                    minimize.Click += (_, _) => WindowState = WindowState.Minimized;   
-                }
-
-                if (e.NameScope.Get<Button>("PART_CloseButton") is { } close)
-                {
-                    close.Click += (_, _) => Close();   
-                }
-
-                if (e.NameScope.Get<Border>("PART_TitleBarBackground") is { } titleBar)
-                {
-                    titleBar.PointerPressed += OnTitleBarPointerPressed;
-                    titleBar.DoubleTapped += OnMaximizeButtonClicked;
-                }
             }
             catch { }
+            
+            if (e.NameScope.Get<Button>("PART_MinimizeButton") is { } minimize)
+            {
+                minimize.Click += (_, _) => WindowState = WindowState.Minimized;   
+            }
+
+            if (e.NameScope.Get<Button>("PART_CloseButton") is { } close)
+            {
+                close.Click += (_, _) => Close();   
+            }
+
+            if (e.NameScope.Get<Border>("PART_TitleBarBackground") is { } titleBar)
+            {
+                titleBar.PointerPressed += OnTitleBarPointerPressed;
+                titleBar.DoubleTapped += OnMaximizeButtonClicked;
+            }
         }
 
         /// <summary>

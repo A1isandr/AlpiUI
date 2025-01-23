@@ -37,7 +37,8 @@
 		                                IsHitTestVisible="True">
 			            
 			            <ExperimentalAcrylicBorder
-				            Material="{TemplateBinding BackgroundAcrylicMaterial}">
+				            Material="{TemplateBinding BackgroundAcrylicMaterial}"
+				            Padding="{TemplateBinding Margin}">
 				            
 				            <DockPanel>
 					            <Border x:Name="PART_TitleBarBackground"
