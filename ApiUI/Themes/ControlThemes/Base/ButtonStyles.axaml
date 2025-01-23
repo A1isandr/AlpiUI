@@ -1,16 +1,31 @@
-﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     
-    <ControlTheme x:Key="{x:Type Button}" TargetType="{x:Type Button}">
-        <Setter Property="CornerRadius" Value="10"/>
+    <Style Selector="Button">
+        <Setter Property="CornerRadius" Value="{DynamicResource ButtonCornerRadius}"/>
         <Setter Property="ClipToBounds" Value="True"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
-        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="FontSize" Value="{DynamicResource ButtonFontSize}"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="BorderThickness" Value="{DynamicResource ButtonBorderThickness}"/>
         <Setter Property="BorderBrush" Value="Transparent"/>
         <Setter Property="Foreground" Value="{DynamicResource ApiTextBrush}"/>
-        <Setter Property="Background" Value="{DynamicResource ApiBackgroundBrush2}"/>
-        <Setter Property="Padding" Value="10"/>
+        <Setter Property="Background" Value="{DynamicResource ButtonBackgroundBrush}"/>
+        <Setter Property="Padding" Value="{DynamicResource ButtonPadding}"/>
+        
+        <Setter Property="Transitions">
+            <Transitions>
+                <BrushTransition
+                    Property="Background"
+                    Duration="0:0:0.2">
+                    
+                    <BrushTransition.Easing>
+                        <QuinticEaseOut/>
+                    </BrushTransition.Easing>
+                </BrushTransition>
+            </Transitions>
+        </Setter>
         
         <Setter Property="Template">
             <ControlTemplate>
@@ -37,5 +52,13 @@
                 </Border>
             </ControlTemplate>
         </Setter>
-    </ControlTheme>
-</ResourceDictionary>
+        
+        <Style Selector="^:pointerover">
+            <Setter Property="Background" Value="{DynamicResource ButtonHoverBackgroundBrush}"/>
+        </Style>
+        
+        <Style Selector="^:pressed">
+            <Setter Property="Background" Value="{DynamicResource ButtonPressedBackgroundBrush}"/>
+        </Style>
+    </Style>
+</Styles>

@@ -8,11 +8,11 @@
                 <MergeResourceInclude Source="/Themes/ControlThemes/ApiControls/TabViewStyles.axaml"/>
                 <MergeResourceInclude Source="/Themes/ControlThemes/ApiControls/TabViewItemStyles.axaml"/>
                 <MergeResourceInclude Source="/Themes/ControlThemes/ApiControls/BlurCard.axaml"/>
-                
-                <MergeResourceInclude Source="/Themes/ControlThemes/Base/ButtonStyles.axaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Styles.Resources>
+    
+    <StyleInclude Source="/Themes/ControlThemes/Base/ButtonStyles.axaml"/>
     
     <StyleInclude Source="/Themes/ControlThemes/Base/TextBlockStyles.axaml"/>
 </Styles>

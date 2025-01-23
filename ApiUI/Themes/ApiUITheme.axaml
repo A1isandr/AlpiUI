@@ -14,7 +14,7 @@
         </ResourceDictionary>
     </Styles.Resources>
     
-    <SimpleTheme/>
+    <!-- <SimpleTheme/> -->
     
     <StyleInclude Source="/Themes/ControlThemes/Controls.axaml"/>
 </Styles>

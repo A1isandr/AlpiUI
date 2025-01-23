@@ -20,9 +20,9 @@
     </Design.PreviewWith>
 
     <ControlTheme x:Key="{x:Type api:ApiWindow}" TargetType="{x:Type api:ApiWindow}">
-		<Setter Property="CornerRadius" Value="0"/>
-	    <Setter Property="Background" Value="{DynamicResource ApiBackgroundBrush1}"/>
-		<Setter Property="Padding" Value="0"/>
+		<Setter Property="CornerRadius" Value="{StaticResource ApiWindowCornerRadius}"/>
+	    <Setter Property="Background" Value="{DynamicResource ApiBackgroundBrush}"/>
+		<Setter Property="Padding" Value="{StaticResource ApiWindowPadding}"/>
 	    <Setter Property="TransparencyLevelHint" Value="AcrylicBlur"/>
         <Setter Property="SystemDecorations" Value="Full"/>
         <Setter Property="ExtendClientAreaChromeHints" Value="NoChrome"/>
@@ -42,7 +42,7 @@
 				            <DockPanel>
 					            <Border x:Name="PART_TitleBarBackground"
 										DockPanel.Dock="Top"
-										Height="40"
+										Height="{StaticResource ApiWindowTitleBarHeight}"
 										Background="{TemplateBinding TitleBarBackground}">
 								        
 						            <Grid
@@ -65,9 +65,9 @@
 								            </ItemsControl.ItemsPanel>
 							            </ItemsControl>
 									        
-							            <Border
+							            <Border x:Name="DragIsland"
 								            Grid.Column="2"
-								            Width="50"/>
+								            Width="{StaticResource ApiWindowDragIslandWidth}"/>
 									        
 							            <StackPanel x:Name="WindowButtons"
 							                        Grid.Column="3"
@@ -84,6 +84,16 @@
 								            </Button>
 
 								            <Button x:Name="PART_CloseButton" Classes="ChromeButton">
+									            <Button.Styles>
+										            <Style Selector="Button">
+											            <Setter Property="Background" Value="{DynamicResource ApiWindowChromeCloseButtonBackgroundBrush}"/>
+											            
+											            <Style Selector="^:pointerover">
+												            <Setter Property="Background" Value="{DynamicResource ApiWindowChromeCloseButtonHoverBackgroundBrush}"/>
+											            </Style>
+										            </Style>
+									            </Button.Styles>
+									            
 									            <TextBlock Classes="GlyphIcon"
 									                       Text=""/>
 								            </Button>
@@ -108,9 +118,8 @@
         </Setter>
 
 		<Style Selector="^ /template/ Button.ChromeButton">
-			<Setter Property="Width" Value="50"/>
-			<Setter Property="CornerRadius" Value="0"/>
-			<Setter Property="Background" Value="Transparent"/>
+			<Setter Property="Width" Value="{StaticResource ApiWindowChromeButtonWidth}"/>
+			<Setter Property="CornerRadius" Value="{StaticResource ApiWindowChromeButtonCornerRadius}"/>
 		</Style>
 		
 		<Style Selector="^[WindowState=Maximized] /template/ Button#PART_MaximizeButton">

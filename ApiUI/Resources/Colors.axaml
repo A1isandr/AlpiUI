@@ -4,21 +4,34 @@
     <ResourceDictionary.ThemeDictionaries>
         <ResourceDictionary x:Key="Light">
             <Color x:Key="ApiTextColor">#000000</Color>
-            <Color x:Key="ApiBackgroundColor1">#fafafa</Color>
-            <Color x:Key="ApiBackgroundColor2">#dcdcdc</Color>
+            <Color x:Key="ApiBackgroundColor">#FAFAFA</Color>
+            
+            <Color x:Key="ApiTransparentColor100">#FF000000</Color>
+            <Color x:Key="ApiTransparentColor50"> #80000000</Color>
+            <Color x:Key="ApiTransparentColor40"> #66000000</Color>
+            <Color x:Key="ApiTransparentColor30"> #4D000000</Color>
+            <Color x:Key="ApiTransparentColor20"> #33000000</Color>
+            <Color x:Key="ApiTransparentColor10"> #1A000000</Color>
+            <Color x:Key="ApiTransparentColor0">  #00000000</Color>
         </ResourceDictionary>
         
         <ResourceDictionary x:Key="Dark">
-            <Color x:Key="ApiTextColor">#ffffff</Color>
-            <Color x:Key="ApiBackgroundColor1">#1c1c1c</Color>
-            <Color x:Key="ApiBackgroundColor2">#0f0f0f</Color>
+            <Color x:Key="ApiTextColor">#FFFFFF</Color>
+            <Color x:Key="ApiBackgroundColor">#1C1C1C</Color>
+            
+            <Color x:Key="ApiTransparentColor100">#FFFFFFFF</Color>
+            <Color x:Key="ApiTransparentColor50"> #80FFFFFF</Color>
+            <Color x:Key="ApiTransparentColor40"> #66FFFFFF</Color>
+            <Color x:Key="ApiTransparentColor30"> #4DFFFFFF</Color>
+            <Color x:Key="ApiTransparentColor20"> #33FFFFFF</Color>
+            <Color x:Key="ApiTransparentColor10"> #1AFFFFFF</Color>
+            <Color x:Key="ApiTransparentColor0">  #00FFFFFF</Color>
         </ResourceDictionary>
     </ResourceDictionary.ThemeDictionaries>
     
-    <Color x:Key="ApiAccentColor">#9046ff</Color>
+    <Color x:Key="ApiAccentColor">#9046FF</Color>
     
     <SolidColorBrush x:Key="ApiAccentBrush" Color="{DynamicResource ApiAccentColor}"/>
     <SolidColorBrush x:Key="ApiTextBrush" Color="{DynamicResource ApiTextColor}"/>
-    <SolidColorBrush x:Key="ApiBackgroundBrush1" Color="{DynamicResource ApiBackgroundColor1}"/>
-    <SolidColorBrush x:Key="ApiBackgroundBrush2" Color="{DynamicResource ApiBackgroundColor2}"/>
+    <SolidColorBrush x:Key="ApiBackgroundBrush" Color="{DynamicResource ApiBackgroundColor}"/>
 </ResourceDictionary>
