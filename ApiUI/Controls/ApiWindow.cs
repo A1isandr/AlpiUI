@@ -99,6 +99,15 @@ namespace ApiUI.Controls
                 TintColor = Colors.Black,
                 FallbackColor = Colors.Transparent
             };
+
+            Activated += (_, _) =>
+            {
+                TitleBarBackground = Brushes.Transparent;
+            };
+            Deactivated += (_, _) =>
+            {
+                TitleBarBackground = Background ?? Brushes.Transparent;
+            };
         }
         
         

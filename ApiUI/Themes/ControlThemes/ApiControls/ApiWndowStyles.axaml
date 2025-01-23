@@ -20,7 +20,8 @@
     </Design.PreviewWith>
 
     <ControlTheme x:Key="{x:Type api:ApiWindow}" TargetType="{x:Type api:ApiWindow}">
-		<Setter Property="CornerRadius" Value="{StaticResource ApiWindowCornerRadius}"/>
+	    <Setter Property="MinWidth" Value="{StaticResource ApiWindowMinWidth}"/>
+	    <Setter Property="CornerRadius" Value="{StaticResource ApiWindowCornerRadius}"/>
 	    <Setter Property="Background" Value="{DynamicResource ApiBackgroundBrush}"/>
 		<Setter Property="Padding" Value="{StaticResource ApiWindowPadding}"/>
 	    <Setter Property="TransparencyLevelHint" Value="AcrylicBlur"/>
