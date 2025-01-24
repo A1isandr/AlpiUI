@@ -65,7 +65,7 @@
             <Setter Property="FocusAdorner">
                 <Template>
                     <Border
-                        CornerRadius="{StaticResource ButtonCornerRadius}"
+                        CornerRadius="{StaticResource ButtonFocusAdornerCornerRadius}"
                         BorderThickness="{StaticResource ButtonFocusAdornerBorderThickness}"
                         BorderBrush="{DynamicResource ButtonFocusAdornerFocusVisibleBorderBrush}"/>
                 </Template>

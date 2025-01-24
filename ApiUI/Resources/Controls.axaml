@@ -21,6 +21,7 @@
     <!-- Button -->
     <x:Double x:Key="ButtonFontSize">14</x:Double>
     <CornerRadius x:Key="ButtonCornerRadius">20</CornerRadius>
+    <CornerRadius x:Key="ButtonFocusAdornerCornerRadius">5</CornerRadius>
     <Thickness x:Key="ButtonBorderThickness">0</Thickness>
     <Thickness x:Key="ButtonPadding">20, 5, 20, 5</Thickness>
     <Thickness x:Key="ButtonFocusAdornerBorderThickness">2</Thickness>
