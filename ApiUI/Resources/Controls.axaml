@@ -1,23 +1,6 @@
 ﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     
-    <!-- BlurCard -->
-    <x:Double x:Key="BlurCardBlurRadius">20</x:Double>
-    <CornerRadius x:Key="BlurCardCornerRadius">10</CornerRadius>
-    <Thickness x:Key="BlurCardBorderThickness">0</Thickness>
-    <Thickness x:Key="BlurCardPadding">10</Thickness>
-    
-    <!-- Button -->
-    <x:Double x:Key="ButtonFontSize">14</x:Double>
-    <CornerRadius x:Key="ButtonCornerRadius">10</CornerRadius>
-    <Thickness x:Key="ButtonBorderThickness">0</Thickness>
-    <Thickness x:Key="ButtonPadding">20, 10, 20, 10</Thickness>
-    <Thickness x:Key="ButtonFocusAdornerBorderThickness">2</Thickness>
-    <SolidColorBrush x:Key="ButtonBackgroundBrush" Color="{DynamicResource ApiTransparentColor0}"/>
-    <SolidColorBrush x:Key="ButtonHoverBackgroundBrush" Color="{DynamicResource ApiTransparentColor10}"/>
-    <SolidColorBrush x:Key="ButtonPressedBackgroundBrush" Color="{DynamicResource ApiTransparentColor20}"/>
-    <SolidColorBrush x:Key="ButtonFocusAdornerFocusVisibleBorderBrush" Color="{DynamicResource ApiFocusColor}"/>
-    
     <!-- ApiWindow -->
     <x:Double x:Key="ApiWindowMinWidth">200</x:Double>
     <x:Double x:Key="ApiWindowChromeButtonWidth">50</x:Double>
@@ -26,6 +9,36 @@
     <CornerRadius x:Key="ApiWindowChromeButtonCornerRadius">0</CornerRadius>
     <CornerRadius x:Key="ApiWindowCornerRadius">0</CornerRadius>
     <Thickness x:Key="ApiWindowPadding">0</Thickness>
-    <SolidColorBrush x:Key="ApiWindowChromeCloseButtonBackgroundBrush" Color="#00FF2821"/>
-    <SolidColorBrush x:Key="ApiWindowChromeCloseButtonHoverBackgroundBrush" Color="#FF2821"/>
+    <SolidColorBrush x:Key="ApiWindowChromeCloseButtonBackgroundBrush" Color="{DynamicResource ApiDangerColor0}"/>
+    <SolidColorBrush x:Key="ApiWindowChromeCloseButtonHoverBackgroundBrush" Color="{DynamicResource ApiDangerColor}"/>
+    
+    <!-- BlurCard -->
+    <x:Double x:Key="BlurCardBlurRadius">20</x:Double>
+    <CornerRadius x:Key="BlurCardCornerRadius">10</CornerRadius>
+    <Thickness x:Key="BlurCardBorderThickness">0</Thickness>
+    <Thickness x:Key="BlurCardPadding">10</Thickness>
+    
+    <!-- Button -->
+    <x:Double x:Key="ButtonFontSize">14</x:Double>
+    <CornerRadius x:Key="ButtonCornerRadius">20</CornerRadius>
+    <Thickness x:Key="ButtonBorderThickness">0</Thickness>
+    <Thickness x:Key="ButtonPadding">20, 5, 20, 5</Thickness>
+    <Thickness x:Key="ButtonFocusAdornerBorderThickness">2</Thickness>
+    <SolidColorBrush x:Key="ButtonBackgroundBrush" Color="{DynamicResource ApiTransparentColor0}"/>
+    <SolidColorBrush x:Key="ButtonHoverBackgroundBrush" Color="{DynamicResource ApiTransparentColor10}"/>
+    <SolidColorBrush x:Key="ButtonPressedBackgroundBrush" Color="{DynamicResource ApiTransparentColor20}"/>
+    <SolidColorBrush x:Key="ButtonFocusAdornerFocusVisibleBorderBrush" Color="{DynamicResource ApiFocusColor}"/>
+    
+    <!-- TextBox -->
+    <x:Double x:Key="TextBoxMinHeight">40</x:Double>
+    <x:Double x:Key="TextBoxFontSize">14</x:Double>
+    <x:Double x:Key="TextBoxFloatingWatermarkBorderActivatedHeight">20</x:Double>
+    <CornerRadius x:Key="TextBoxCornerRadius">20</CornerRadius>
+    <Thickness x:Key="TextBoxBorderThickness">2</Thickness>
+    <Thickness x:Key="TextBoxPadding">20, 5, 20, 5</Thickness>
+    <SolidColorBrush x:Key="TextBoxCaretBrush" Color="{DynamicResource ApiTextColor}"/>
+    <SolidColorBrush x:Key="TextBoxWatermarkForegroundBrush" Color="{DynamicResource ApiTransparentColor80}"/>
+    <SolidColorBrush x:Key="TextBoxFloatingWatermarkNotEmptyForegroundBrush" Color="{DynamicResource ApiTransparentColor50}"/>
+    <SolidColorBrush x:Key="TextBoxBorderBrush" Color="{DynamicResource ApiTransparentColor80}"/>
+    <SolidColorBrush x:Key="TextBoxValidationErrorBorderBrush" Color="{DynamicResource ApiDangerColor}"/>
 </ResourceDictionary>

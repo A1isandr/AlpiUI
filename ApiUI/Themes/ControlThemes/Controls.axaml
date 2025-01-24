@@ -13,6 +13,6 @@
     </Styles.Resources>
     
     <StyleInclude Source="/Themes/ControlThemes/Base/ButtonStyles.axaml"/>
-    
+    <StyleInclude Source="/Themes/ControlThemes/Base/TextBoxStyles.axaml"/>
     <StyleInclude Source="/Themes/ControlThemes/Base/TextBlockStyles.axaml"/>
 </Styles>

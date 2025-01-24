@@ -1,0 +1,228 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+	<Design.PreviewWith>
+		<Border
+			Padding="10">
+			
+			<TextBox
+				Watermark="Type something here"/>
+		</Border>
+	</Design.PreviewWith>
+    
+    <Style Selector="TextBox">
+	    <Setter Property="MinHeight" Value="{StaticResource TextBoxMinHeight}"/>
+	    <Setter Property="CornerRadius" Value="{StaticResource TextBoxCornerRadius}"/>
+	    <Setter Property="HorizontalContentAlignment" Value="Left"/>
+	    <Setter Property="VerticalContentAlignment" Value="Center"/>
+	    <Setter Property="FontSize" Value="{StaticResource TextBoxFontSize}"/>
+	    <Setter Property="TextWrapping" Value="NoWrap"/>
+	    <Setter Property="Foreground" Value="{DynamicResource ApiTextBrush}"/>
+	    <Setter Property="SelectionBrush" Value="{DynamicResource ApiAccentBrush}"/>
+	    <Setter Property="CaretBrush" Value="{DynamicResource TextBoxCaretBrush}"/>
+	    <Setter Property="BorderThickness" Value="{StaticResource TextBoxBorderThickness}"/>
+	    <Setter Property="BorderBrush" Value="{DynamicResource TextBoxBorderBrush}"/>
+	    <Setter Property="Padding" Value="{StaticResource TextBoxPadding}"/>
+	    
+	    <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Hidden"/>
+	    <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+	    <Setter Property="ScrollViewer.AllowAutoHide" Value="True"/>
+	    <Setter Property="ScrollViewer.IsScrollChainingEnabled" Value="True"/>
+	    <Setter Property="ScrollViewer.BringIntoViewOnFocusChange" Value="True"/>
+	    
+	    <Setter Property="Template">
+		    <ControlTemplate>
+			    <DataValidationErrors>
+					<Panel>
+						<Border x:Name="PART_BorderElement"
+						        MinWidth="{TemplateBinding MinWidth}"
+						        MinHeight="{TemplateBinding MinHeight}"
+						        CornerRadius="{TemplateBinding CornerRadius}"
+						        BorderThickness="{TemplateBinding BorderThickness}"
+						        BorderBrush="{TemplateBinding BorderBrush}"
+							    Background="{TemplateBinding Background}">
+							
+							<Border.Transitions>
+							    <Transitions>
+							        <BrushTransition
+							            Property="BorderBrush"
+							            Duration="0:0:0.2">
+							
+								         <BrushTransition.Easing>
+									         <QuinticEaseOut/>
+								         </BrushTransition.Easing>
+							        </BrushTransition>
+							    </Transitions>
+							</Border.Transitions>
+						</Border>
+
+						<Border
+							Margin="{TemplateBinding BorderThickness}">
+							
+							<Grid 
+								ColumnDefinitions="Auto,*,Auto">
+								
+								<ContentPresenter 
+									Grid.Column="0"
+									Content="{TemplateBinding InnerLeftContent}"
+								    VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							    
+							    <Grid x:Name="PART_InnerDockPanel"
+							          Grid.Column="1"
+							          RowDefinitions="Auto, *"
+							          Margin="{TemplateBinding Padding}">
+								    
+								    <Border x:Name="FloatingWatermarkBorder"
+		                                    Grid.Row="0"
+		                                    Height="0">
+		    
+		                                <Border.Transitions>
+		                                    <Transitions>
+		                                        <DoubleTransition
+		                                            Property="Height"
+		                                            Duration="0:0:0.2">
+		    
+		                                            <DoubleTransition.Easing>
+			                                            <QuinticEaseOut/>
+		                                            </DoubleTransition.Easing>
+		                                        </DoubleTransition>
+		                                    </Transitions>
+		                                </Border.Transitions>
+		                            </Border>
+								    
+								    <TextBlock x:Name="PART_Watermark"
+								               Grid.Row="1"
+								               Opacity="0.5"
+								               Text="{TemplateBinding Watermark}"
+								               TextAlignment="{TemplateBinding TextAlignment}"
+								               TextWrapping="{TemplateBinding TextWrapping}"
+								               HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+								               VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+										          
+									    <TextBlock.Transitions>
+											<Transitions>
+												<TransformOperationsTransition
+												    Property="RenderTransform"
+												    Duration="0:0:0.2">
+
+												    <TransformOperationsTransition.Easing>
+													    <QuinticEaseOut/>
+												    </TransformOperationsTransition.Easing>
+												</TransformOperationsTransition>
+
+												<DoubleTransition
+												    Property="Opacity"
+												    Duration="0:0:0.2">
+
+												    <DoubleTransition.Easing>
+													    <QuinticEaseOut/>
+												    </DoubleTransition.Easing>
+												</DoubleTransition>
+
+												<BrushTransition
+												    Property="Foreground"
+												    Duration="0:0:0.2">
+													
+													<BrushTransition.Easing>
+														<QuinticEaseOut/>
+													</BrushTransition.Easing>
+												</BrushTransition>
+											</Transitions>
+									    </TextBlock.Transitions>
+						           </TextBlock>
+								    
+								    <ScrollViewer x:Name="PART_ScrollViewer"
+								                  Grid.Row="1"
+							                      HorizontalScrollBarVisibility="{TemplateBinding (ScrollViewer.HorizontalScrollBarVisibility)}"
+							                      VerticalScrollBarVisibility="{TemplateBinding (ScrollViewer.VerticalScrollBarVisibility)}"
+							                      IsScrollChainingEnabled="{TemplateBinding (ScrollViewer.IsScrollChainingEnabled)}"
+							                      AllowAutoHide="{TemplateBinding (ScrollViewer.AllowAutoHide)}"
+							                      BringIntoViewOnFocusChange="{TemplateBinding (ScrollViewer.BringIntoViewOnFocusChange)}"
+							                      Background="Transparent">
+									    
+									    <ScrollViewer.Styles>
+										    <Style Selector="ScrollViewer">
+											    <Setter Property="Cursor" Value="IBeam"/>
+										    </Style>
+									    </ScrollViewer.Styles>
+									    
+									    <Panel>
+									          <TextPresenter x:Name="PART_TextPresenter"
+									                         Text="{TemplateBinding Text, Mode=TwoWay}"
+									                         TextAlignment="{TemplateBinding TextAlignment}"
+									                         TextWrapping="{TemplateBinding TextWrapping}"
+									                         CaretBlinkInterval="{TemplateBinding CaretBlinkInterval}"
+									                         CaretIndex="{TemplateBinding CaretIndex}"
+									                         SelectionStart="{TemplateBinding SelectionStart}"
+									                         SelectionEnd="{TemplateBinding SelectionEnd}"
+									                         LineHeight="{TemplateBinding LineHeight}"
+									                         LetterSpacing="{TemplateBinding LetterSpacing}"
+									                         PasswordChar="{TemplateBinding PasswordChar}"
+									                         RevealPassword="{TemplateBinding RevealPassword}"
+									                         SelectionBrush="{TemplateBinding SelectionBrush}"
+									                         SelectionForegroundBrush="{TemplateBinding SelectionForegroundBrush}"
+									                         CaretBrush="{TemplateBinding CaretBrush}"
+									                         HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+									                         VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+								        </Panel>
+								    </ScrollViewer>
+							    </Grid>
+								
+							    <ContentPresenter Grid.Column="2"
+							                      VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+							                      Content="{TemplateBinding InnerRightContent}"/>
+							</Grid>
+						</Border>
+					</Panel>
+				</DataValidationErrors>
+		    </ControlTemplate>
+	    </Setter>
+	    
+	     <Style Selector="^:focus">
+		    <Style Selector="^ /template/ Border#PART_BorderElement">
+			    <Setter Property="BorderBrush" Value="{DynamicResource ApiAccentBrush}"/>
+		    </Style>
+	    </Style>
+	   
+	    <Style Selector="^:focus-visible">
+		    <Style Selector="^ /template/ Border#PART_BorderElement">
+			    <Setter Property="BorderBrush" Value="{DynamicResource ApiAccentBrush}"/>
+		    </Style>
+	    </Style>
+    
+	    <Style Selector="^:error">
+		    <Style Selector="^ /template/ Border#PART_BorderElement">
+			    <Setter Property="BorderBrush" Value="{DynamicResource TextBoxValidationErrorBorderBrush}"/>
+		    </Style>
+	    </Style>
+    
+	    <Style Selector="^[UseFloatingWatermark=true]">
+		    <Style Selector="^:not(:empty)">
+			    <Style Selector="^ /template/ Border#FloatingWatermarkBorder">
+				    <Setter Property="Height" Value="{StaticResource TextBoxFloatingWatermarkBorderActivatedHeight}"/>
+			    </Style>
+    
+			    <Style Selector="^ /template/ TextBlock#PART_Watermark">
+				    <Setter Property="RenderTransform" Value="translateY(-20px)"/>
+				    <Setter Property="Foreground" Value="{DynamicResource TextBoxFloatingWatermarkNotEmptyForegroundBrush}"/>
+			    </Style>
+		    </Style>
+	    </Style>
+    
+	    <Style Selector="^[UseFloatingWatermark=False]">
+		    <Style Selector="^:empty">
+			    <Style Selector="^ /template/ TextBlock#PART_Watermark">
+				    <Setter Property="RenderTransform" Value="translateX(0px)"/>
+				    <Setter Property="Opacity" Value="1"/>
+			    </Style>
+		    </Style>
+    
+		    <Style Selector="^:not(:empty)">
+			    <Style Selector="^ /template/ TextBlock#PART_Watermark">
+				    <Setter Property="RenderTransform" Value="translateX(20px)"/>
+				    <Setter Property="Opacity" Value="0"/>
+			    </Style>
+		    </Style>
+	    </Style>
+    </Style>
+</Styles>

@@ -17,6 +17,7 @@
         <entry key="ApiUI/Themes/ControlThemes/ApiControls/TabViewStyles.axaml" value="ApiUI.Demo/ApiUI.Demo.csproj" />
         <entry key="ApiUI/Themes/ControlThemes/Base/ButtonStyles.axaml" value="ApiUI.Demo/ApiUI.Demo.csproj" />
         <entry key="ApiUI/Themes/ControlThemes/Base/TextBlockStyles.axaml" value="ApiUI.Demo/ApiUI.Demo.csproj" />
+        <entry key="ApiUI/Themes/ControlThemes/Base/TextBoxStyles.axaml" value="ApiUI.Demo/ApiUI.Demo.csproj" />
         <entry key="ApiUI/Themes/ControlThemes/Controls.axaml" value="ApiUI.Demo/ApiUI.Demo.csproj" />
         <entry key="ApiUI/Themes/TabViewItemStyles.axaml" value="ApiUI.Demo/ApiUI.Demo.csproj" />
         <entry key="ApiUI/Themes/TabViewStyles.axaml" value="ApiUI.Demo/ApiUI.Demo.csproj" />
