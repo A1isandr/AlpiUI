@@ -60,5 +60,16 @@
         <Style Selector="^:pressed">
             <Setter Property="Background" Value="{DynamicResource ButtonPressedBackgroundBrush}"/>
         </Style>
+        
+        <Style Selector="^:focus-visible">
+            <Setter Property="FocusAdorner">
+                <Template>
+                    <Border
+                        CornerRadius="{StaticResource ButtonCornerRadius}"
+                        BorderThickness="{StaticResource ButtonFocusAdornerBorderThickness}"
+                        BorderBrush="{DynamicResource ButtonFocusAdornerFocusVisibleBorderBrush}"/>
+                </Template>
+            </Setter>
+        </Style>
     </Style>
 </Styles>

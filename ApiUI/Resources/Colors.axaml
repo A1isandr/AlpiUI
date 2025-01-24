@@ -5,6 +5,7 @@
         <ResourceDictionary x:Key="Light">
             <Color x:Key="ApiTextColor">#000000</Color>
             <Color x:Key="ApiBackgroundColor">#FAFAFA</Color>
+            <Color x:Key="ApiFocusColor">#000000</Color>
             
             <Color x:Key="ApiTransparentColor100">#FF000000</Color>
             <Color x:Key="ApiTransparentColor50"> #80000000</Color>
@@ -18,6 +19,7 @@
         <ResourceDictionary x:Key="Dark">
             <Color x:Key="ApiTextColor">#FFFFFF</Color>
             <Color x:Key="ApiBackgroundColor">#1C1C1C</Color>
+            <Color x:Key="ApiFocusColor">#FFFFFF</Color>
             
             <Color x:Key="ApiTransparentColor100">#FFFFFFFF</Color>
             <Color x:Key="ApiTransparentColor50"> #80FFFFFF</Color>
