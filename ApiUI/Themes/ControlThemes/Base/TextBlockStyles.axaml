@@ -19,6 +19,11 @@
         </Border>
     </Design.PreviewWith>
     
+    <Style Selector="TextBlock">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+    </Style>
+    
     <Style Selector="TextBlock.GlyphIcon">
         <Setter Property="FontFamily" Value="Segoe Fluent Icons"/>
         <Setter Property="FontSize" Value="10"/>

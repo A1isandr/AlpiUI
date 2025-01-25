@@ -42,11 +42,6 @@
                                       ContentTemplate="{TemplateBinding ContentTemplate}"
                                       HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
                                       VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
-                                      FontFamily="{TemplateBinding FontFamily}"
-                                      FontSize="{TemplateBinding FontSize}"
-                                      FontWeight="{TemplateBinding FontWeight}"
-                                      FontStretch="{TemplateBinding FontStretch}"
-                                      FontStyle="{TemplateBinding FontStyle}"
                                       Foreground="{TemplateBinding Foreground}"
                                       RecognizesAccessKey="True"/>
                 </Border>
