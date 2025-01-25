@@ -10,6 +10,8 @@
 		</Border>
 	</Design.PreviewWith>
     
+	
+	
     <Style Selector="TextBox">
 	    <Setter Property="MinHeight" Value="{StaticResource TextBoxMinHeight}"/>
 	    <Setter Property="CornerRadius" Value="{StaticResource TextBoxCornerRadius}"/>
@@ -22,6 +24,7 @@
 	    <Setter Property="CaretBrush" Value="{DynamicResource TextBoxCaretBrush}"/>
 	    <Setter Property="BorderThickness" Value="{StaticResource TextBoxBorderThickness}"/>
 	    <Setter Property="BorderBrush" Value="{DynamicResource TextBoxBorderBrush}"/>
+	    <Setter Property="Background" Value="{DynamicResource TextBoxBackgroundBrush}"/>
 	    <Setter Property="Padding" Value="{StaticResource TextBoxPadding}"/>
 	    
 	    <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Hidden"/>
@@ -52,6 +55,15 @@
 									         <QuinticEaseOut/>
 								         </BrushTransition.Easing>
 							        </BrushTransition>
+								    
+								    <BrushTransition
+									    Property="Background"
+									    Duration="0:0:0.2">
+									    
+									    <BrushTransition.Easing>
+										    <QuinticEaseOut/>
+									    </BrushTransition.Easing>
+								    </BrushTransition>
 							    </Transitions>
 							</Border.Transitions>
 						</Border>
@@ -178,6 +190,10 @@
 		    </ControlTemplate>
 	    </Setter>
 	    
+	    <Style Selector="^:pointerover">
+		    <Setter Property="BorderBrush" Value="{DynamicResource TextBoxHoverBorderBrush}"/>
+	    </Style>
+	    
 	     <Style Selector="^:focus">
 		    <Style Selector="^ /template/ Border#PART_BorderElement">
 			    <Setter Property="BorderBrush" Value="{DynamicResource ApiAccentBrush}"/>
@@ -225,4 +241,13 @@
 		    </Style>
 	    </Style>
     </Style>
+	
+	<Style Selector="TextBox.Card">
+		<Setter Property="BorderBrush" Value="{DynamicResource TextBoxCardBorderBrush}"/>
+		<Setter Property="Background" Value="{DynamicResource TextBoxCardBackgroundBrush}"/>
+		
+		<Style Selector="^:pointerover:not(:focus)">
+			<Setter Property="Background" Value="{DynamicResource TextBoxCardHoverBackgroundBrush}"/>
+		</Style>
+	</Style>
 </Styles>

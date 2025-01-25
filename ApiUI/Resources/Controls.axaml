@@ -63,6 +63,12 @@
     <SolidColorBrush x:Key="TextBoxCaretBrush" Color="{DynamicResource ApiTextColor}"/>
     <SolidColorBrush x:Key="TextBoxWatermarkForegroundBrush" Color="{DynamicResource ApiTransparentColor80}"/>
     <SolidColorBrush x:Key="TextBoxFloatingWatermarkNotEmptyForegroundBrush" Color="{DynamicResource ApiTransparentColor50}"/>
-    <SolidColorBrush x:Key="TextBoxBorderBrush" Color="{DynamicResource ApiTransparentColor80}"/>
+    <SolidColorBrush x:Key="TextBoxBorderBrush" Color="{DynamicResource ApiTransparentColor50}"/>
+    <SolidColorBrush x:Key="TextBoxHoverBorderBrush" Color="{DynamicResource ApiTransparentColor100}"/>
+    <SolidColorBrush x:Key="TextBoxCardBorderBrush" Color="{DynamicResource ApiTransparentColor0}"/>
     <SolidColorBrush x:Key="TextBoxValidationErrorBorderBrush" Color="{DynamicResource ApiDangerColor}"/>
+    <SolidColorBrush x:Key="TextBoxBackgroundBrush" Color="{DynamicResource ApiTransparentColor0}"/>
+    <SolidColorBrush x:Key="TextBoxCardBackgroundBrush" Color="{DynamicResource ApiTransparentColor10}"/>
+    <SolidColorBrush x:Key="TextBoxCardHoverBackgroundBrush" Color="{DynamicResource ApiTransparentColor30}"/>
+    <SolidColorBrush x:Key="TextBoxCardFocusBackgroundBrush" Color="{DynamicResource ApiTransparentColor10}"/>
 </ResourceDictionary>
