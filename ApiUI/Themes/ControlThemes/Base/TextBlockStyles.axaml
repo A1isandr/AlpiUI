@@ -14,14 +14,10 @@
                            Text=""/>
                 
                 <TextBlock Classes="GlyphIcon"
-                    Text=""/>
+                           Text=""/>
             </StackPanel>
         </Border>
     </Design.PreviewWith>
-
-    <Style Selector="TextBlock">
-        <Setter Property="Foreground" Value="{DynamicResource ApiTextBrush}"/>
-    </Style>
     
     <Style Selector="TextBlock.GlyphIcon">
         <Setter Property="FontFamily" Value="Segoe Fluent Icons"/>
