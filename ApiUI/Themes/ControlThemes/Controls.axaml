@@ -15,4 +15,6 @@
     <StyleInclude Source="/Themes/ControlThemes/Base/ButtonStyles.axaml"/>
     <StyleInclude Source="/Themes/ControlThemes/Base/TextBoxStyles.axaml"/>
     <StyleInclude Source="/Themes/ControlThemes/Base/TextBlockStyles.axaml"/>
+    <StyleInclude Source="/Themes/ControlThemes/Base/ScrollBarStyles.axaml"/>
+    <StyleInclude Source="/Themes/ControlThemes/Base/ScrollViewerStyles.axaml"/>
 </Styles>

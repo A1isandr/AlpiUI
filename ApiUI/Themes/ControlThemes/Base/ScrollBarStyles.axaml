@@ -1,0 +1,193 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Design.PreviewWith>
+        <Border
+            Padding="10">
+            
+            <StackPanel Orientation="Horizontal">
+                
+            </StackPanel>
+        </Border>
+    </Design.PreviewWith>
+    
+    
+    
+    <Style Selector="Thumb">
+        <Setter Property="CornerRadius" Value="{StaticResource ScrollBarThumbCornerRadius}"/>
+        <Setter Property="Background" Value="{DynamicResource ScrollBarThumbBackgroundBrush}"/>
+        
+        <Setter Property="Transitions">
+            <Transitions>
+                <BrushTransition
+                    Property="Background"
+                    Duration="0:0:0.2">
+                
+                    <BrushTransition.Easing>
+                        <QuinticEaseOut/>
+                    </BrushTransition.Easing>
+                </BrushTransition>
+            </Transitions>
+        </Setter>
+        
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Border
+                    Width="{TemplateBinding Width}"
+                    CornerRadius="{TemplateBinding CornerRadius}"
+                    Background="{TemplateBinding Background}"/>
+            </ControlTemplate>
+        </Setter>
+        
+        <Style Selector="^:pointerover">
+            <Setter Property="Background" Value="{DynamicResource ScrollBarThumbHoverBackgroundBrush}"/>
+        </Style>
+        
+        <Style Selector="^:pressed">
+            <Setter Property="Background" Value="{DynamicResource ScrollBarThumbPressedBackgroundBrush}"/>
+        </Style>
+    </Style>
+    
+    
+    
+    <Style Selector="ScrollBar">
+        <Setter Property="Width" Value="{StaticResource ScrollBarWidth}"/>
+        
+        <Style Selector="^:vertical">
+            <Setter Property="Template">
+                <ControlTemplate>
+                    <Border
+                        Width="{TemplateBinding Width}"
+                        Background="Transparent"
+                        UseLayoutRounding="False">
+                        
+                        <Grid 
+                            RowDefinitions="Auto,*,Auto">
+
+                            <Track 
+                                Grid.Row="1"
+                                Width="{StaticResource ScrollBarTrackWidth}"
+                                Value="{TemplateBinding Value, Mode=TwoWay}"
+                                Minimum="{TemplateBinding Minimum}"
+                                Maximum="{TemplateBinding Maximum}"
+                                Orientation="{TemplateBinding Orientation}"
+                                ViewportSize="{TemplateBinding ViewportSize}"
+                                HorizontalAlignment="Right"
+                                IsDirectionReversed="True">
+                                
+                                <Track.Transitions>
+                                    <Transitions>
+                                        <DoubleTransition
+                                            Property="Width"
+                                            Duration="0:0:0.2"
+                                            Delay="0:0:0.5">
+                    
+                                            <DoubleTransition.Easing>
+                                                <QuinticEaseOut/>
+                                            </DoubleTransition.Easing>
+                                        </DoubleTransition>
+                                        
+                                        <DoubleTransition
+                                            Property="Opacity"
+                                            Duration="0:0:0.2"
+                                            Delay="0:0:0.1">
+                    
+                                            <DoubleTransition.Easing>
+                                                <QuinticEaseOut/>
+                                            </DoubleTransition.Easing>
+                                        </DoubleTransition>
+                                    </Transitions>
+                                </Track.Transitions>
+                                
+                                <Track.DecreaseButton>
+                                    <RepeatButton x:Name="PART_PageUpButton"
+                                                  Background="Transparent"
+                                                  Focusable="False"/>
+                                </Track.DecreaseButton>
+                                
+                                <Track.IncreaseButton>
+                                    <RepeatButton x:Name="PART_PageDownButton"
+                                                  Background="Transparent"
+                                                  Focusable="False"/>
+                                </Track.IncreaseButton>
+                                
+                                <Thumb x:Name="Thumb"
+                                       HorizontalAlignment="Stretch"/>
+                            </Track>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter>
+        </Style>
+        
+        <Style Selector="^:horizontal">
+            <Setter Property="Template">
+                <ControlTemplate>
+                    <Border
+                        Width="{TemplateBinding Width}"
+                        Background="Transparent" 
+                        UseLayoutRounding="False">
+                        
+                        <Grid>
+                            <Track
+                                Width="{StaticResource ScrollBarTrackWidth}"
+                                Value="{TemplateBinding Value, Mode=TwoWay}"
+                                Minimum="{TemplateBinding Minimum}"
+                                Maximum="{TemplateBinding Maximum}"
+                                Orientation="{TemplateBinding Orientation}"
+                                ViewportSize="{TemplateBinding ViewportSize}"
+                                IsDirectionReversed="False">
+                                
+                                <Track.Transitions>
+                                    <Transitions>
+                                        <DoubleTransition
+                                            Property="Width"
+                                            Duration="0:0:0.2"
+                                            Delay="0:0:0.5">
+                    
+                                            <DoubleTransition.Easing>
+                                                <QuinticEaseOut/>
+                                            </DoubleTransition.Easing>
+                                        </DoubleTransition>
+                                        
+                                        <DoubleTransition
+                                            Property="Opacity"
+                                            Duration="0:0:0.2"
+                                            Delay="0:0:0.1">
+                                            
+                                            <DoubleTransition.Easing>
+                                                <QuinticEaseOut/>
+                                            </DoubleTransition.Easing>
+                                        </DoubleTransition>
+                                    </Transitions>
+                                </Track.Transitions>
+                                
+                                <Track.DecreaseButton>
+                                    <RepeatButton x:Name="PART_PageUpButton"
+                                                  Background="Transparent"
+                                                  Focusable="False"/>
+                                </Track.DecreaseButton>
+                                
+                                <Track.IncreaseButton>
+                                    <RepeatButton x:Name="PART_PageDownButton"
+                                                  Background="Transparent"
+                                                  Focusable="False"/>
+                                </Track.IncreaseButton>
+                                
+                                <Thumb x:Name="Thumb"/>
+                            </Track>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter>
+        </Style>
+        
+        <Style Selector="^ Track:pointerover">
+            <Setter Property="Width" Value="{StaticResource ScrollBarWidth}"/>
+        </Style>
+        
+        <Style Selector="^[AllowAutoHide=True] Track">
+            <Setter Property="Opacity" Value="0"/>
+        </Style>
+    </Style>
+</Styles>
