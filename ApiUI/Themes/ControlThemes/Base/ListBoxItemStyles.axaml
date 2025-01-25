@@ -1,0 +1,93 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <Design.PreviewWith>
+        <Border
+            Width="300"
+            Height="200"
+            Padding="20, 0">
+            
+            <ListBox>
+                <ListBoxItem 
+                    Content="Disabled"
+                    IsEnabled="False"/>
+                    
+                <ListBoxItem 
+                    Background="Crimson"
+                    Content="Test 1"/>
+                
+                <ListBoxItem
+                    Content="Test 2"/>
+                
+                <ListBoxItem
+                    Content="Test 2"/>
+            </ListBox>
+        </Border>
+    </Design.PreviewWith>
+
+    
+    
+    <Style Selector="ListBoxItem">
+        <Setter Property="CornerRadius" Value="{StaticResource ListBoxItemCornerRadius}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="BorderThickness" Value="{StaticResource ListBoxItemBorderThickness}"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="Foreground" Value="{DynamicResource ApiTextBrush}"/>
+        <Setter Property="Background" Value="{DynamicResource ListBoxItemBackgroundBrush}"/>
+        <Setter Property="Padding" Value="{StaticResource ListBoxItemPadding}"/>
+        
+        <Setter Property="Transitions">
+            <Transitions>
+                <BrushTransition
+                    Property="Background"
+                    Duration="0:0:0.2">
+                    
+                    <BrushTransition.Easing>
+                        <QuinticEaseOut/>
+                    </BrushTransition.Easing>
+                </BrushTransition>
+            </Transitions>
+        </Setter>
+        
+        <Setter Property="Template">
+            <ControlTemplate>
+                <ContentPresenter x:Name="PART_ContentPresenter"
+                                  Content="{TemplateBinding Content}"
+                                  ContentTemplate="{TemplateBinding ContentTemplate}"
+                                  CornerRadius="{TemplateBinding CornerRadius}"
+                                  Foreground="{TemplateBinding Foreground}"
+                                  HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                  VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                                  BorderThickness="{TemplateBinding BorderThickness}"
+                                  BorderBrush="{TemplateBinding BorderBrush}"
+                                  Background="{TemplateBinding Background}"
+                                  Padding="{TemplateBinding Padding}"/>
+            </ControlTemplate>
+        </Setter>
+        
+        <Style Selector="^:pointerover">
+            <Setter Property="Background" Value="{DynamicResource ListBoxItemHoverBackgroundBrush}"/>
+        </Style>
+        
+        <Style Selector="^:pressed">
+            <Setter Property="Background" Value="{DynamicResource ListBoxItemPressedBackgroundBrush}"/>
+        </Style>
+        
+        <Style Selector="^:selected">
+            <Setter Property="Background" Value="{DynamicResource ListBoxItemSelectedBackgroundBrush}"/>
+            
+            <Style Selector="^:pointerover">
+                <Setter Property="Background" Value="{DynamicResource ListBoxItemSelectedHoverBackgroundBrush}"/>
+            </Style>
+            
+            <Style Selector="^:pressed">
+                <Setter Property="Background" Value="{DynamicResource ListBoxItemSelectedPressedBackgroundBrush}"/>
+            </Style>
+        </Style>
+        
+        <Style Selector="^:disabled /template/ ContentPresenter">
+            <Setter Property="Foreground" Value="{DynamicResource ApiDisabledTextBrush}"/>
+        </Style>
+    </Style>
+</Styles>

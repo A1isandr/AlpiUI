@@ -23,25 +23,27 @@
     <CornerRadius x:Key="ButtonCornerRadius">20</CornerRadius>
     <CornerRadius x:Key="ButtonFocusAdornerCornerRadius">5</CornerRadius>
     <Thickness x:Key="ButtonBorderThickness">0</Thickness>
-    <Thickness x:Key="ButtonPadding">20, 5, 20, 5</Thickness>
+    <Thickness x:Key="ButtonPadding">20, 5</Thickness>
     <Thickness x:Key="ButtonFocusAdornerBorderThickness">2</Thickness>
     <SolidColorBrush x:Key="ButtonBackgroundBrush" Color="{DynamicResource ApiTransparentColor0}"/>
     <SolidColorBrush x:Key="ButtonHoverBackgroundBrush" Color="{DynamicResource ApiTransparentColor10}"/>
     <SolidColorBrush x:Key="ButtonPressedBackgroundBrush" Color="{DynamicResource ApiTransparentColor20}"/>
     <SolidColorBrush x:Key="ButtonFocusAdornerFocusVisibleBorderBrush" Color="{DynamicResource ApiFocusColor}"/>
     
-    <!-- TextBox -->
-    <x:Double x:Key="TextBoxMinHeight">40</x:Double>
-    <x:Double x:Key="TextBoxFontSize">14</x:Double>
-    <x:Double x:Key="TextBoxFloatingWatermarkBorderActivatedHeight">20</x:Double>
-    <CornerRadius x:Key="TextBoxCornerRadius">20</CornerRadius>
-    <Thickness x:Key="TextBoxBorderThickness">2</Thickness>
-    <Thickness x:Key="TextBoxPadding">20, 5, 20, 5</Thickness>
-    <SolidColorBrush x:Key="TextBoxCaretBrush" Color="{DynamicResource ApiTextColor}"/>
-    <SolidColorBrush x:Key="TextBoxWatermarkForegroundBrush" Color="{DynamicResource ApiTransparentColor80}"/>
-    <SolidColorBrush x:Key="TextBoxFloatingWatermarkNotEmptyForegroundBrush" Color="{DynamicResource ApiTransparentColor50}"/>
-    <SolidColorBrush x:Key="TextBoxBorderBrush" Color="{DynamicResource ApiTransparentColor80}"/>
-    <SolidColorBrush x:Key="TextBoxValidationErrorBorderBrush" Color="{DynamicResource ApiDangerColor}"/>
+    <!-- ListBox -->
+    <CornerRadius x:Key="ListBoxCornerRadius">0</CornerRadius>
+    <Thickness x:Key="ListBoxBorderThickness">0</Thickness>
+    
+    <!-- ListBoxItem -->
+    <CornerRadius x:Key="ListBoxItemCornerRadius">20</CornerRadius>
+    <Thickness x:Key="ListBoxItemBorderThickness">0</Thickness>
+    <Thickness x:Key="ListBoxItemPadding">20, 10</Thickness>
+    <SolidColorBrush x:Key="ListBoxItemBackgroundBrush" Color="{DynamicResource ApiTransparentColor}"/>
+    <SolidColorBrush x:Key="ListBoxItemHoverBackgroundBrush" Color="{DynamicResource ApiTransparentColor10}"/>
+    <SolidColorBrush x:Key="ListBoxItemPressedBackgroundBrush" Color="{DynamicResource ApiTransparentColor20}"/>
+    <SolidColorBrush x:Key="ListBoxItemSelectedBackgroundBrush" Color="{DynamicResource ApiAccentColor50}"/>
+    <SolidColorBrush x:Key="ListBoxItemSelectedHoverBackgroundBrush" Color="{DynamicResource ApiAccentColor80}"/>
+    <SolidColorBrush x:Key="ListBoxItemSelectedPressedBackgroundBrush" Color="{DynamicResource ApiAccentColor}"/>
     
     <!-- ScrollBar -->
     <x:Double x:Key="ScrollBarWidth">10</x:Double>
@@ -50,4 +52,17 @@
     <SolidColorBrush x:Key="ScrollBarThumbBackgroundBrush" Color="{DynamicResource ApiTransparentColor50}"/>
     <SolidColorBrush x:Key="ScrollBarThumbHoverBackgroundBrush" Color="{DynamicResource ApiTransparentColor70}"/>
     <SolidColorBrush x:Key="ScrollBarThumbPressedBackgroundBrush" Color="{DynamicResource ApiTransparentColor90}"/>
+    
+    <!-- TextBox -->
+    <x:Double x:Key="TextBoxMinHeight">40</x:Double>
+    <x:Double x:Key="TextBoxFontSize">14</x:Double>
+    <x:Double x:Key="TextBoxFloatingWatermarkBorderActivatedHeight">20</x:Double>
+    <CornerRadius x:Key="TextBoxCornerRadius">20</CornerRadius>
+    <Thickness x:Key="TextBoxBorderThickness">2</Thickness>
+    <Thickness x:Key="TextBoxPadding">20, 5</Thickness>
+    <SolidColorBrush x:Key="TextBoxCaretBrush" Color="{DynamicResource ApiTextColor}"/>
+    <SolidColorBrush x:Key="TextBoxWatermarkForegroundBrush" Color="{DynamicResource ApiTransparentColor80}"/>
+    <SolidColorBrush x:Key="TextBoxFloatingWatermarkNotEmptyForegroundBrush" Color="{DynamicResource ApiTransparentColor50}"/>
+    <SolidColorBrush x:Key="TextBoxBorderBrush" Color="{DynamicResource ApiTransparentColor80}"/>
+    <SolidColorBrush x:Key="TextBoxValidationErrorBorderBrush" Color="{DynamicResource ApiDangerColor}"/>
 </ResourceDictionary>
