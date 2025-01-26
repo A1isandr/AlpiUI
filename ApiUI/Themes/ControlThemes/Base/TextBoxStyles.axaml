@@ -18,6 +18,7 @@
 	    <Setter Property="HorizontalContentAlignment" Value="Left"/>
 	    <Setter Property="VerticalContentAlignment" Value="Center"/>
 	    <Setter Property="FontSize" Value="{StaticResource TextBoxFontSize}"/>
+	    <Setter Property="FontWeight" Value="SemiBold"/>
 	    <Setter Property="TextWrapping" Value="NoWrap"/>
 	    <Setter Property="Foreground" Value="{DynamicResource ApiTextBrush}"/>
 	    <Setter Property="SelectionBrush" Value="{DynamicResource ApiAccentBrush}"/>
@@ -158,25 +159,23 @@
 										    </Style>
 									    </ScrollViewer.Styles>
 									    
-									    <Panel>
-									          <TextPresenter x:Name="PART_TextPresenter"
-									                         Text="{TemplateBinding Text, Mode=TwoWay}"
-									                         TextAlignment="{TemplateBinding TextAlignment}"
-									                         TextWrapping="{TemplateBinding TextWrapping}"
-									                         CaretBlinkInterval="{TemplateBinding CaretBlinkInterval}"
-									                         CaretIndex="{TemplateBinding CaretIndex}"
-									                         SelectionStart="{TemplateBinding SelectionStart}"
-									                         SelectionEnd="{TemplateBinding SelectionEnd}"
-									                         LineHeight="{TemplateBinding LineHeight}"
-									                         LetterSpacing="{TemplateBinding LetterSpacing}"
-									                         PasswordChar="{TemplateBinding PasswordChar}"
-									                         RevealPassword="{TemplateBinding RevealPassword}"
-									                         SelectionBrush="{TemplateBinding SelectionBrush}"
-									                         SelectionForegroundBrush="{TemplateBinding SelectionForegroundBrush}"
-									                         CaretBrush="{TemplateBinding CaretBrush}"
-									                         HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-									                         VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-								        </Panel>
+							            <TextPresenter x:Name="PART_TextPresenter"
+							                           Text="{TemplateBinding Text, Mode=TwoWay}"
+							                           TextAlignment="{TemplateBinding TextAlignment}"
+							                           TextWrapping="{TemplateBinding TextWrapping}"
+							                           CaretBlinkInterval="{TemplateBinding CaretBlinkInterval}"
+							                           CaretIndex="{TemplateBinding CaretIndex}"
+							                           SelectionStart="{TemplateBinding SelectionStart}"
+							                           SelectionEnd="{TemplateBinding SelectionEnd}"
+							                           LineHeight="{TemplateBinding LineHeight}"
+							                           LetterSpacing="{TemplateBinding LetterSpacing}"
+							                           PasswordChar="{TemplateBinding PasswordChar}"
+							                           RevealPassword="{TemplateBinding RevealPassword}"
+							                           SelectionBrush="{TemplateBinding SelectionBrush}"
+							                           SelectionForegroundBrush="{TemplateBinding SelectionForegroundBrush}"
+							                           CaretBrush="{TemplateBinding CaretBrush}"
+							                           HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+							                           VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
 								    </ScrollViewer>
 							    </Grid>
 								
