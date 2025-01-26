@@ -11,20 +11,15 @@
                 
                 <StackPanel>
                     <ListBoxItem>Test 1</ListBoxItem>
-                    <ListBoxItem>Test 1</ListBoxItem>
-                    <ListBoxItem>Test 1</ListBoxItem>
-                    <ListBoxItem>Test 1</ListBoxItem>
-                    <ListBoxItem>Test 1</ListBoxItem>
-                    <ListBoxItem>Test 1</ListBoxItem>
-                    <ListBoxItem>Test 1</ListBoxItem>
-                    <ListBoxItem>Test 1</ListBoxItem>
-                    <ListBoxItem>Test 1</ListBoxItem>
-                    <ListBoxItem>Test 1</ListBoxItem>
-                    <ListBoxItem>Test 1</ListBoxItem>
-                    <ListBoxItem>Test 1</ListBoxItem>
-                    <ListBoxItem>Test 1</ListBoxItem>
-                    <ListBoxItem>Test 1</ListBoxItem>
-                    <ListBoxItem>Test 1</ListBoxItem>
+                    <ListBoxItem>Test 2</ListBoxItem>
+                    <ListBoxItem>Test 3</ListBoxItem>
+                    <ListBoxItem>Test 4</ListBoxItem>
+                    <ListBoxItem>Test 5</ListBoxItem>
+                    <ListBoxItem>Test 6</ListBoxItem>
+                    <ListBoxItem>Test 7</ListBoxItem>
+                    <ListBoxItem>Test 8</ListBoxItem>
+                    <ListBoxItem>Test 9</ListBoxItem>
+                    <ListBoxItem>Test 10</ListBoxItem>
                 </StackPanel>
             </ScrollViewer>
         </Border>
