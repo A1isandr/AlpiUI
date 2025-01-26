@@ -30,15 +30,6 @@
             </Transitions>
         </Setter>
         
-        <Setter Property="Template">
-            <ControlTemplate>
-                <Border
-                    Width="{TemplateBinding Width}"
-                    CornerRadius="{TemplateBinding CornerRadius}"
-                    Background="{TemplateBinding Background}"/>
-            </ControlTemplate>
-        </Setter>
-        
         <Style Selector="^:pointerover">
             <Setter Property="Background" Value="{DynamicResource ScrollBarThumbHoverBackgroundBrush}"/>
         </Style>
@@ -51,9 +42,9 @@
     
     
     <Style Selector="ScrollBar">
-        <Setter Property="Width" Value="{StaticResource ScrollBarWidth}"/>
-        
         <Style Selector="^:vertical">
+            <Setter Property="Width" Value="{StaticResource ScrollBarWidth}"/>
+            
             <Setter Property="Template">
                 <ControlTemplate>
                     <Border
@@ -66,31 +57,18 @@
 
                             <Track 
                                 Grid.Row="1"
-                                Width="{StaticResource ScrollBarTrackWidth}"
                                 Value="{TemplateBinding Value, Mode=TwoWay}"
                                 Minimum="{TemplateBinding Minimum}"
                                 Maximum="{TemplateBinding Maximum}"
                                 Orientation="{TemplateBinding Orientation}"
                                 ViewportSize="{TemplateBinding ViewportSize}"
-                                HorizontalAlignment="Right"
                                 IsDirectionReversed="True">
                                 
                                 <Track.Transitions>
                                     <Transitions>
                                         <DoubleTransition
-                                            Property="Width"
-                                            Duration="0:0:0.2"
-                                            Delay="0:0:0.5">
-                    
-                                            <DoubleTransition.Easing>
-                                                <QuinticEaseOut/>
-                                            </DoubleTransition.Easing>
-                                        </DoubleTransition>
-                                        
-                                        <DoubleTransition
                                             Property="Opacity"
-                                            Duration="0:0:0.2"
-                                            Delay="0:0:0.2">
+                                            Duration="0:0:0.2">
                     
                                             <DoubleTransition.Easing>
                                                 <QuinticEaseOut/>
@@ -112,7 +90,37 @@
                                 </Track.IncreaseButton>
                                 
                                 <Thumb x:Name="Thumb"
-                                       HorizontalAlignment="Stretch"/>
+                                       Width="{StaticResource ScrollBarThumbWidth}"
+                                       HorizontalAlignment="Right">
+                                    
+                                    <Thumb.Transitions>
+                                        <Transitions>
+                                            <DoubleTransition
+                                                Property="Width"
+                                                Duration="0:0:0.2">
+                                
+                                                <DoubleTransition.Easing>
+                                                    <QuinticEaseOut/>
+                                                </DoubleTransition.Easing>
+                                            </DoubleTransition>
+                                        </Transitions>
+                                    </Thumb.Transitions>
+                                    
+                                    <Thumb.Template>
+                                        <ControlTemplate>
+                                            <Border x:Name="Thumb"
+                                                    Width="{TemplateBinding Width}"
+                                                    CornerRadius="{TemplateBinding CornerRadius}"
+                                                    Background="{TemplateBinding Background}"/>
+                                        </ControlTemplate>
+                                    </Thumb.Template>
+                                    
+                                    <Thumb.Styles>
+                                        <Style Selector="Thumb:pointerover">
+                                            <Setter Property="Width" Value="{StaticResource ScrollBarWidth}"/>
+                                        </Style>
+                                    </Thumb.Styles>
+                                </Thumb>
                             </Track>
                         </Grid>
                     </Border>
@@ -121,16 +129,20 @@
         </Style>
         
         <Style Selector="^:horizontal">
+            <Setter Property="Height" Value="{StaticResource ScrollBarHeight}"/>
+            
             <Setter Property="Template">
                 <ControlTemplate>
                     <Border
-                        Width="{TemplateBinding Width}"
-                        Background="Transparent" 
-                        UseLayoutRounding="False">
+                        Height="{TemplateBinding Height}"
+                        UseLayoutRounding="False"
+                        HorizontalAlignment="Stretch">
                         
-                        <Grid>
+                        <Grid
+                            ColumnDefinitions="Auto, *, Auto">
+                            
                             <Track
-                                Width="{StaticResource ScrollBarTrackWidth}"
+                                Grid.Column="1"
                                 Value="{TemplateBinding Value, Mode=TwoWay}"
                                 Minimum="{TemplateBinding Minimum}"
                                 Maximum="{TemplateBinding Maximum}"
@@ -141,19 +153,8 @@
                                 <Track.Transitions>
                                     <Transitions>
                                         <DoubleTransition
-                                            Property="Width"
-                                            Duration="0:0:0.2"
-                                            Delay="0:0:0.5">
-                    
-                                            <DoubleTransition.Easing>
-                                                <QuinticEaseOut/>
-                                            </DoubleTransition.Easing>
-                                        </DoubleTransition>
-                                        
-                                        <DoubleTransition
                                             Property="Opacity"
-                                            Duration="0:0:0.2"
-                                            Delay="0:0:0.2">
+                                            Duration="0:0:0.2">
                                             
                                             <DoubleTransition.Easing>
                                                 <QuinticEaseOut/>
@@ -174,16 +175,43 @@
                                                   Focusable="False"/>
                                 </Track.IncreaseButton>
                                 
-                                <Thumb x:Name="Thumb"/>
+                                <Thumb x:Name="Thumb"
+                                       Height="{StaticResource ScrollBarThumbHeight}"
+                                       VerticalAlignment="Bottom">
+                                    
+                                    <Thumb.Transitions>
+                                        <Transitions>
+                                            <DoubleTransition
+                                                Property="Height"
+                                                Duration="0:0:0.2">
+                                
+                                                <DoubleTransition.Easing>
+                                                    <QuinticEaseOut/>
+                                                </DoubleTransition.Easing>
+                                            </DoubleTransition>
+                                        </Transitions>
+                                    </Thumb.Transitions>
+                                    
+                                    <Thumb.Template>
+                                        <ControlTemplate>
+                                            <Border x:Name="Thumb"
+                                                    Height="{TemplateBinding Height}"
+                                                    CornerRadius="{TemplateBinding CornerRadius}"
+                                                    Background="{TemplateBinding Background}"/>
+                                        </ControlTemplate>
+                                    </Thumb.Template>
+                                    
+                                    <Thumb.Styles>
+                                        <Style Selector="Thumb:pointerover">
+                                            <Setter Property="Height" Value="{StaticResource ScrollBarHeight}"/>
+                                        </Style>
+                                    </Thumb.Styles>
+                                </Thumb>
                             </Track>
                         </Grid>
                     </Border>
                 </ControlTemplate>
             </Setter>
-        </Style>
-        
-        <Style Selector="^ Track:pointerover">
-            <Setter Property="Width" Value="{StaticResource ScrollBarWidth}"/>
         </Style>
         
         <Style Selector="^[AllowAutoHide=True] Track">
