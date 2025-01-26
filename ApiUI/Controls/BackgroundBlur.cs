@@ -29,7 +29,8 @@ public class BackgroundBlur : Control
     {
         AffectsRender<BackgroundBlur>(BlurRadiusProperty);
     }
-        
+    
+    /// <inheritdoc/>
     public override void Render(DrawingContext context)
     {
         context.Custom(new BackdropBlurDrawOperation(Bounds, BlurRadius));
@@ -56,10 +57,13 @@ internal class BackdropBlurDrawOperation(Rect controlBounds, double blurRadius) 
                Math.Abs(operation._blurRadius - _blurRadius) < 1e-6;
     }
 
+    /// <inheritdoc/>
     public void Dispose() { }
 
+    /// <inheritdoc/>
     public bool HitTest(Point p) => _controlBounds.Contains(p);
     
+    /// <inheritdoc/>
     public void Render(ImmediateDrawingContext context)
     {
         var leaseFeature = context.TryGetFeature<ISkiaSharpApiLeaseFeature>();

@@ -15,7 +15,7 @@ public class TabView : SelectingItemsControl
 
     public TabView()
     {
-        // Будет работать только если в качестве ItemsPanel выступает Grid. 
+        // Will work only with grid as panel.
         ItemsPanelProperty.OverrideDefaultValue<TabView>(GridPanelTemplate);
         KeyboardNavigation.TabNavigationProperty.OverrideDefaultValue<TabView>(KeyboardNavigationMode.Once);
     }

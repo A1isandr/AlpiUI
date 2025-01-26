@@ -156,7 +156,6 @@ namespace ApiUI.Controls
                                     ? WindowState.Normal
                                     : WindowState.Maximized;
                                     break;
-                                // This doesn't work properly.
                                 case 0x0084:
                                     var point = new PixelPoint(
                                         (short)(ToInt32(lParam) & 0xffff),
