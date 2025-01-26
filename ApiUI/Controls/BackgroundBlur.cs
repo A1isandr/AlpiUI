@@ -8,6 +8,9 @@ using SkiaSharp;
 
 namespace ApiUI.Controls;
 
+/// <summary>
+/// Control with ability to blur background.
+/// </summary>
 public class BackgroundBlur : Control
 {
     /// <summary>

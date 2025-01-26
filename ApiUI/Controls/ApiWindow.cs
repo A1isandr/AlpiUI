@@ -11,6 +11,9 @@ using Avalonia.Threading;
 
 namespace ApiUI.Controls
 {
+    /// <summary>
+    /// Api window.
+    /// </summary>
     [TemplatePart(PartMinimizeButton, typeof(Button), IsRequired = true)]
     [TemplatePart(PartMaximizeButton, typeof(Button), IsRequired = true)]
     [TemplatePart(PartCloseButton, typeof(Button), IsRequired = true)]
@@ -24,6 +27,9 @@ namespace ApiUI.Controls
         private const string PartCloseButton = "PART_CloseButton";
         private const string PartTitleBarBackground = "PART_TitleBarBackground";
         
+        /// <summary>
+        /// Returns the type of the style key for the <see cref="ApiWindow"/> class.
+        /// </summary>
         protected override Type StyleKeyOverride => typeof(ApiWindow);
 
         /// <summary>
@@ -89,6 +95,9 @@ namespace ApiUI.Controls
         
         
         
+        /// <summary>
+        /// Api window constructor.
+        /// </summary>
         public ApiWindow()
         {
             BackgroundAcrylicMaterial = new ExperimentalAcrylicMaterial
@@ -112,6 +121,7 @@ namespace ApiUI.Controls
         
         
         
+        /// <inheritdoc/>
         protected override void OnLoaded(RoutedEventArgs e)
         {
             base.OnLoaded(e);
@@ -125,6 +135,7 @@ namespace ApiUI.Controls
             }
         }
         
+        /// <inheritdoc/>
         protected override void OnApplyTemplate(TemplateAppliedEventArgs e)
         {
             base.OnApplyTemplate(e);

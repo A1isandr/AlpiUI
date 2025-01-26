@@ -6,20 +6,28 @@ using Avalonia.Input;
 // ReSharper disable CheckNamespace
 namespace ApiUI.Controls;
 
+/// <summary>
+/// Control that displays a tab strip with the ability to create new or close tabs.
+/// Work in progress. 
+/// </summary>
 public class TabView : SelectingItemsControl
 {
     private static readonly Grid GridPanel = new();
     
     private static readonly FuncTemplate<Panel?> GridPanelTemplate =
         new(() => GridPanel);
-
+    
+    /// <summary>
+    /// TabView constructor.
+    /// </summary>
     public TabView()
     {
         // Will work only with grid as panel.
         ItemsPanelProperty.OverrideDefaultValue<TabView>(GridPanelTemplate);
         KeyboardNavigation.TabNavigationProperty.OverrideDefaultValue<TabView>(KeyboardNavigationMode.Once);
     }
-
+    
+    /// <inheritdoc/>
     protected override Control CreateContainerForItemOverride(object? item, int index, object? recycleKey)
     {
         var tabBoxItem = new TabViewItem();
@@ -30,6 +38,7 @@ public class TabView : SelectingItemsControl
         return tabBoxItem;
     }
 
+    /// <inheritdoc/>
     protected override bool NeedsContainerOverride(object? item, int index, out object? recycleKey)
     {
         return NeedsContainer<TabViewItem>(item, out recycleKey);

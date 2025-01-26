@@ -4,6 +4,9 @@ using Avalonia.Input;
 // ReSharper disable CheckNamespace
 namespace ApiUI.Controls;
 
+/// <summary>
+/// An item in a <see cref="TabView"/>. 
+/// </summary>
 public class TabViewItem : ListBoxItem
 {
     /// <inheritdoc/>

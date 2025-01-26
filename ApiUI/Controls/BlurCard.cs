@@ -4,6 +4,9 @@ using Avalonia.Controls.Metadata;
 
 namespace ApiUI.Controls;
 
+/// <summary>
+/// Card with blurred background.
+/// </summary>
 [TemplatePart("PART_BackgroundBlur", typeof(BackgroundBlur), IsRequired = true)]
 public class BlurCard : ContentControl
 {
