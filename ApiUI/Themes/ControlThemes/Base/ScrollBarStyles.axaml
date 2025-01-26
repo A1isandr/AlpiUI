@@ -43,7 +43,7 @@
     
     <Style Selector="ScrollBar">
         <Style Selector="^:vertical">
-            <Setter Property="Width" Value="{StaticResource ScrollBarWidth}"/>
+            <Setter Property="Width" Value="{StaticResource ScrollBarVerticalWidth}"/>
             
             <Setter Property="Template">
                 <ControlTemplate>
@@ -90,7 +90,8 @@
                                 </Track.IncreaseButton>
                                 
                                 <Thumb x:Name="Thumb"
-                                       Width="{StaticResource ScrollBarThumbWidth}"
+                                       Width="{StaticResource ScrollBarVerticalThumbWidth}"
+                                       MinHeight="{StaticResource ScrollBarVerticalThumbMinHeight}"
                                        HorizontalAlignment="Right">
                                     
                                     <Thumb.Transitions>
@@ -110,6 +111,7 @@
                                         <ControlTemplate>
                                             <Border x:Name="Thumb"
                                                     Width="{TemplateBinding Width}"
+                                                    MinHeight="{TemplateBinding MinHeight}"
                                                     CornerRadius="{TemplateBinding CornerRadius}"
                                                     Background="{TemplateBinding Background}"/>
                                         </ControlTemplate>
@@ -117,7 +119,7 @@
                                     
                                     <Thumb.Styles>
                                         <Style Selector="Thumb:pointerover">
-                                            <Setter Property="Width" Value="{StaticResource ScrollBarWidth}"/>
+                                            <Setter Property="Width" Value="{StaticResource ScrollBarVerticalWidth}"/>
                                         </Style>
                                     </Thumb.Styles>
                                 </Thumb>
@@ -129,7 +131,7 @@
         </Style>
         
         <Style Selector="^:horizontal">
-            <Setter Property="Height" Value="{StaticResource ScrollBarHeight}"/>
+            <Setter Property="Height" Value="{StaticResource ScrollBarHorizontalHeight}"/>
             
             <Setter Property="Template">
                 <ControlTemplate>
@@ -176,7 +178,8 @@
                                 </Track.IncreaseButton>
                                 
                                 <Thumb x:Name="Thumb"
-                                       Height="{StaticResource ScrollBarThumbHeight}"
+                                       MinWidth="{StaticResource ScrollBarHorizontalThumbMinWidth}"
+                                       Height="{StaticResource ScrollBarHorizontalThumbHeight}"
                                        VerticalAlignment="Bottom">
                                     
                                     <Thumb.Transitions>
@@ -195,6 +198,7 @@
                                     <Thumb.Template>
                                         <ControlTemplate>
                                             <Border x:Name="Thumb"
+                                                    MinWidth="{TemplateBinding MinWidth}"
                                                     Height="{TemplateBinding Height}"
                                                     CornerRadius="{TemplateBinding CornerRadius}"
                                                     Background="{TemplateBinding Background}"/>
@@ -203,7 +207,7 @@
                                     
                                     <Thumb.Styles>
                                         <Style Selector="Thumb:pointerover">
-                                            <Setter Property="Height" Value="{StaticResource ScrollBarHeight}"/>
+                                            <Setter Property="Height" Value="{StaticResource ScrollBarHorizontalHeight}"/>
                                         </Style>
                                     </Thumb.Styles>
                                 </Thumb>
