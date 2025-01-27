@@ -1,11 +1,34 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <TargetFramework>net8.0</TargetFramework>
+        <LangVersion>13</LangVersion>
+    </PropertyGroup>
+    
+    <PropertyGroup>
+        <Version>0.1.0</Version>
+        <Title>Api UI</Title>
+        <Authors>AlPi</Authors>
+        <Description>Controls library for Avalonia UI.</Description>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageProjectUrl>https://github.com/A1isandr/ApiUI</PackageProjectUrl>
+        <PackageLicenseUrl>https://licenses.nuget.org/MIT</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/A1isandr/ApiUI</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>avalonia;avaloniaui;ui;controls;theme;library</PackageTags>
+    </PropertyGroup>
+    
+    <PropertyGroup>
+        <EnablePackageValidation>True</EnablePackageValidation>
+        <GenerateDocumentationFile>True</GenerateDocumentationFile>
     </PropertyGroup>
 
+    <ItemGroup>
+        <None Include="README.md" Pack="true" PackagePath="../"/>
+    </ItemGroup>
+    
     <ItemGroup>
       <PackageReference Include="Avalonia" Version="11.2.3" />
       <PackageReference Include="Avalonia.Skia" Version="11.2.3" />
