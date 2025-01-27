@@ -13,7 +13,7 @@
         <Description>Controls library for Avalonia UI.</Description>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageProjectUrl>https://github.com/A1isandr/ApiUI</PackageProjectUrl>
-        <PackageLicenseUrl>https://licenses.nuget.org/MIT</PackageLicenseUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <RepositoryUrl>https://github.com/A1isandr/ApiUI</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageTags>avalonia;avaloniaui;ui;controls;theme;library</PackageTags>
