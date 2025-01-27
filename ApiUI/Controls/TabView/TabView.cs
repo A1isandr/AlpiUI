@@ -37,6 +37,18 @@ public class TabView : SelectingItemsControl
         
         return tabBoxItem;
     }
+    
+    /// <inheritdoc/>
+    protected override void ContainerForItemPreparedOverride(Control container, object? item, int index)
+    {
+        if (container is TabViewItem tabViewItem)
+        {
+            AddNewColumnToGrid();
+            SetColumnPropertyToTab(tabViewItem);
+        }
+        
+        base.ContainerForItemPreparedOverride(container, item, index);
+    }
 
     /// <inheritdoc/>
     protected override bool NeedsContainerOverride(object? item, int index, out object? recycleKey)

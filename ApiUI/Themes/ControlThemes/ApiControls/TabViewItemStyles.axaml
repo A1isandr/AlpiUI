@@ -3,29 +3,27 @@
                     xmlns:tabView="clr-namespace:ApiUI.Controls">
     
     <ControlTheme x:Key="{x:Type tabView:TabViewItem}" TargetType="{x:Type tabView:TabViewItem}">
-        <Setter Property="CornerRadius" Value="10"/>
+        <Setter Property="CornerRadius" Value="{StaticResource TabViewItemCornerRadius}"/>
         <Setter Property="ClipToBounds" Value="True"/>
         <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="HorizontalAlignment" Value="Stretch"/>
-        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="BorderThickness" Value="{StaticResource TabViewItemBorderThickness}"/>
         <Setter Property="BorderBrush" Value="Transparent"/>
-        <Setter Property="Background" Value="{DynamicResource TabBoxItemBackgroundBrush}"/>
-        <Setter Property="Padding" Value="10, 0, 5, 0"/>
+        <Setter Property="Foreground" Value="{DynamicResource ApiTextBrush}"/>
+        <Setter Property="Background" Value="{DynamicResource TabViewItemBackgroundBrush}"/>
+        <Setter Property="Padding" Value="{StaticResource TabViewItemPadding}"/>
         
         <Setter Property="Transitions">
             <Transitions>
                 <BrushTransition
                     Property="Background"
-                    Duration="0:0:0.1"/>
+                    Duration="0:0:0.2">
                     
-                <ThicknessTransition
-                    Property="Margin"
-                    Duration="0:0:0.1"/>
-                    
-                <CornerRadiusTransition
-                    Property="CornerRadius"
-                    Duration="0:0:0.1"/>
+                    <BrushTransition.Easing>
+                        <QuinticEaseOut/>
+                    </BrushTransition.Easing>
+                </BrushTransition>
             </Transitions>
         </Setter>
         
@@ -33,17 +31,13 @@
             <ControlTemplate>
                 <LayoutTransformControl x:Name="LayoutTransform">
                     <Panel>
-                        <Border x:Name="Separator"
-                                BorderBrush="{DynamicResource WhiteBrush20}"
-                                Margin="0, 0, 0, 2"/>
-                    
                         <Border x:Name="Border"
                                 CornerRadius="{TemplateBinding CornerRadius}"
                                 ClipToBounds="{TemplateBinding ClipToBounds}"
                                 BorderThickness="{TemplateBinding BorderThickness}"
                                 BorderBrush="{TemplateBinding BorderBrush}"
                                 Background="{TemplateBinding Background}"
-                                Margin="5, 0, 5, 2">
+                                Padding="0, 0, 5, 0">
                             
                             <Grid 
                                 ColumnDefinitions="*, Auto">
@@ -66,9 +60,9 @@
                                         HorizontalAlignment="Right"
                                         VerticalAlignment="Center"
                                         Opacity="0"
-                                        Margin="0, 0, 5, 0">
+                                        Padding="5">
                                 
-                                    <TextBlock Classes="Glyph"
+                                    <TextBlock Classes="GlyphIcon"
                                                Text=""/>
                                 </Button>
                             </Grid>
@@ -79,7 +73,7 @@
         </Setter>
         
         <Style Selector="^:pointerover">
-            <Setter Property="Background" Value="{DynamicResource TabBoxItemHoverBackgroundBrush}"/>
+            <Setter Property="Background" Value="{DynamicResource TabViewItemHoverBackgroundBrush}"/>
             
             <Style Selector="^ /template/ Button#PART_CloseButton">
                 <Setter Property="Opacity" Value="1"/>
@@ -87,27 +81,18 @@
         </Style>
         
         <Style Selector="^:pressed">
-            <Setter Property="Background" Value="{DynamicResource TabBoxItemPressedBackgroundBrush}"/>
+            <Setter Property="Background" Value="{DynamicResource TabViewItemPressedBackgroundBrush}"/>
         </Style>
         
         <Style Selector="^:selected">
-            <Setter Property="CornerRadius" Value="10, 10, 0, 0"/>
-            <Setter Property="Background" Value="{DynamicResource TabBoxItemSelectedBackgroundBrush}"/>
+            <Setter Property="Background" Value="{DynamicResource TabViewItemSelectedBackgroundBrush}"/>
             
-            <Style Selector="^ /template/ Border#Border">
-                <Setter Property="Margin" Value="5, 0, 5, 0"/>
+            <Style Selector="^:pointerover">
+                <Setter Property="Background" Value="{DynamicResource TabViewItemSelectedHoverBackgroundBrush}"/>
             </Style>
-        </Style>
-        
-        <Style Selector="^:nth-child(even):not(:nth-last-child(1))">
-            <Style Selector="^ /template/ Border#Separator">
-                <Setter Property="BorderThickness" Value="2, 0, 2, 0"/>
-            </Style>
-        </Style>
-        
-        <Style Selector="^:nth-last-child(2):not(:nth-child(even))">
-            <Style Selector="^ /template/ Border#Separator">
-                <Setter Property="BorderThickness" Value="0, 0, 2, 0"/>
+            
+            <Style Selector="^:pressed">
+                <Setter Property="Background" Value="{DynamicResource TabViewItemSelectedPressedBackgroundBrush}"/>
             </Style>
         </Style>
         

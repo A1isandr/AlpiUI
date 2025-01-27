@@ -1,14 +1,24 @@
 ﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:tabView="clr-namespace:ApiUI.Controls">
+                    xmlns:api="clr-namespace:ApiUI.Controls">
     
-    <ControlTheme x:Key="{x:Type tabView:TabView}" TargetType="{x:Type tabView:TabView}">
-        <Setter Property="CornerRadius" Value="0"/>
+    <Design.PreviewWith>
+        <Border Padding="20">
+            <api:TabView>
+                <api:TabViewItem>Tab 1</api:TabViewItem>
+                <api:TabViewItem>Tab 2</api:TabViewItem>
+                <api:TabViewItem>Tab 3</api:TabViewItem>
+            </api:TabView>
+        </Border>
+    </Design.PreviewWith>
+    
+    <ControlTheme x:Key="{x:Type api:TabView}" TargetType="{x:Type api:TabView}">
+        <Setter Property="CornerRadius" Value="{StaticResource TabViewCornerRadius}"/>
         <Setter Property="ClipToBounds" Value="True"/>
-        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="BorderThickness" Value="{StaticResource TabViewBorderThickness}"/>
         <Setter Property="BorderBrush" Value="Transparent"/>
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Padding" Value="{StaticResource TabViewPadding}"/>
         
         <Setter Property="Template">
             <ControlTemplate>

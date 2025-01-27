@@ -57,6 +57,22 @@
     <SolidColorBrush x:Key="ScrollBarThumbHoverBackgroundBrush" Color="{DynamicResource ApiTransparentColor70}"/>
     <SolidColorBrush x:Key="ScrollBarThumbPressedBackgroundBrush" Color="{DynamicResource ApiTransparentColor90}"/>
     
+    <!-- TabView -->
+    <CornerRadius x:Key="TabViewCornerRadius">0</CornerRadius>
+    <Thickness x:Key="TabViewBorderThickness">0</Thickness>
+    <Thickness x:Key="TabViewPadding">0</Thickness>
+    
+    <!-- TabViewItem -->
+    <CornerRadius x:Key="TabViewItemCornerRadius">20</CornerRadius>
+    <Thickness x:Key="TabViewItemBorderThickness">0</Thickness>
+    <Thickness x:Key="TabViewItemPadding">20, 5</Thickness>
+    <SolidColorBrush x:Key="TabViewItemBackgroundBrush" Color="{DynamicResource ApiTransparentColor0}"/>
+    <SolidColorBrush x:Key="TabViewItemHoverBackgroundBrush" Color="{DynamicResource ApiTransparentColor10}"/>
+    <SolidColorBrush x:Key="TabViewItemPressedBackgroundBrush" Color="{DynamicResource ApiTransparentColor20}"/>
+    <SolidColorBrush x:Key="TabViewItemSelectedBackgroundBrush" Color="{DynamicResource ApiAccentColor50}"/>
+    <SolidColorBrush x:Key="TabViewItemSelectedHoverBackgroundBrush" Color="{DynamicResource ApiAccentColor80}"/>
+    <SolidColorBrush x:Key="TabViewItemSelectedPressedBackgroundBrush" Color="{DynamicResource ApiAccentColor}"/>
+    
     <!-- TextBox -->
     <x:Double x:Key="TextBoxMinHeight">40</x:Double>
     <x:Double x:Key="TextBoxFontSize">14</x:Double>
