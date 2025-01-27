@@ -8,17 +8,17 @@
             <Color x:Key="ApiBackgroundColor">#FAFAFA</Color>
             <Color x:Key="ApiFocusColor">#000000</Color>
             
-            <Color x:Key="ApiTransparentColor100">#FF000000</Color>
-            <Color x:Key="ApiTransparentColor90"> #E6000000</Color>
-            <Color x:Key="ApiTransparentColor80"> #CC000000</Color>
-            <Color x:Key="ApiTransparentColor70"> #B3000000</Color>
-            <Color x:Key="ApiTransparentColor60"> #99000000</Color>
-            <Color x:Key="ApiTransparentColor50"> #80000000</Color>
-            <Color x:Key="ApiTransparentColor40"> #66000000</Color>
-            <Color x:Key="ApiTransparentColor30"> #4D000000</Color>
-            <Color x:Key="ApiTransparentColor20"> #33000000</Color>
-            <Color x:Key="ApiTransparentColor10"> #1A000000</Color>
-            <Color x:Key="ApiTransparentColor0">  #00000000</Color>
+            <Color x:Key="ApiTransparentColor100">#FF1C1C1C</Color>
+            <Color x:Key="ApiTransparentColor90"> #E61C1C1C</Color>
+            <Color x:Key="ApiTransparentColor80"> #CC1C1C1C</Color>
+            <Color x:Key="ApiTransparentColor70"> #B31C1C1C</Color>
+            <Color x:Key="ApiTransparentColor60"> #991C1C1C</Color>
+            <Color x:Key="ApiTransparentColor50"> #801C1C1C</Color>
+            <Color x:Key="ApiTransparentColor40"> #661C1C1C</Color>
+            <Color x:Key="ApiTransparentColor30"> #4D1C1C1C</Color>
+            <Color x:Key="ApiTransparentColor20"> #331C1C1C</Color>
+            <Color x:Key="ApiTransparentColor10"> #1A1C1C1C</Color>
+            <Color x:Key="ApiTransparentColor0">  #001C1C1C</Color>
         </ResourceDictionary>
         
         <ResourceDictionary x:Key="Dark">

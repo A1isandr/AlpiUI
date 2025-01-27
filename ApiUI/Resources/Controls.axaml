@@ -55,7 +55,7 @@
     <CornerRadius x:Key="ScrollBarThumbCornerRadius">0</CornerRadius>
     <SolidColorBrush x:Key="ScrollBarThumbBackgroundBrush" Color="{DynamicResource ApiTransparentColor50}"/>
     <SolidColorBrush x:Key="ScrollBarThumbHoverBackgroundBrush" Color="{DynamicResource ApiTransparentColor70}"/>
-    <SolidColorBrush x:Key="ScrollBarThumbPressedBackgroundBrush" Color="{DynamicResource ApiTransparentColor90}"/>
+    <SolidColorBrush x:Key="ScrollBarThumbPressedBackgroundBrush" Color="{DynamicResource ApiTransparentColor80}"/>
     
     <!-- TabView -->
     <CornerRadius x:Key="TabViewCornerRadius">0</CornerRadius>
