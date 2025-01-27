@@ -80,7 +80,7 @@
 									Content="{TemplateBinding InnerLeftContent}"
 								    VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"/>
 							    
-							    <Grid x:Name="PART_InnerDockPanel"
+							    <Grid x:Name="PART_InnerGrid"
 							          Grid.Column="1"
 							          RowDefinitions="Auto, *"
 							          Margin="{TemplateBinding Padding}">
@@ -105,12 +105,12 @@
 								    
 								    <TextBlock x:Name="PART_Watermark"
 								               Grid.Row="1"
-								               Opacity="0.5"
 								               Text="{TemplateBinding Watermark}"
 								               TextAlignment="{TemplateBinding TextAlignment}"
 								               TextWrapping="{TemplateBinding TextWrapping}"
 								               HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-								               VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+								               VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+								               Opacity="{StaticResource TextBoxWatermarkOpacity}">
 										          
 									    <TextBlock.Transitions>
 											<Transitions>
@@ -131,18 +131,9 @@
 													    <QuinticEaseOut/>
 												    </DoubleTransition.Easing>
 												</DoubleTransition>
-
-												<BrushTransition
-												    Property="Foreground"
-												    Duration="0:0:0.2">
-													
-													<BrushTransition.Easing>
-														<QuinticEaseOut/>
-													</BrushTransition.Easing>
-												</BrushTransition>
 											</Transitions>
 									    </TextBlock.Transitions>
-						           </TextBlock>
+						            </TextBlock>
 								    
 								    <ScrollViewer x:Name="PART_ScrollViewer"
 								                  Grid.Row="1"
@@ -150,8 +141,7 @@
 							                      VerticalScrollBarVisibility="{TemplateBinding (ScrollViewer.VerticalScrollBarVisibility)}"
 							                      IsScrollChainingEnabled="{TemplateBinding (ScrollViewer.IsScrollChainingEnabled)}"
 							                      AllowAutoHide="{TemplateBinding (ScrollViewer.AllowAutoHide)}"
-							                      BringIntoViewOnFocusChange="{TemplateBinding (ScrollViewer.BringIntoViewOnFocusChange)}"
-							                      Background="Transparent">
+							                      BringIntoViewOnFocusChange="{TemplateBinding (ScrollViewer.BringIntoViewOnFocusChange)}">
 									    
 									    <ScrollViewer.Styles>
 										    <Style Selector="ScrollViewer">
@@ -179,9 +169,10 @@
 								    </ScrollViewer>
 							    </Grid>
 								
-							    <ContentPresenter Grid.Column="2"
-							                      VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
-							                      Content="{TemplateBinding InnerRightContent}"/>
+							    <ContentPresenter 
+								    Grid.Column="2"
+							        Content="{TemplateBinding InnerRightContent}"
+								    VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"/>
 							</Grid>
 						</Border>
 					</Panel>
@@ -191,6 +182,10 @@
 	    
 	    <Style Selector="^:pointerover">
 		    <Setter Property="BorderBrush" Value="{DynamicResource TextBoxHoverBorderBrush}"/>
+		    
+		    <Style Selector="^ /template/ TextBlock#PART_Watermark">
+			    <Setter Property="Opacity" Value="{StaticResource TextBoxWatermarkHoverOpacity}"/>
+		    </Style>
 	    </Style>
 	    
 	     <Style Selector="^:focus">
@@ -219,27 +214,22 @@
     
 			    <Style Selector="^ /template/ TextBlock#PART_Watermark">
 				    <Setter Property="RenderTransform" Value="translateY(-20px)"/>
-				    <Setter Property="Foreground" Value="{DynamicResource TextBoxFloatingWatermarkNotEmptyForegroundBrush}"/>
+				    <Setter Property="Opacity" Value="{StaticResource TextBoxFocusFloatingWatermarkOpacity}"/>
 			    </Style>
 		    </Style>
 	    </Style>
     
 	    <Style Selector="^[UseFloatingWatermark=False]">
-		    <Style Selector="^:empty">
-			    <Style Selector="^ /template/ TextBlock#PART_Watermark">
-				    <Setter Property="RenderTransform" Value="translateX(0px)"/>
-				    <Setter Property="Opacity" Value="1"/>
-			    </Style>
-		    </Style>
-    
 		    <Style Selector="^:not(:empty)">
 			    <Style Selector="^ /template/ TextBlock#PART_Watermark">
 				    <Setter Property="RenderTransform" Value="translateX(20px)"/>
-				    <Setter Property="Opacity" Value="0"/>
+				    <Setter Property="Opacity" Value="{StaticResource TextBoxFocusWatermarkOpacity}"/>
 			    </Style>
 		    </Style>
 	    </Style>
     </Style>
+	
+	
 	
 	<Style Selector="TextBox.Card">
 		<Setter Property="BorderBrush" Value="{DynamicResource TextBoxCardBorderBrush}"/>
