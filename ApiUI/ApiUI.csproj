@@ -8,7 +8,6 @@
     </PropertyGroup>
     
     <PropertyGroup>
-        <Version>0.1.0</Version>
         <Title>Api UI</Title>
         <Authors>AlPi</Authors>
         <Description>Controls library for Avalonia UI.</Description>
@@ -33,6 +32,10 @@
       <PackageReference Include="Avalonia" Version="11.2.3" />
       <PackageReference Include="Avalonia.Skia" Version="11.2.3" />
       <PackageReference Include="Avalonia.Themes.Simple" Version="11.2.3" />
+      <PackageReference Include="MinVer" Version="6.0.0">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
       <PackageReference Include="System.Reactive" Version="6.0.1" />
     </ItemGroup>
 
