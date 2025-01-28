@@ -61,8 +61,7 @@
 										        
 								            <ItemsControl.ItemsPanel>
 									            <ItemsPanelTemplate>
-										            <StackPanel
-											            Orientation="Horizontal"/>
+										            <DockPanel/>
 									            </ItemsPanelTemplate>
 								            </ItemsControl.ItemsPanel>
 							            </ItemsControl>
