@@ -50,14 +50,14 @@
 						            <Grid
 							            ColumnDefinitions="Auto, *, Auto, Auto">
 									        
-							            <ContentPresenter
-								            Grid.Column="0"
-								            Content="{TemplateBinding LogoContent}"/>
+							            <ContentPresenter x:Name="PART_LogoContent"
+							                              Grid.Column="0"
+							                              Content="{TemplateBinding LogoContent}"/>
 									        
-							            <ItemsControl
-								            Grid.Column="1"
-								            ItemsSource="{TemplateBinding TitleBarControls}"
-								            HorizontalAlignment="Stretch">
+							            <ItemsControl x:Name="PART_TitleBarControls"
+										              Grid.Column="1"
+										              ItemsSource="{TemplateBinding TitleBarControls}"
+										              HorizontalAlignment="Stretch">
 										        
 								            <ItemsControl.ItemsPanel>
 									            <ItemsPanelTemplate>

@@ -3,6 +3,7 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Controls.Metadata;
+using Avalonia.Controls.Presenters;
 using Avalonia.Controls.Primitives;
 using Avalonia.Input;
 using Avalonia.Interactivity;
@@ -18,6 +19,8 @@ namespace ApiUI.Controls
     [TemplatePart(PartMaximizeButton, typeof(Button), IsRequired = true)]
     [TemplatePart(PartCloseButton, typeof(Button), IsRequired = true)]
     [TemplatePart(PartTitleBarBackground, typeof(Decorator), IsRequired = true)]
+    [TemplatePart(PartLogoContent, typeof(ContentPresenter), IsRequired = true)]
+    [TemplatePart(PartTitleBarControls, typeof(ItemsControl), IsRequired = true)]
     public class ApiWindow : Window
     {
         private IDisposable? _subscriptionDisposables;
@@ -26,6 +29,8 @@ namespace ApiUI.Controls
         private const string PartMaximizeButton = "PART_MaximizeButton";
         private const string PartCloseButton = "PART_CloseButton";
         private const string PartTitleBarBackground = "PART_TitleBarBackground";
+        private const string PartLogoContent = "PART_LogoContent";
+        private const string PartTitleBarControls = "PART_TitleBarControls";
         
         /// <summary>
         /// Returns the type of the style key for the <see cref="ApiWindow"/> class.
@@ -51,7 +56,8 @@ namespace ApiUI.Controls
         /// Defines the <see cref="TitleBarControls"/> property.
         /// </summary>
         public static readonly StyledProperty<Avalonia.Controls.Controls?> TitleBarControlsProperty =
-            AvaloniaProperty.Register<ApiWindow, Avalonia.Controls.Controls?>(nameof(TitleBarControls));
+            AvaloniaProperty.Register<ApiWindow, Avalonia.Controls.Controls?>(nameof(TitleBarControls),
+                []);
 
         /// <summary>
         /// Controls that are displayed on the title bar.
@@ -206,17 +212,17 @@ namespace ApiUI.Controls
             }
             catch { }
             
-            if (e.NameScope.Get<Button>("PART_MinimizeButton") is { } minimize)
+            if (e.NameScope.Get<Button>(PartMinimizeButton) is { } minimize)
             {
                 minimize.Click += (_, _) => WindowState = WindowState.Minimized;   
             }
 
-            if (e.NameScope.Get<Button>("PART_CloseButton") is { } close)
+            if (e.NameScope.Get<Button>(PartCloseButton) is { } close)
             {
                 close.Click += (_, _) => Close();   
             }
 
-            if (e.NameScope.Get<Border>("PART_TitleBarBackground") is { } titleBar)
+            if (e.NameScope.Get<Decorator>(PartTitleBarBackground) is { } titleBar)
             {
                 titleBar.PointerPressed += OnTitleBarPointerPressed;
                 titleBar.DoubleTapped += OnMaximizeButtonClicked;
@@ -227,11 +233,11 @@ namespace ApiUI.Controls
         /// On maximize button click.
         /// </summary>
         /// <param name="sender"></param>
-        /// <param name="args"></param>
-        private void OnMaximizeButtonClicked(object? sender, RoutedEventArgs args)
+        /// <param name="e"></param>
+        private void OnMaximizeButtonClicked(object? sender, RoutedEventArgs e)
         {
             if (!CanResize) return;
-
+            
             WindowState = WindowState == WindowState.Maximized
                 ? WindowState.Normal
                 : WindowState.Maximized;
