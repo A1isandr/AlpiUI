@@ -76,7 +76,7 @@
     <SolidColorBrush x:Key="TabViewItemSelectedPressedBackgroundBrush" Color="{DynamicResource AlpiAccentColor}"/>
     
     <!-- TextBox -->
-    <x:Double x:Key="TextBoxMinHeight">40</x:Double>
+    <x:Double x:Key="TextBoxMinHeight">35</x:Double>
     <x:Double x:Key="TextBoxFontSize">14</x:Double>
     <x:Double x:Key="TextBoxFloatingWatermarkBorderActivatedHeight">20</x:Double>
     <x:Double x:Key="TextBoxWatermarkOpacity">0.5</x:Double>
