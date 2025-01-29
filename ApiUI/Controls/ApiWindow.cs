@@ -8,6 +8,7 @@ using Avalonia.Controls.Primitives;
 using Avalonia.Input;
 using Avalonia.Interactivity;
 using Avalonia.Media;
+using Avalonia.Styling;
 using Avalonia.Threading;
 
 namespace ApiUI.Controls
@@ -21,16 +22,19 @@ namespace ApiUI.Controls
     [TemplatePart(PartTitleBarBackground, typeof(Decorator), IsRequired = true)]
     [TemplatePart(PartLogoContent, typeof(ContentPresenter), IsRequired = true)]
     [TemplatePart(PartTitleBarControls, typeof(ItemsControl), IsRequired = true)]
+    [PseudoClasses(PseudoClassActivated)]
     public class ApiWindow : Window
     {
-        private IDisposable? _subscriptionDisposables;
-
         private const string PartMinimizeButton = "PART_MinimizeButton";
         private const string PartMaximizeButton = "PART_MaximizeButton";
         private const string PartCloseButton = "PART_CloseButton";
         private const string PartTitleBarBackground = "PART_TitleBarBackground";
         private const string PartLogoContent = "PART_LogoContent";
         private const string PartTitleBarControls = "PART_TitleBarControls";
+        
+        private const string PseudoClassActivated = ":activated";
+        
+        private IDisposable? _subscriptionDisposables;
         
         /// <summary>
         /// Returns the type of the style key for the <see cref="ApiWindow"/> class.
@@ -57,7 +61,7 @@ namespace ApiUI.Controls
         /// </summary>
         public static readonly StyledProperty<Avalonia.Controls.Controls?> TitleBarControlsProperty =
             AvaloniaProperty.Register<ApiWindow, Avalonia.Controls.Controls?>(nameof(TitleBarControls),
-                []);
+                defaultValue: []);
 
         /// <summary>
         /// Controls that are displayed on the title bar.
@@ -99,6 +103,22 @@ namespace ApiUI.Controls
             set => SetValue(TitleBarBackgroundProperty, value);
         }
         
+        /// <summary>
+        /// Defines the <see cref="MakeTitleBarOpaqueOnDeactivationProperty"/> property.
+        /// </summary>
+        public static readonly StyledProperty<bool> MakeTitleBarOpaqueOnDeactivationProperty =
+            AvaloniaProperty.Register<ApiWindow, bool>(nameof(MakeTitleBarOpaqueOnDeactivation),
+                defaultValue: true);
+        
+        /// <summary>
+        /// Make title bar opaque on window deactivation.
+        /// </summary>
+        public bool MakeTitleBarOpaqueOnDeactivation
+        {
+            get => GetValue(MakeTitleBarOpaqueOnDeactivationProperty);
+            set => SetValue(MakeTitleBarOpaqueOnDeactivationProperty, value);
+        }
+        
         
         
         /// <summary>
@@ -106,22 +126,13 @@ namespace ApiUI.Controls
         /// </summary>
         public ApiWindow()
         {
-            BackgroundAcrylicMaterial = new ExperimentalAcrylicMaterial
-            {
-                BackgroundSource = AcrylicBackgroundSource.Digger,
-                TintOpacity = 0.4,
-                MaterialOpacity = .0,
-                TintColor = Colors.Black,
-                FallbackColor = Colors.Transparent
-            };
-
             Activated += (_, _) =>
             {
-                TitleBarBackground = Brushes.Transparent;
+                PseudoClasses.Set(PseudoClassActivated, true);
             };
             Deactivated += (_, _) =>
             {
-                TitleBarBackground = Background ?? Brushes.Transparent;
+                PseudoClasses.Set(PseudoClassActivated, false);
             };
         }
         

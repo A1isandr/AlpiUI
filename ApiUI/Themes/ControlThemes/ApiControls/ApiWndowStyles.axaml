@@ -30,7 +30,7 @@
         <Setter Property="ExtendClientAreaTitleBarHeightHint" Value="-1"/>
         <Setter Property="ExtendClientAreaToDecorationsHint" Value="True"/>
         <Setter Property="WindowStartupLocation" Value="CenterScreen"/>
-        
+	    
         <Setter Property="Template">
             <ControlTemplate>
 	            <Panel>
@@ -110,7 +110,21 @@
 					                              HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
 					                              VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
 					                              Background="{TemplateBinding Background}"
-					                              Margin="{TemplateBinding Padding}"/>
+					                              Margin="{TemplateBinding Padding}">
+						            
+						            <ContentPresenter.Transitions>
+							            <Transitions>
+								            <BrushTransition
+									            Property="Background"
+									            Duration="0:0:0.2">
+									            
+									            <BrushTransition.Easing>
+										            <QuinticEaseOut/>
+									            </BrushTransition.Easing>
+								            </BrushTransition>
+							            </Transitions>
+						            </ContentPresenter.Transitions>
+					            </ContentPresenter>
 				            </DockPanel>
 			            </ExperimentalAcrylicBorder>
 		            </VisualLayerManager>
@@ -123,6 +137,14 @@
 			<Setter Property="CornerRadius" Value="{StaticResource ApiWindowChromeButtonCornerRadius}"/>
 		</Style>
 		
+	    <Style Selector="^[MakeTitleBarOpaqueOnDeactivation=True]">
+		    <Setter Property="TitleBarBackground" Value="{DynamicResource ApiWindowTitleBarBackgroundBrush}"/>
+		    
+		    <Style Selector="^:activated">
+			    <Setter Property="TitleBarBackground" Value="{DynamicResource ApiWindowActivatedTitleBarBackgroundBrush}"/>
+		    </Style>
+	    </Style>
+	    
 		<Style Selector="^[WindowState=Maximized] /template/ Button#PART_MaximizeButton">
 			<Style Selector="^ TextBlock">
 				<Setter Property="Text" Value=""/>

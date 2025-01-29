@@ -5,8 +5,10 @@
         <ResourceDictionary x:Key="Light">
             <Color x:Key="ApiTextColor">#000000</Color>
             <Color x:Key="ApiDisabledTextColor">#80000000</Color>
-            <Color x:Key="ApiBackgroundColor">#FAFAFA</Color>
             <Color x:Key="ApiFocusColor">#000000</Color>
+            
+            <Color x:Key="ApiBackgroundColor100">#FFFAFAFA</Color>
+            <Color x:Key="ApiBackgroundColor0">  #00FAFAFA</Color>
             
             <Color x:Key="ApiTransparentColor100">#FF1C1C1C</Color>
             <Color x:Key="ApiTransparentColor90"> #E61C1C1C</Color>
@@ -24,8 +26,10 @@
         <ResourceDictionary x:Key="Dark">
             <Color x:Key="ApiTextColor">#FFFFFF</Color>
             <Color x:Key="ApiDisabledTextColor">#80FFFFFF</Color>
-            <Color x:Key="ApiBackgroundColor">#1C1C1C</Color>
             <Color x:Key="ApiFocusColor">#FFFFFF</Color>
+            
+            <Color x:Key="ApiBackgroundColor100">#FF1C1C1C</Color>
+            <Color x:Key="ApiBackgroundColor0">  #001C1C1C</Color>
             
             <Color x:Key="ApiTransparentColor100">#FFFFFFFF</Color>
             <Color x:Key="ApiTransparentColor90"> #E6FFFFFF</Color>
@@ -53,5 +57,5 @@
     <SolidColorBrush x:Key="ApiDangerBrush" Color="{DynamicResource ApiDangerColor}"/>
     <SolidColorBrush x:Key="ApiTextBrush" Color="{DynamicResource ApiTextColor}"/>
     <SolidColorBrush x:Key="ApiDisabledTextBrush" Color="{DynamicResource ApiDisabledTextColor}"/>
-    <SolidColorBrush x:Key="ApiBackgroundBrush" Color="{DynamicResource ApiBackgroundColor}"/>
+    <SolidColorBrush x:Key="ApiBackgroundBrush" Color="{DynamicResource ApiBackgroundColor100}"/>
 </ResourceDictionary>

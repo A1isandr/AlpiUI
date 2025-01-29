@@ -9,6 +9,8 @@
     <CornerRadius x:Key="ApiWindowChromeButtonCornerRadius">0</CornerRadius>
     <CornerRadius x:Key="ApiWindowCornerRadius">0</CornerRadius>
     <Thickness x:Key="ApiWindowPadding">0</Thickness>
+    <SolidColorBrush x:Key="ApiWindowTitleBarBackgroundBrush" Color="{DynamicResource ApiBackgroundColor100}"/>
+    <SolidColorBrush x:Key="ApiWindowActivatedTitleBarBackgroundBrush" Color="{DynamicResource ApiBackgroundColor0}"/>
     <SolidColorBrush x:Key="ApiWindowChromeCloseButtonBackgroundBrush" Color="{DynamicResource ApiDangerColor0}"/>
     <SolidColorBrush x:Key="ApiWindowChromeCloseButtonHoverBackgroundBrush" Color="{DynamicResource ApiDangerColor}"/>
     
