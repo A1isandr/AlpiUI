@@ -1,18 +1,18 @@
 ﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     
-    <!-- ApiWindow -->
-    <x:Double x:Key="ApiWindowMinWidth">200</x:Double>
-    <x:Double x:Key="ApiWindowChromeButtonWidth">50</x:Double>
-    <x:Double x:Key="ApiWindowDragIslandWidth">50</x:Double>
-    <x:Double x:Key="ApiWindowTitleBarHeight">40</x:Double>
-    <CornerRadius x:Key="ApiWindowChromeButtonCornerRadius">0</CornerRadius>
-    <CornerRadius x:Key="ApiWindowCornerRadius">0</CornerRadius>
-    <Thickness x:Key="ApiWindowPadding">0</Thickness>
-    <SolidColorBrush x:Key="ApiWindowTitleBarBackgroundBrush" Color="{DynamicResource ApiBackgroundColor100}"/>
-    <SolidColorBrush x:Key="ApiWindowActivatedTitleBarBackgroundBrush" Color="{DynamicResource ApiBackgroundColor0}"/>
-    <SolidColorBrush x:Key="ApiWindowChromeCloseButtonBackgroundBrush" Color="{DynamicResource ApiDangerColor0}"/>
-    <SolidColorBrush x:Key="ApiWindowChromeCloseButtonHoverBackgroundBrush" Color="{DynamicResource ApiDangerColor}"/>
+    <!-- AlpiWindow -->
+    <x:Double x:Key="AlpiWindowMinWidth">200</x:Double>
+    <x:Double x:Key="AlpiWindowChromeButtonWidth">50</x:Double>
+    <x:Double x:Key="AlpiWindowDragIslandWidth">50</x:Double>
+    <x:Double x:Key="AlpiWindowTitleBarHeight">40</x:Double>
+    <CornerRadius x:Key="AlpiWindowChromeButtonCornerRadius">0</CornerRadius>
+    <CornerRadius x:Key="AlpiWindowCornerRadius">0</CornerRadius>
+    <Thickness x:Key="AlpiWindowPadding">0</Thickness>
+    <SolidColorBrush x:Key="AlpiWindowTitleBarBackgroundBrush" Color="{DynamicResource AlpiBackgroundColor100}"/>
+    <SolidColorBrush x:Key="AlpiWindowActivatedTitleBarBackgroundBrush" Color="{DynamicResource AlpiBackgroundColor0}"/>
+    <SolidColorBrush x:Key="AlpiWindowChromeCloseButtonBackgroundBrush" Color="{DynamicResource AlpiDangerColor0}"/>
+    <SolidColorBrush x:Key="AlpiWindowChromeCloseButtonHoverBackgroundBrush" Color="{DynamicResource AlpiDangerColor}"/>
     
     <!-- BlurCard -->
     <x:Double x:Key="BlurCardBlurRadius">20</x:Double>
@@ -27,10 +27,10 @@
     <Thickness x:Key="ButtonBorderThickness">0</Thickness>
     <Thickness x:Key="ButtonPadding">20, 5</Thickness>
     <Thickness x:Key="ButtonFocusAdornerBorderThickness">2</Thickness>
-    <SolidColorBrush x:Key="ButtonBackgroundBrush" Color="{DynamicResource ApiTransparentColor0}"/>
-    <SolidColorBrush x:Key="ButtonHoverBackgroundBrush" Color="{DynamicResource ApiTransparentColor10}"/>
-    <SolidColorBrush x:Key="ButtonPressedBackgroundBrush" Color="{DynamicResource ApiTransparentColor20}"/>
-    <SolidColorBrush x:Key="ButtonFocusAdornerFocusVisibleBorderBrush" Color="{DynamicResource ApiFocusColor}"/>
+    <SolidColorBrush x:Key="ButtonBackgroundBrush" Color="{DynamicResource AlpiTransparentColor0}"/>
+    <SolidColorBrush x:Key="ButtonHoverBackgroundBrush" Color="{DynamicResource AlpiTransparentColor10}"/>
+    <SolidColorBrush x:Key="ButtonPressedBackgroundBrush" Color="{DynamicResource AlpiTransparentColor20}"/>
+    <SolidColorBrush x:Key="ButtonFocusAdornerFocusVisibleBorderBrush" Color="{DynamicResource AlpiFocusColor}"/>
     
     <!-- ListBox -->
     <CornerRadius x:Key="ListBoxCornerRadius">0</CornerRadius>
@@ -41,11 +41,11 @@
     <Thickness x:Key="ListBoxItemBorderThickness">0</Thickness>
     <Thickness x:Key="ListBoxItemPadding">20, 10</Thickness>
     <SolidColorBrush x:Key="ListBoxItemBackgroundBrush" Color="{DynamicResource ApiTransparentColor}"/>
-    <SolidColorBrush x:Key="ListBoxItemHoverBackgroundBrush" Color="{DynamicResource ApiTransparentColor10}"/>
-    <SolidColorBrush x:Key="ListBoxItemPressedBackgroundBrush" Color="{DynamicResource ApiTransparentColor20}"/>
-    <SolidColorBrush x:Key="ListBoxItemSelectedBackgroundBrush" Color="{DynamicResource ApiAccentColor50}"/>
-    <SolidColorBrush x:Key="ListBoxItemSelectedHoverBackgroundBrush" Color="{DynamicResource ApiAccentColor80}"/>
-    <SolidColorBrush x:Key="ListBoxItemSelectedPressedBackgroundBrush" Color="{DynamicResource ApiAccentColor}"/>
+    <SolidColorBrush x:Key="ListBoxItemHoverBackgroundBrush" Color="{DynamicResource AlpiTransparentColor10}"/>
+    <SolidColorBrush x:Key="ListBoxItemPressedBackgroundBrush" Color="{DynamicResource AlpiTransparentColor20}"/>
+    <SolidColorBrush x:Key="ListBoxItemSelectedBackgroundBrush" Color="{DynamicResource AlpiAccentColor50}"/>
+    <SolidColorBrush x:Key="ListBoxItemSelectedHoverBackgroundBrush" Color="{DynamicResource AlpiAccentColor80}"/>
+    <SolidColorBrush x:Key="ListBoxItemSelectedPressedBackgroundBrush" Color="{DynamicResource AlpiAccentColor}"/>
     
     <!-- ScrollBar -->
     <x:Double x:Key="ScrollBarVerticalWidth">15</x:Double>
@@ -55,9 +55,9 @@
     <x:Double x:Key="ScrollBarHorizontalThumbHeight">5</x:Double>
     <x:Double x:Key="ScrollBarHorizontalThumbMinWidth">20</x:Double>
     <CornerRadius x:Key="ScrollBarThumbCornerRadius">0</CornerRadius>
-    <SolidColorBrush x:Key="ScrollBarThumbBackgroundBrush" Color="{DynamicResource ApiTransparentColor50}"/>
-    <SolidColorBrush x:Key="ScrollBarThumbHoverBackgroundBrush" Color="{DynamicResource ApiTransparentColor70}"/>
-    <SolidColorBrush x:Key="ScrollBarThumbPressedBackgroundBrush" Color="{DynamicResource ApiTransparentColor80}"/>
+    <SolidColorBrush x:Key="ScrollBarThumbBackgroundBrush" Color="{DynamicResource AlpiTransparentColor50}"/>
+    <SolidColorBrush x:Key="ScrollBarThumbHoverBackgroundBrush" Color="{DynamicResource AlpiTransparentColor70}"/>
+    <SolidColorBrush x:Key="ScrollBarThumbPressedBackgroundBrush" Color="{DynamicResource AlpiTransparentColor80}"/>
     
     <!-- TabView -->
     <CornerRadius x:Key="TabViewCornerRadius">0</CornerRadius>
@@ -68,12 +68,12 @@
     <CornerRadius x:Key="TabViewItemCornerRadius">20</CornerRadius>
     <Thickness x:Key="TabViewItemBorderThickness">0</Thickness>
     <Thickness x:Key="TabViewItemPadding">20, 5</Thickness>
-    <SolidColorBrush x:Key="TabViewItemBackgroundBrush" Color="{DynamicResource ApiTransparentColor0}"/>
-    <SolidColorBrush x:Key="TabViewItemHoverBackgroundBrush" Color="{DynamicResource ApiTransparentColor10}"/>
-    <SolidColorBrush x:Key="TabViewItemPressedBackgroundBrush" Color="{DynamicResource ApiTransparentColor20}"/>
-    <SolidColorBrush x:Key="TabViewItemSelectedBackgroundBrush" Color="{DynamicResource ApiAccentColor50}"/>
-    <SolidColorBrush x:Key="TabViewItemSelectedHoverBackgroundBrush" Color="{DynamicResource ApiAccentColor80}"/>
-    <SolidColorBrush x:Key="TabViewItemSelectedPressedBackgroundBrush" Color="{DynamicResource ApiAccentColor}"/>
+    <SolidColorBrush x:Key="TabViewItemBackgroundBrush" Color="{DynamicResource AlpiTransparentColor0}"/>
+    <SolidColorBrush x:Key="TabViewItemHoverBackgroundBrush" Color="{DynamicResource AlpiTransparentColor10}"/>
+    <SolidColorBrush x:Key="TabViewItemPressedBackgroundBrush" Color="{DynamicResource AlpiTransparentColor20}"/>
+    <SolidColorBrush x:Key="TabViewItemSelectedBackgroundBrush" Color="{DynamicResource AlpiAccentColor50}"/>
+    <SolidColorBrush x:Key="TabViewItemSelectedHoverBackgroundBrush" Color="{DynamicResource AlpiAccentColor80}"/>
+    <SolidColorBrush x:Key="TabViewItemSelectedPressedBackgroundBrush" Color="{DynamicResource AlpiAccentColor}"/>
     
     <!-- TextBox -->
     <x:Double x:Key="TextBoxMinHeight">40</x:Double>
@@ -86,13 +86,13 @@
     <CornerRadius x:Key="TextBoxCornerRadius">20</CornerRadius>
     <Thickness x:Key="TextBoxBorderThickness">2</Thickness>
     <Thickness x:Key="TextBoxPadding">20, 5</Thickness>
-    <SolidColorBrush x:Key="TextBoxCaretBrush" Color="{DynamicResource ApiTextColor}"/>
-    <SolidColorBrush x:Key="TextBoxBorderBrush" Color="{DynamicResource ApiTransparentColor50}"/>
-    <SolidColorBrush x:Key="TextBoxHoverBorderBrush" Color="{DynamicResource ApiTransparentColor100}"/>
-    <SolidColorBrush x:Key="TextBoxCardBorderBrush" Color="{DynamicResource ApiTransparentColor0}"/>
-    <SolidColorBrush x:Key="TextBoxValidationErrorBorderBrush" Color="{DynamicResource ApiDangerColor}"/>
-    <SolidColorBrush x:Key="TextBoxBackgroundBrush" Color="{DynamicResource ApiTransparentColor0}"/>
-    <SolidColorBrush x:Key="TextBoxCardBackgroundBrush" Color="{DynamicResource ApiTransparentColor10}"/>
-    <SolidColorBrush x:Key="TextBoxCardHoverBackgroundBrush" Color="{DynamicResource ApiTransparentColor30}"/>
-    <SolidColorBrush x:Key="TextBoxCardFocusBackgroundBrush" Color="{DynamicResource ApiTransparentColor10}"/>
+    <SolidColorBrush x:Key="TextBoxCaretBrush" Color="{DynamicResource AlpiTextColor}"/>
+    <SolidColorBrush x:Key="TextBoxBorderBrush" Color="{DynamicResource AlpiTransparentColor50}"/>
+    <SolidColorBrush x:Key="TextBoxHoverBorderBrush" Color="{DynamicResource AlpiTransparentColor100}"/>
+    <SolidColorBrush x:Key="TextBoxCardBorderBrush" Color="{DynamicResource AlpiTransparentColor0}"/>
+    <SolidColorBrush x:Key="TextBoxValidationErrorBorderBrush" Color="{DynamicResource AlpiDangerColor}"/>
+    <SolidColorBrush x:Key="TextBoxBackgroundBrush" Color="{DynamicResource AlpiTransparentColor0}"/>
+    <SolidColorBrush x:Key="TextBoxCardBackgroundBrush" Color="{DynamicResource AlpiTransparentColor10}"/>
+    <SolidColorBrush x:Key="TextBoxCardHoverBackgroundBrush" Color="{DynamicResource AlpiTransparentColor30}"/>
+    <SolidColorBrush x:Key="TextBoxCardFocusBackgroundBrush" Color="{DynamicResource AlpiTransparentColor10}"/>
 </ResourceDictionary>

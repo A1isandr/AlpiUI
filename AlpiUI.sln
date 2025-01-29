@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlpiUI", "AlpiUI\AlpiUI.csproj", "{FE256238-BB37-40C4-96C8-E25D20B420EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlpiUI.Demo", "AlpiUI.Demo\AlpiUI.Demo.csproj", "{D1268C4C-CCEB-41CA-91EC-E1C1770D1BA8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{FE256238-BB37-40C4-96C8-E25D20B420EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE256238-BB37-40C4-96C8-E25D20B420EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE256238-BB37-40C4-96C8-E25D20B420EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1268C4C-CCEB-41CA-91EC-E1C1770D1BA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1268C4C-CCEB-41CA-91EC-E1C1770D1BA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1268C4C-CCEB-41CA-91EC-E1C1770D1BA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1268C4C-CCEB-41CA-91EC-E1C1770D1BA8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

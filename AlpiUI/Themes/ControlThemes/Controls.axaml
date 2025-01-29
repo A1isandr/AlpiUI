@@ -4,7 +4,7 @@
     <Styles.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <MergeResourceInclude Source="/Themes/ControlThemes/ApiControls/ApiWndowStyles.axaml"/>
+                <MergeResourceInclude Source="/Themes/ControlThemes/ApiControls/AlpiWndowStyles.axaml"/>
                 <MergeResourceInclude Source="/Themes/ControlThemes/ApiControls/TabViewStyles.axaml"/>
                 <MergeResourceInclude Source="/Themes/ControlThemes/ApiControls/TabViewItemStyles.axaml"/>
                 <MergeResourceInclude Source="/Themes/ControlThemes/ApiControls/BlurCard.axaml"/>

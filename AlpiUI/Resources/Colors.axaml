@@ -3,59 +3,59 @@
     
     <ResourceDictionary.ThemeDictionaries>
         <ResourceDictionary x:Key="Light">
-            <Color x:Key="ApiTextColor">#000000</Color>
-            <Color x:Key="ApiDisabledTextColor">#80000000</Color>
-            <Color x:Key="ApiFocusColor">#000000</Color>
+            <Color x:Key="AlpiTextColor">#000000</Color>
+            <Color x:Key="AlpiDisabledTextColor">#80000000</Color>
+            <Color x:Key="AlpiFocusColor">#000000</Color>
             
-            <Color x:Key="ApiBackgroundColor100">#FFFAFAFA</Color>
-            <Color x:Key="ApiBackgroundColor0">  #00FAFAFA</Color>
+            <Color x:Key="AlpiBackgroundColor100">#FFFAFAFA</Color>
+            <Color x:Key="AlpiBackgroundColor0">  #00FAFAFA</Color>
             
-            <Color x:Key="ApiTransparentColor100">#FF1C1C1C</Color>
-            <Color x:Key="ApiTransparentColor90"> #E61C1C1C</Color>
-            <Color x:Key="ApiTransparentColor80"> #CC1C1C1C</Color>
-            <Color x:Key="ApiTransparentColor70"> #B31C1C1C</Color>
-            <Color x:Key="ApiTransparentColor60"> #991C1C1C</Color>
-            <Color x:Key="ApiTransparentColor50"> #801C1C1C</Color>
-            <Color x:Key="ApiTransparentColor40"> #661C1C1C</Color>
-            <Color x:Key="ApiTransparentColor30"> #4D1C1C1C</Color>
-            <Color x:Key="ApiTransparentColor20"> #331C1C1C</Color>
-            <Color x:Key="ApiTransparentColor10"> #1A1C1C1C</Color>
-            <Color x:Key="ApiTransparentColor0">  #001C1C1C</Color>
+            <Color x:Key="AlpiTransparentColor100">#FF1C1C1C</Color>
+            <Color x:Key="AlpiTransparentColor90"> #E61C1C1C</Color>
+            <Color x:Key="AlpiTransparentColor80"> #CC1C1C1C</Color>
+            <Color x:Key="AlpiTransparentColor70"> #B31C1C1C</Color>
+            <Color x:Key="AlpiTransparentColor60"> #991C1C1C</Color>
+            <Color x:Key="AlpiTransparentColor50"> #801C1C1C</Color>
+            <Color x:Key="AlpiTransparentColor40"> #661C1C1C</Color>
+            <Color x:Key="AlpiTransparentColor30"> #4D1C1C1C</Color>
+            <Color x:Key="AlpiTransparentColor20"> #331C1C1C</Color>
+            <Color x:Key="AlpiTransparentColor10"> #1A1C1C1C</Color>
+            <Color x:Key="AlpiTransparentColor0">  #001C1C1C</Color>
         </ResourceDictionary>
         
         <ResourceDictionary x:Key="Dark">
-            <Color x:Key="ApiTextColor">#FFFFFF</Color>
-            <Color x:Key="ApiDisabledTextColor">#80FFFFFF</Color>
-            <Color x:Key="ApiFocusColor">#FFFFFF</Color>
+            <Color x:Key="AlpiTextColor">#FFFFFF</Color>
+            <Color x:Key="AlpiDisabledTextColor">#80FFFFFF</Color>
+            <Color x:Key="AlpiFocusColor">#FFFFFF</Color>
             
-            <Color x:Key="ApiBackgroundColor100">#FF1C1C1C</Color>
-            <Color x:Key="ApiBackgroundColor0">  #001C1C1C</Color>
+            <Color x:Key="AlpiBackgroundColor100">#FF1C1C1C</Color>
+            <Color x:Key="AlpiBackgroundColor0">  #001C1C1C</Color>
             
-            <Color x:Key="ApiTransparentColor100">#FFFFFFFF</Color>
-            <Color x:Key="ApiTransparentColor90"> #E6FFFFFF</Color>
-            <Color x:Key="ApiTransparentColor80"> #CCFFFFFF</Color>
-            <Color x:Key="ApiTransparentColor70"> #B3FFFFFF</Color>
-            <Color x:Key="ApiTransparentColor60"> #99FFFFFF</Color>
-            <Color x:Key="ApiTransparentColor50"> #80FFFFFF</Color>
-            <Color x:Key="ApiTransparentColor40"> #66FFFFFF</Color>
-            <Color x:Key="ApiTransparentColor30"> #4DFFFFFF</Color>
-            <Color x:Key="ApiTransparentColor20"> #33FFFFFF</Color>
-            <Color x:Key="ApiTransparentColor10"> #1AFFFFFF</Color>
-            <Color x:Key="ApiTransparentColor0">  #00FFFFFF</Color>
+            <Color x:Key="AlpiTransparentColor100">#FFFFFFFF</Color>
+            <Color x:Key="AlpiTransparentColor90"> #E6FFFFFF</Color>
+            <Color x:Key="AlpiTransparentColor80"> #CCFFFFFF</Color>
+            <Color x:Key="AlpiTransparentColor70"> #B3FFFFFF</Color>
+            <Color x:Key="AlpiTransparentColor60"> #99FFFFFF</Color>
+            <Color x:Key="AlpiTransparentColor50"> #80FFFFFF</Color>
+            <Color x:Key="AlpiTransparentColor40"> #66FFFFFF</Color>
+            <Color x:Key="AlpiTransparentColor30"> #4DFFFFFF</Color>
+            <Color x:Key="AlpiTransparentColor20"> #33FFFFFF</Color>
+            <Color x:Key="AlpiTransparentColor10"> #1AFFFFFF</Color>
+            <Color x:Key="AlpiTransparentColor0">  #00FFFFFF</Color>
         </ResourceDictionary>
     </ResourceDictionary.ThemeDictionaries>
     
-    <Color x:Key="ApiAccentColor">  #FF9046FF</Color>
-    <Color x:Key="ApiAccentColor80">#CC9046FF</Color>
-    <Color x:Key="ApiAccentColor50">#809046FF</Color>
-    <Color x:Key="ApiAccentColor0"> #009046FF</Color>
+    <Color x:Key="AlpiAccentColor">  #FF9046FF</Color>
+    <Color x:Key="AlpiAccentColor80">#CC9046FF</Color>
+    <Color x:Key="AlpiAccentColor50">#809046FF</Color>
+    <Color x:Key="AlpiAccentColor0"> #009046FF</Color>
     
-    <Color x:Key="ApiDangerColor"> #FFFF2821</Color>
-    <Color x:Key="ApiDangerColor0">#00FF2821</Color>
+    <Color x:Key="AlpiDangerColor"> #FFFF2821</Color>
+    <Color x:Key="AlpiDangerColor0">#00FF2821</Color>
     
-    <SolidColorBrush x:Key="ApiAccentBrush" Color="{DynamicResource ApiAccentColor}"/>
-    <SolidColorBrush x:Key="ApiDangerBrush" Color="{DynamicResource ApiDangerColor}"/>
-    <SolidColorBrush x:Key="ApiTextBrush" Color="{DynamicResource ApiTextColor}"/>
-    <SolidColorBrush x:Key="ApiDisabledTextBrush" Color="{DynamicResource ApiDisabledTextColor}"/>
-    <SolidColorBrush x:Key="ApiBackgroundBrush" Color="{DynamicResource ApiBackgroundColor100}"/>
+    <SolidColorBrush x:Key="AlpiAccentBrush" Color="{DynamicResource AlpiAccentColor}"/>
+    <SolidColorBrush x:Key="AlpiDangerBrush" Color="{DynamicResource AlpiDangerColor}"/>
+    <SolidColorBrush x:Key="AlpiTextBrush" Color="{DynamicResource AlpiTextColor}"/>
+    <SolidColorBrush x:Key="AlpiDisabledTextBrush" Color="{DynamicResource AlpiDisabledTextColor}"/>
+    <SolidColorBrush x:Key="AlpiBackgroundBrush" Color="{DynamicResource AlpiBackgroundColor100}"/>
 </ResourceDictionary>

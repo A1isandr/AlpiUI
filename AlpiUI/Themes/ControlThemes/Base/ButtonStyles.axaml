@@ -21,7 +21,7 @@
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="BorderThickness" Value="{DynamicResource ButtonBorderThickness}"/>
         <Setter Property="BorderBrush" Value="Transparent"/>
-        <Setter Property="Foreground" Value="{DynamicResource ApiTextBrush}"/>
+        <Setter Property="Foreground" Value="{DynamicResource AlpiTextBrush}"/>
         <Setter Property="Background" Value="{DynamicResource ButtonBackgroundBrush}"/>
         <Setter Property="Padding" Value="{DynamicResource ButtonPadding}"/>
         

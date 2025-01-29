@@ -20,8 +20,8 @@
 	    <Setter Property="FontSize" Value="{StaticResource TextBoxFontSize}"/>
 	    <Setter Property="FontWeight" Value="SemiBold"/>
 	    <Setter Property="TextWrapping" Value="NoWrap"/>
-	    <Setter Property="Foreground" Value="{DynamicResource ApiTextBrush}"/>
-	    <Setter Property="SelectionBrush" Value="{DynamicResource ApiAccentBrush}"/>
+	    <Setter Property="Foreground" Value="{DynamicResource AlpiTextBrush}"/>
+	    <Setter Property="SelectionBrush" Value="{DynamicResource AlpiAccentBrush}"/>
 	    <Setter Property="CaretBrush" Value="{DynamicResource TextBoxCaretBrush}"/>
 	    <Setter Property="BorderThickness" Value="{StaticResource TextBoxBorderThickness}"/>
 	    <Setter Property="BorderBrush" Value="{DynamicResource TextBoxBorderBrush}"/>
@@ -170,13 +170,13 @@
 	    
 	     <Style Selector="^:focus">
 		    <Style Selector="^ /template/ Border#PART_BorderElement">
-			    <Setter Property="BorderBrush" Value="{DynamicResource ApiAccentBrush}"/>
+			    <Setter Property="BorderBrush" Value="{DynamicResource AlpiAccentBrush}"/>
 		    </Style>
 	    </Style>
 	   
 	    <Style Selector="^:focus-visible">
 		    <Style Selector="^ /template/ Border#PART_BorderElement">
-			    <Setter Property="BorderBrush" Value="{DynamicResource ApiAccentBrush}"/>
+			    <Setter Property="BorderBrush" Value="{DynamicResource AlpiAccentBrush}"/>
 		    </Style>
 	    </Style>
     

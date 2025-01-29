@@ -33,7 +33,7 @@
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="BorderThickness" Value="{StaticResource ListBoxItemBorderThickness}"/>
         <Setter Property="BorderBrush" Value="Transparent"/>
-        <Setter Property="Foreground" Value="{DynamicResource ApiTextBrush}"/>
+        <Setter Property="Foreground" Value="{DynamicResource AlpiTextBrush}"/>
         <Setter Property="Background" Value="{DynamicResource ListBoxItemBackgroundBrush}"/>
         <Setter Property="Padding" Value="{StaticResource ListBoxItemPadding}"/>
         
@@ -83,7 +83,7 @@
         </Style>
         
         <Style Selector="^:disabled /template/ ContentPresenter">
-            <Setter Property="Foreground" Value="{DynamicResource ApiDisabledTextBrush}"/>
+            <Setter Property="Foreground" Value="{DynamicResource AlpiDisabledTextBrush}"/>
         </Style>
     </Style>
 </Styles>

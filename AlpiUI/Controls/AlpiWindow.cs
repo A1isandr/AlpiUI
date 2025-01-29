@@ -23,7 +23,7 @@ namespace AlpiUI.Controls
     [TemplatePart(PartLogoContent, typeof(ContentPresenter), IsRequired = true)]
     [TemplatePart(PartTitleBarControls, typeof(ItemsControl), IsRequired = true)]
     [PseudoClasses(PseudoClassActivated)]
-    public class ApiWindow : Window
+    public class AlpiWindow : Window
     {
         private const string PartMinimizeButton = "PART_MinimizeButton";
         private const string PartMaximizeButton = "PART_MaximizeButton";
@@ -37,15 +37,15 @@ namespace AlpiUI.Controls
         private IDisposable? _subscriptionDisposables;
         
         /// <summary>
-        /// Returns the type of the style key for the <see cref="ApiWindow"/> class.
+        /// Returns the type of the style key for the <see cref="AlpiWindow"/> class.
         /// </summary>
-        protected override Type StyleKeyOverride => typeof(ApiWindow);
+        protected override Type StyleKeyOverride => typeof(AlpiWindow);
 
         /// <summary>
         /// Defines the <see cref="LogoContent"/> property.
         /// </summary>
         public static readonly StyledProperty<Control?> LogoContentProperty =
-            AvaloniaProperty.Register<ApiWindow, Control?>(nameof(LogoContent));
+            AvaloniaProperty.Register<AlpiWindow, Control?>(nameof(LogoContent));
 
         /// <summary>
         /// Content that is displayed on the left corner of title bar.
@@ -60,7 +60,7 @@ namespace AlpiUI.Controls
         /// Defines the <see cref="TitleBarControls"/> property.
         /// </summary>
         public static readonly StyledProperty<Avalonia.Controls.Controls?> TitleBarControlsProperty =
-            AvaloniaProperty.Register<ApiWindow, Avalonia.Controls.Controls?>(nameof(TitleBarControls),
+            AvaloniaProperty.Register<AlpiWindow, Avalonia.Controls.Controls?>(nameof(TitleBarControls),
                 defaultValue: []);
 
         /// <summary>
@@ -76,7 +76,7 @@ namespace AlpiUI.Controls
         /// Defines the <see cref="BackgroundAcrylicMaterialProperty"/> property.
         /// </summary>
         public static readonly StyledProperty<ExperimentalAcrylicMaterial> BackgroundAcrylicMaterialProperty =
-            AvaloniaProperty.Register<ApiWindow, ExperimentalAcrylicMaterial>(nameof(Background),
+            AvaloniaProperty.Register<AlpiWindow, ExperimentalAcrylicMaterial>(nameof(Background),
                 defaultValue: new ExperimentalAcrylicMaterial());
 
         /// <summary>
@@ -92,7 +92,7 @@ namespace AlpiUI.Controls
         /// Defines the <see cref="TitleBarBackgroundProperty"/> property.
         /// </summary>
         public static readonly StyledProperty<IBrush> TitleBarBackgroundProperty =
-            AvaloniaProperty.Register<ApiWindow, IBrush>(nameof(TitleBarBackground));
+            AvaloniaProperty.Register<AlpiWindow, IBrush>(nameof(TitleBarBackground));
         
         /// <summary>
         /// Title bar background.
@@ -107,7 +107,7 @@ namespace AlpiUI.Controls
         /// Defines the <see cref="MakeTitleBarOpaqueOnDeactivationProperty"/> property.
         /// </summary>
         public static readonly StyledProperty<bool> MakeTitleBarOpaqueOnDeactivationProperty =
-            AvaloniaProperty.Register<ApiWindow, bool>(nameof(MakeTitleBarOpaqueOnDeactivation),
+            AvaloniaProperty.Register<AlpiWindow, bool>(nameof(MakeTitleBarOpaqueOnDeactivation),
                 defaultValue: true);
         
         /// <summary>
@@ -124,7 +124,7 @@ namespace AlpiUI.Controls
         /// <summary>
         /// Api window constructor.
         /// </summary>
-        public ApiWindow()
+        public AlpiWindow()
         {
             Activated += (_, _) =>
             {
@@ -146,7 +146,7 @@ namespace AlpiUI.Controls
             if (Application.Current?.ApplicationLifetime is not IClassicDesktopStyleApplicationLifetime desktop)
                 return;
 
-            if (desktop.MainWindow is ApiWindow window && window != this)
+            if (desktop.MainWindow is AlpiWindow window && window != this)
             {
                 Icon ??= window.Icon;
             }
