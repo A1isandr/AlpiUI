@@ -3,6 +3,23 @@
   <component name="AvaloniaProject">
     <option name="projectPerEditor">
       <map>
+        <entry key="AlpiUI.Demo/App.axaml" value="AlpiUI.Demo/AlpiUI.Demo.csproj" />
+        <entry key="AlpiUI.Demo/Views/MainWindow.axaml" value="AlpiUI.Demo/AlpiUI.Demo.csproj" />
+        <entry key="AlpiUI/Resources/Colors.axaml" value="AlpiUI.Demo/AlpiUI.Demo.csproj" />
+        <entry key="AlpiUI/Resources/Controls.axaml" value="AlpiUI.Demo/AlpiUI.Demo.csproj" />
+        <entry key="AlpiUI/Themes/AlpiUITheme.axaml" value="AlpiUI.Demo/AlpiUI.Demo.csproj" />
+        <entry key="AlpiUI/Themes/ControlThemes/ApiControls/AlpiWndowStyles.axaml" value="AlpiUI.Demo/AlpiUI.Demo.csproj" />
+        <entry key="AlpiUI/Themes/ControlThemes/ApiControls/BlurCard.axaml" value="AlpiUI.Demo/AlpiUI.Demo.csproj" />
+        <entry key="AlpiUI/Themes/ControlThemes/ApiControls/TabViewItemStyles.axaml" value="AlpiUI.Demo/AlpiUI.Demo.csproj" />
+        <entry key="AlpiUI/Themes/ControlThemes/ApiControls/TabViewStyles.axaml" value="AlpiUI.Demo/AlpiUI.Demo.csproj" />
+        <entry key="AlpiUI/Themes/ControlThemes/Base/ButtonStyles.axaml" value="AlpiUI.Demo/AlpiUI.Demo.csproj" />
+        <entry key="AlpiUI/Themes/ControlThemes/Base/ItemsControlStyles.axaml" value="AlpiUI.Demo/AlpiUI.Demo.csproj" />
+        <entry key="AlpiUI/Themes/ControlThemes/Base/ListBoxItemStyles.axaml" value="AlpiUI.Demo/AlpiUI.Demo.csproj" />
+        <entry key="AlpiUI/Themes/ControlThemes/Base/ListBoxStyles.axaml" value="AlpiUI.Demo/AlpiUI.Demo.csproj" />
+        <entry key="AlpiUI/Themes/ControlThemes/Base/ScrollBarStyles.axaml" value="AlpiUI.Demo/AlpiUI.Demo.csproj" />
+        <entry key="AlpiUI/Themes/ControlThemes/Base/ScrollViewerStyles.axaml" value="AlpiUI.Demo/AlpiUI.Demo.csproj" />
+        <entry key="AlpiUI/Themes/ControlThemes/Base/TextBlockStyles.axaml" value="AlpiUI.Demo/AlpiUI.Demo.csproj" />
+        <entry key="AlpiUI/Themes/ControlThemes/Base/TextBoxStyles.axaml" value="AlpiUI.Demo/AlpiUI.Demo.csproj" />
         <entry key="ApiUI.Demo/App.axaml" value="ApiUI.Demo/ApiUI.Demo.csproj" />
         <entry key="ApiUI.Demo/Views/MainWindow.axaml" value="ApiUI.Demo/ApiUI.Demo.csproj" />
         <entry key="ApiUI/Resources/Api.axaml" value="ApiUI.Demo/ApiUI.Demo.csproj" />

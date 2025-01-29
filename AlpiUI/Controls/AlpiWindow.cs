@@ -7,8 +7,8 @@ using Avalonia.Controls.Presenters;
 using Avalonia.Controls.Primitives;
 using Avalonia.Input;
 using Avalonia.Interactivity;
+using Avalonia.Layout;
 using Avalonia.Media;
-using Avalonia.Styling;
 using Avalonia.Threading;
 
 namespace AlpiUI.Controls
@@ -72,6 +72,22 @@ namespace AlpiUI.Controls
             set => SetValue(TitleBarControlsProperty, value);
         }
 
+        /// <summary>
+        /// Defines the <see cref="TitleBarControlsHorizontalAlignment"/> property.
+        /// </summary>
+        public static readonly StyledProperty<HorizontalAlignment> TitleBarControlsHorizontalAlignmentProperty =
+            AvaloniaProperty.Register<AlpiWindow, HorizontalAlignment>(nameof(TitleBarControlsHorizontalAlignment),
+                defaultValue: HorizontalAlignment.Left);
+
+        /// <summary>
+        /// Gets or Sets preferred alignment for title bar controls.
+        /// </summary>
+        public HorizontalAlignment TitleBarControlsHorizontalAlignment
+        {
+            get => GetValue(TitleBarControlsHorizontalAlignmentProperty);
+            set => SetValue(TitleBarControlsHorizontalAlignmentProperty, value);
+        }
+            
         /// <summary>
         /// Defines the <see cref="BackgroundAcrylicMaterialProperty"/> property.
         /// </summary>
