@@ -17,6 +17,7 @@ env:
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
   DOTNET_NOLOGO: true
   NuGetDirectory: ${{ github.workspace}}/nuget
+  ProjectPath: ./ApiUI/ApiUI.csproj
 
 defaults:
   run:
@@ -35,7 +36,7 @@ jobs:
       uses: actions/setup-dotnet@v4
 
     # Create the NuGet package in the folder from the environment variable NuGetDirectory
-    - run: dotnet pack --configuration Release --output ${{ env.NuGetDirectory }} ./ApiUI/ApiUI.csproj
+    - run: dotnet pack --configuration Release --output ${{ env.NuGetDirectory }} ${{ env.ProjectPath }}
 
     # Publish the NuGet package as an artifact, so they can be used in the following jobs
     - uses: actions/upload-artifact@v3
