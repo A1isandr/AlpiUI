@@ -13,7 +13,7 @@
             </api:ApiWindow.TitleBarControls>
 
             <TextBlock
-                Text="ConverseWindow"
+                Text="A window."
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"/>
         </api:ApiWindow>
@@ -47,6 +47,15 @@
 										Height="{StaticResource ApiWindowTitleBarHeight}"
 										Background="{TemplateBinding TitleBarBackground}">
 								        
+						            <Border.Transitions>
+							            <Transitions>
+								            <BrushTransition
+									            Property="Background"
+									            Duration="{StaticResource MediumAnimationDuration}"
+									            Easing="{StaticResource DefaultEasingInOut}"/>
+							            </Transitions>
+						            </Border.Transitions>
+						            
 						            <Grid
 							            ColumnDefinitions="Auto, *, Auto, Auto">
 									        
@@ -116,12 +125,8 @@
 							            <Transitions>
 								            <BrushTransition
 									            Property="Background"
-									            Duration="0:0:0.2">
-									            
-									            <BrushTransition.Easing>
-										            <QuinticEaseOut/>
-									            </BrushTransition.Easing>
-								            </BrushTransition>
+									            Duration="{StaticResource MediumAnimationDuration}"
+									            Easing="{StaticResource DefaultEasingInOut}"/>
 							            </Transitions>
 						            </ContentPresenter.Transitions>
 					            </ContentPresenter>

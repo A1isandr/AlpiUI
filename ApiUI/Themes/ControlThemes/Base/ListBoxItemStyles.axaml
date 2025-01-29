@@ -41,12 +41,8 @@
             <Transitions>
                 <BrushTransition
                     Property="Background"
-                    Duration="0:0:0.2">
-                    
-                    <BrushTransition.Easing>
-                        <QuinticEaseOut/>
-                    </BrushTransition.Easing>
-                </BrushTransition>
+                    Duration="{StaticResource ShortAnimationDuration}"
+                    Easing="{StaticResource DefaultEasingOut}"/>
             </Transitions>
         </Setter>
         

@@ -21,12 +21,8 @@
             <Transitions>
                 <BrushTransition
                     Property="Background"
-                    Duration="0:0:0.2">
-                
-                    <BrushTransition.Easing>
-                        <QuinticEaseOut/>
-                    </BrushTransition.Easing>
-                </BrushTransition>
+                    Duration="{StaticResource ShortAnimationDuration}"
+                    Easing="{StaticResource DefaultEasingOut}"/>
             </Transitions>
         </Setter>
         
@@ -68,12 +64,8 @@
                                     <Transitions>
                                         <DoubleTransition
                                             Property="Opacity"
-                                            Duration="0:0:0.2">
-                    
-                                            <DoubleTransition.Easing>
-                                                <QuinticEaseOut/>
-                                            </DoubleTransition.Easing>
-                                        </DoubleTransition>
+                                            Duration="{StaticResource ShortAnimationDuration}"
+                                            Easing="{StaticResource DefaultEasingOut}"/>
                                     </Transitions>
                                 </Track.Transitions>
                                 
@@ -98,12 +90,8 @@
                                         <Transitions>
                                             <DoubleTransition
                                                 Property="Width"
-                                                Duration="0:0:0.2">
-                                
-                                                <DoubleTransition.Easing>
-                                                    <QuinticEaseOut/>
-                                                </DoubleTransition.Easing>
-                                            </DoubleTransition>
+                                                Duration="{StaticResource ShortAnimationDuration}"
+                                                Easing="{StaticResource DefaultEasingOut}"/>
                                         </Transitions>
                                     </Thumb.Transitions>
                                     
@@ -156,12 +144,8 @@
                                     <Transitions>
                                         <DoubleTransition
                                             Property="Opacity"
-                                            Duration="0:0:0.2">
-                                            
-                                            <DoubleTransition.Easing>
-                                                <QuinticEaseOut/>
-                                            </DoubleTransition.Easing>
-                                        </DoubleTransition>
+                                            Duration="{StaticResource ShortAnimationDuration}"
+                                            Easing="{StaticResource DefaultEasingOut}"/>
                                     </Transitions>
                                 </Track.Transitions>
                                 
@@ -186,12 +170,8 @@
                                         <Transitions>
                                             <DoubleTransition
                                                 Property="Height"
-                                                Duration="0:0:0.2">
-                                
-                                                <DoubleTransition.Easing>
-                                                    <QuinticEaseOut/>
-                                                </DoubleTransition.Easing>
-                                            </DoubleTransition>
+                                                Duration="{StaticResource ShortAnimationDuration}"
+                                                Easing="{StaticResource DefaultEasingOut}"/>
                                         </Transitions>
                                     </Thumb.Transitions>
                                     

@@ -12,6 +12,14 @@
                 <ResourceInclude Source="/Resources/Controls.axaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
+        
+        <x:TimeSpan x:Key="ShortAnimationDuration">  0.2</x:TimeSpan>
+        <x:TimeSpan x:Key="MediumAnimationDuration"> 0.3</x:TimeSpan>
+        <x:TimeSpan x:Key="LongAnimationDuration">   0.5</x:TimeSpan>
+        
+        <Easing x:Key="DefaultEasingIn">QuinticEaseIn</Easing>
+        <Easing x:Key="DefaultEasingOut">QuinticEaseOut</Easing>
+        <Easing x:Key="DefaultEasingInOut">QuinticEaseInOut</Easing>
     </Styles.Resources>
     
     <!-- <SimpleTheme/> -->

@@ -50,21 +50,13 @@
 							    <Transitions>
 							        <BrushTransition
 							            Property="BorderBrush"
-							            Duration="0:0:0.2">
-							
-								         <BrushTransition.Easing>
-									         <QuinticEaseOut/>
-								         </BrushTransition.Easing>
-							        </BrushTransition>
+							            Duration="{StaticResource ShortAnimationDuration}"
+							            Easing="{StaticResource DefaultEasingOut}"/>
 								    
 								    <BrushTransition
 									    Property="Background"
-									    Duration="0:0:0.2">
-									    
-									    <BrushTransition.Easing>
-										    <QuinticEaseOut/>
-									    </BrushTransition.Easing>
-								    </BrushTransition>
+									    Duration="{StaticResource ShortAnimationDuration}"
+									    Easing="{StaticResource DefaultEasingOut}"/>
 							    </Transitions>
 							</Border.Transitions>
 						</Border>
@@ -93,12 +85,8 @@
 		                                    <Transitions>
 		                                        <DoubleTransition
 		                                            Property="Height"
-		                                            Duration="0:0:0.2">
-		    
-		                                            <DoubleTransition.Easing>
-			                                            <QuinticEaseOut/>
-		                                            </DoubleTransition.Easing>
-		                                        </DoubleTransition>
+		                                            Duration="{StaticResource ShortAnimationDuration}"
+		                                            Easing="{StaticResource DefaultEasingOut}"/>
 		                                    </Transitions>
 		                                </Border.Transitions>
 		                            </Border>
@@ -116,21 +104,13 @@
 											<Transitions>
 												<TransformOperationsTransition
 												    Property="RenderTransform"
-												    Duration="0:0:0.2">
-
-												    <TransformOperationsTransition.Easing>
-													    <QuinticEaseOut/>
-												    </TransformOperationsTransition.Easing>
-												</TransformOperationsTransition>
+												    Duration="{StaticResource ShortAnimationDuration}"
+												    Easing="{StaticResource DefaultEasingOut}"/>
 
 												<DoubleTransition
 												    Property="Opacity"
-												    Duration="0:0:0.2">
-
-												    <DoubleTransition.Easing>
-													    <QuinticEaseOut/>
-												    </DoubleTransition.Easing>
-												</DoubleTransition>
+												    Duration="{StaticResource ShortAnimationDuration}"
+												    Easing="{StaticResource DefaultEasingOut}"/>
 											</Transitions>
 									    </TextBlock.Transitions>
 						            </TextBlock>

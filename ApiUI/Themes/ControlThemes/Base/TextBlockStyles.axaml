@@ -22,6 +22,15 @@
     <Style Selector="TextBlock">
         <Setter Property="FontSize" Value="14"/>
         <Setter Property="FontWeight" Value="SemiBold"/>
+        
+        <Setter Property="Transitions">
+            <Transitions>
+                <BrushTransition
+                    Property="Foreground"
+                    Duration="{StaticResource ShortAnimationDuration}"
+                    Easing="{StaticResource DefaultEasingInOut}"/>
+            </Transitions>
+        </Setter>
     </Style>
     
     <Style Selector="TextBlock.GlyphIcon">
