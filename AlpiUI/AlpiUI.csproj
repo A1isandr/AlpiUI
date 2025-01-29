@@ -8,13 +8,13 @@
     </PropertyGroup>
     
     <PropertyGroup>
-        <Title>Api UI</Title>
+        <Title>Alpi UI</Title>
         <Authors>AlPi</Authors>
         <Description>Controls library for Avalonia UI.</Description>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <PackageProjectUrl>https://github.com/A1isandr/ApiUI</PackageProjectUrl>
+        <PackageProjectUrl>https://github.com/A1isandr/AlpiUI</PackageProjectUrl>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <RepositoryUrl>https://github.com/A1isandr/ApiUI</RepositoryUrl>
+        <RepositoryUrl>https://github.com/A1isandr/AlpiUI</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageTags>avalonia;avaloniaui;ui;controls;theme;library</PackageTags>
     </PropertyGroup>
@@ -22,6 +22,7 @@
     <PropertyGroup>
         <EnablePackageValidation>True</EnablePackageValidation>
         <GenerateDocumentationFile>True</GenerateDocumentationFile>
+        <MinVerVerbosity>detailed</MinVerVerbosity>
     </PropertyGroup>
 
     <ItemGroup>

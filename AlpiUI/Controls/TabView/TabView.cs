@@ -4,7 +4,7 @@ using Avalonia.Controls.Templates;
 using Avalonia.Input;
 
 // ReSharper disable CheckNamespace
-namespace ApiUI.Controls;
+namespace AlpiUI.Controls;
 
 /// <summary>
 /// Control that displays a tab strip with the ability to create new or close tabs.

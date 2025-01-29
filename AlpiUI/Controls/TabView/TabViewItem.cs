@@ -2,7 +2,7 @@
 using Avalonia.Input;
 
 // ReSharper disable CheckNamespace
-namespace ApiUI.Controls;
+namespace AlpiUI.Controls;
 
 /// <summary>
 /// An item in a <see cref="TabView"/>. 

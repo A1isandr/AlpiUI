@@ -1,9 +1,9 @@
 ﻿using Avalonia.Styling;
 
-namespace ApiUI.Themes;
+namespace AlpiUI.Themes;
 
 /// <summary>
-/// Main class for ApiUI theme.
+/// Main class for AlpiUI theme.
 /// </summary>
 public partial class ApiUITheme : Styles
 {

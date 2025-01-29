@@ -2,7 +2,7 @@
 using Avalonia.Controls;
 using Avalonia.Controls.Metadata;
 
-namespace ApiUI.Controls;
+namespace AlpiUI.Controls;
 
 /// <summary>
 /// Card with blurred background.

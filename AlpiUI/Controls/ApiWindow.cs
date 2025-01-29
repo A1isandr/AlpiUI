@@ -11,7 +11,7 @@ using Avalonia.Media;
 using Avalonia.Styling;
 using Avalonia.Threading;
 
-namespace ApiUI.Controls
+namespace AlpiUI.Controls
 {
     /// <summary>
     /// Api window.

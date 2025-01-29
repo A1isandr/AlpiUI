@@ -6,7 +6,7 @@ using Avalonia.Rendering.SceneGraph;
 using Avalonia.Skia;
 using SkiaSharp;
 
-namespace ApiUI.Controls;
+namespace AlpiUI.Controls;
 
 /// <summary>
 /// Control with ability to blur background.
