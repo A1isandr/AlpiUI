@@ -84,6 +84,7 @@
                                 <Thumb x:Name="Thumb"
                                        Width="{StaticResource ScrollBarVerticalThumbWidth}"
                                        MinHeight="{StaticResource ScrollBarVerticalThumbMinHeight}"
+                                       ClipToBounds="False"
                                        HorizontalAlignment="Right">
                                     
                                     <Thumb.Transitions>
@@ -97,11 +98,16 @@
                                     
                                     <Thumb.Template>
                                         <ControlTemplate>
-                                            <Border x:Name="Thumb"
-                                                    Width="{TemplateBinding Width}"
-                                                    MinHeight="{TemplateBinding MinHeight}"
-                                                    CornerRadius="{TemplateBinding CornerRadius}"
-                                                    Background="{TemplateBinding Background}"/>
+                                            <Border x:Name="HoverBorder"
+                                                Width="{StaticResource ScrollBarVerticalThumbHoverBorderWidth}"
+                                                Background="Transparent">
+                                                
+                                                <Border x:Name="Thumb"
+                                                        Width="{TemplateBinding Width}"
+                                                        MinHeight="{TemplateBinding MinHeight}"
+                                                        CornerRadius="{TemplateBinding CornerRadius}"
+                                                        Background="{TemplateBinding Background}"/>
+                                            </Border>
                                         </ControlTemplate>
                                     </Thumb.Template>
                                     
@@ -164,6 +170,7 @@
                                 <Thumb x:Name="Thumb"
                                        MinWidth="{StaticResource ScrollBarHorizontalThumbMinWidth}"
                                        Height="{StaticResource ScrollBarHorizontalThumbHeight}"
+                                       ClipToBounds="False"
                                        VerticalAlignment="Bottom">
                                     
                                     <Thumb.Transitions>
@@ -177,11 +184,16 @@
                                     
                                     <Thumb.Template>
                                         <ControlTemplate>
-                                            <Border x:Name="Thumb"
-                                                    MinWidth="{TemplateBinding MinWidth}"
-                                                    Height="{TemplateBinding Height}"
-                                                    CornerRadius="{TemplateBinding CornerRadius}"
-                                                    Background="{TemplateBinding Background}"/>
+                                            <Border x:Name="HoverBorder"
+                                                    Height="{StaticResource ScrollBarHorizontalThumbHoverBorderHeight}"
+                                                    Background="Transparent">
+                                                
+                                                <Border x:Name="Thumb"
+                                                        MinWidth="{TemplateBinding MinWidth}"
+                                                        Height="{TemplateBinding Height}"
+                                                        CornerRadius="{TemplateBinding CornerRadius}"
+                                                        Background="{TemplateBinding Background}"/>
+                                            </Border>
                                         </ControlTemplate>
                                     </Thumb.Template>
                                     
