@@ -38,6 +38,8 @@
     
     
     <Style Selector="ScrollBar">
+        <Setter Property="ClipToBounds" Value="False"/>
+        
         <Style Selector="^:vertical">
             <Setter Property="Width" Value="{StaticResource ScrollBarVerticalWidth}"/>
             
