@@ -78,15 +78,15 @@
     <SolidColorBrush x:Key="TabViewItemSelectedPressedBackgroundBrush" Color="{DynamicResource AlpiAccentColor}"/>
     
     <!-- TextBox -->
-    <x:Double x:Key="TextBoxMinHeight">35</x:Double>
-    <x:Double x:Key="TextBoxFontSize">14</x:Double>
+    <x:Double x:Key="TextBoxMinHeight">30</x:Double>
+    <x:Double x:Key="TextBoxFontSize">12</x:Double>
     <x:Double x:Key="TextBoxFloatingWatermarkBorderActivatedHeight">20</x:Double>
     <x:Double x:Key="TextBoxWatermarkOpacity">0.5</x:Double>
     <x:Double x:Key="TextBoxWatermarkHoverOpacity">1</x:Double>
     <x:Double x:Key="TextBoxFocusWatermarkOpacity">0</x:Double>
     <x:Double x:Key="TextBoxFocusFloatingWatermarkOpacity">0.3</x:Double>
     <CornerRadius x:Key="TextBoxCornerRadius">20</CornerRadius>
-    <Thickness x:Key="TextBoxBorderThickness">2</Thickness>
+    <Thickness x:Key="TextBoxBorderThickness">1.5</Thickness>
     <Thickness x:Key="TextBoxPadding">20, 5</Thickness>
     <SolidColorBrush x:Key="TextBoxCaretBrush" Color="{DynamicResource AlpiTextColor}"/>
     <SolidColorBrush x:Key="TextBoxBorderBrush" Color="{DynamicResource AlpiTransparentColor50}"/>
