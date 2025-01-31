@@ -1,8 +1,8 @@
 ﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:tabView="clr-namespace:AlpiUI.Controls">
+                    xmlns:alpi="clr-namespace:AlpiUI.Controls">
     
-    <ControlTheme x:Key="{x:Type tabView:TabViewItem}" TargetType="{x:Type tabView:TabViewItem}">
+    <ControlTheme x:Key="{x:Type alpi:TabViewItem}" TargetType="{x:Type alpi:TabViewItem}">
         <Setter Property="CornerRadius" Value="{StaticResource TabViewItemCornerRadius}"/>
         <Setter Property="ClipToBounds" Value="True"/>
         <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
