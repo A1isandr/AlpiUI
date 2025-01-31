@@ -196,8 +196,31 @@
 	    <Style Selector="^[UseFloatingWatermark=False]">
 		    <Style Selector="^:not(:empty)">
 			    <Style Selector="^ /template/ TextBlock#PART_Watermark">
-				    <Setter Property="RenderTransform" Value="translateX(20px)"/>
 				    <Setter Property="Opacity" Value="{StaticResource TextBoxFocusWatermarkOpacity}"/>
+			    </Style>
+			    
+			    <Style Selector="^[HorizontalContentAlignment=Left]">
+				    <Style Selector="^ /template/ TextBlock#PART_Watermark">
+					    <Setter Property="RenderTransform" Value="translateX(20px)"/>
+				    </Style>
+			    </Style>
+			    
+			    <Style Selector="^[HorizontalContentAlignment=Right]">
+				    <Style Selector="^ /template/ TextBlock#PART_Watermark">
+					    <Setter Property="RenderTransform" Value="translateX(-20px)"/>
+				    </Style>
+			    </Style>
+			    
+			    <Style Selector="^[HorizontalContentAlignment=Center]">
+				    <Style Selector="^ /template/ TextBlock#PART_Watermark">
+					    <Setter Property="RenderTransform" Value="translateY(-20px)"/>
+				    </Style>
+			    </Style>
+			    
+			    <Style Selector="^[HorizontalContentAlignment=Stretch]">
+				    <Style Selector="^ /template/ TextBlock#PART_Watermark">
+					    <Setter Property="RenderTransform" Value="translateX(20px)"/>
+				    </Style>
 			    </Style>
 		    </Style>
 	    </Style>
