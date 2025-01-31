@@ -16,7 +16,7 @@
     
     <!-- BlurCard -->
     <x:Double x:Key="BlurCardBlurRadius">20</x:Double>
-    <CornerRadius x:Key="BlurCardCornerRadius">10</CornerRadius>
+    <CornerRadius x:Key="BlurCardCornerRadius">20</CornerRadius>
     <Thickness x:Key="BlurCardBorderThickness">0</Thickness>
     <Thickness x:Key="BlurCardPadding">10</Thickness>
     

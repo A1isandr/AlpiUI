@@ -1,8 +1,8 @@
 ﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:api="clr-namespace:AlpiUI.Controls">
+                    xmlns:alpi="clr-namespace:AlpiUI.Controls">
     
-    <ControlTheme x:Key="{x:Type api:BlurCard}" TargetType="{x:Type api:BlurCard}">
+    <ControlTheme x:Key="{x:Type alpi:BlurCard}" TargetType="{x:Type alpi:BlurCard}">
         <Setter Property="CornerRadius" Value="{StaticResource BlurCardCornerRadius}"/>
         <Setter Property="ClipToBounds" Value="True"/>
         <Setter Property="BlurRadius" Value="{StaticResource BlurCardBlurRadius}"/>
@@ -21,7 +21,7 @@
                     Background="{TemplateBinding Background}">
                     
                     <Panel>
-                        <api:BackgroundBlur x:Name="PART_BackgroundBlur"
+                        <alpi:BackgroundBlur x:Name="PART_BackgroundBlur"
                                             BlurRadius="{TemplateBinding BlurRadius}"/>
                     
                         <ContentPresenter x:Name="PART_ContentPresenter"

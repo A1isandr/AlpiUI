@@ -86,12 +86,14 @@ internal class BackdropBlurDrawOperation(Rect controlBounds, double blurRadius) 
             SKShaderTileMode.Clamp,
             invertedTransform);
 
-        using var blurFilter = SKImageFilter.CreateBlur((float)_blurRadius, (float)_blurRadius);
+        using var blurFilter = SKImageFilter.CreateBlur(
+            (float)_blurRadius, 
+            (float)_blurRadius, 
+            SKShaderTileMode.Clamp);
 
         using var blurPaint = new SKPaint();
         blurPaint.Shader = backgroundShader;
         blurPaint.ImageFilter = blurFilter;
-        blurPaint.IsAntialias = true;
         
         canvas.DrawRect(0, 0, (float)_controlBounds.Width, (float)_controlBounds.Height, blurPaint);
     }
