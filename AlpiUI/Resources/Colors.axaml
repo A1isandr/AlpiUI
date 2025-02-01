@@ -45,15 +45,33 @@
         </ResourceDictionary>
     </ResourceDictionary.ThemeDictionaries>
     
-    <Color x:Key="AlpiAccentColor">  #FF9046FF</Color>
-    <Color x:Key="AlpiAccentColor80">#CC9046FF</Color>
-    <Color x:Key="AlpiAccentColor50">#809046FF</Color>
-    <Color x:Key="AlpiAccentColor0"> #009046FF</Color>
+    <Color x:Key="AlpiAccentColor100"> #FF9046FF</Color>
+    <Color x:Key="AlpiAccentColor90">  #E69046FF</Color>
+    <Color x:Key="AlpiAccentColor80">  #CC9046FF</Color>
+    <Color x:Key="AlpiAccentColor70">  #B39046FF</Color>
+    <Color x:Key="AlpiAccentColor60">  #998046FF</Color>
+    <Color x:Key="AlpiAccentColor50">  #809046FF</Color>
+    <Color x:Key="AlpiAccentColor40">  #669046FF</Color>
+    <Color x:Key="AlpiAccentColor30">  #4D9046FF</Color>
+    <Color x:Key="AlpiAccentColor20">  #339046FF</Color>
+    <Color x:Key="AlpiAccentColor10">  #1A9046FF</Color>
+    <Color x:Key="AlpiAccentColor0">   #009046FF</Color>
     
     <Color x:Key="AlpiDangerColor"> #FFFF2821</Color>
     <Color x:Key="AlpiDangerColor0">#00FF2821</Color>
     
-    <SolidColorBrush x:Key="AlpiAccentBrush" Color="{DynamicResource AlpiAccentColor}"/>
+    <SolidColorBrush x:Key="AlpiAccentBrush100" Color="{DynamicResource AlpiAccentColor100}"/>
+    <SolidColorBrush x:Key="AlpiAccentBrush90" Color="{DynamicResource AlpiAccentColor90}"/>
+    <SolidColorBrush x:Key="AlpiAccentBrush80" Color="{DynamicResource AlpiAccentColor80}"/>
+    <SolidColorBrush x:Key="AlpiAccentBrush70" Color="{DynamicResource AlpiAccentColor70}"/>
+    <SolidColorBrush x:Key="AlpiAccentBrush60" Color="{DynamicResource AlpiAccentColor60}"/>
+    <SolidColorBrush x:Key="AlpiAccentBrush50" Color="{DynamicResource AlpiAccentColor50}"/>
+    <SolidColorBrush x:Key="AlpiAccentBrush40" Color="{DynamicResource AlpiAccentColor40}"/>
+    <SolidColorBrush x:Key="AlpiAccentBrush30" Color="{DynamicResource AlpiAccentColor30}"/>
+    <SolidColorBrush x:Key="AlpiAccentBrush20" Color="{DynamicResource AlpiAccentColor20}"/>
+    <SolidColorBrush x:Key="AlpiAccentBrush10" Color="{DynamicResource AlpiAccentColor10}"/>
+    <SolidColorBrush x:Key="AlpiAccentBrush0" Color="{DynamicResource AlpiAccentColor0}"/>
+    
     <SolidColorBrush x:Key="AlpiDangerBrush" Color="{DynamicResource AlpiDangerColor}"/>
     <SolidColorBrush x:Key="AlpiTextBrush" Color="{DynamicResource AlpiTextColor}"/>
     <SolidColorBrush x:Key="AlpiDisabledTextBrush" Color="{DynamicResource AlpiDisabledTextColor}"/>

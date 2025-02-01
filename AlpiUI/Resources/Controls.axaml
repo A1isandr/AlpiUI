@@ -45,7 +45,7 @@
     <SolidColorBrush x:Key="ListBoxItemPressedBackgroundBrush" Color="{DynamicResource AlpiTransparentColor20}"/>
     <SolidColorBrush x:Key="ListBoxItemSelectedBackgroundBrush" Color="{DynamicResource AlpiAccentColor50}"/>
     <SolidColorBrush x:Key="ListBoxItemSelectedHoverBackgroundBrush" Color="{DynamicResource AlpiAccentColor80}"/>
-    <SolidColorBrush x:Key="ListBoxItemSelectedPressedBackgroundBrush" Color="{DynamicResource AlpiAccentColor}"/>
+    <SolidColorBrush x:Key="ListBoxItemSelectedPressedBackgroundBrush" Color="{DynamicResource AlpiAccentColor100}"/>
     
     <!-- ScrollBar -->
     <x:Double x:Key="ScrollBarVerticalWidth">15</x:Double>
@@ -75,7 +75,7 @@
     <SolidColorBrush x:Key="TabViewItemPressedBackgroundBrush" Color="{DynamicResource AlpiTransparentColor20}"/>
     <SolidColorBrush x:Key="TabViewItemSelectedBackgroundBrush" Color="{DynamicResource AlpiAccentColor50}"/>
     <SolidColorBrush x:Key="TabViewItemSelectedHoverBackgroundBrush" Color="{DynamicResource AlpiAccentColor80}"/>
-    <SolidColorBrush x:Key="TabViewItemSelectedPressedBackgroundBrush" Color="{DynamicResource AlpiAccentColor}"/>
+    <SolidColorBrush x:Key="TabViewItemSelectedPressedBackgroundBrush" Color="{DynamicResource AlpiAccentColor100}"/>
     
     <!-- TextBox -->
     <x:Double x:Key="TextBoxMinHeight">30</x:Double>
