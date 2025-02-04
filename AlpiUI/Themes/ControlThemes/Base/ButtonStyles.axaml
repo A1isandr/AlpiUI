@@ -1,18 +1,30 @@
-﻿<Styles xmlns="https://github.com/avaloniaui"
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     
     <Design.PreviewWith>
         <Border
             Padding="10">
             
-            <Button
-                Content="Button"/>
+            <StackPanel
+                Orientation="Horizontal">
+                
+                <Button
+                    Content="Button"/>
+                
+                <Button
+                    Content="Button"
+                    Background="Brown"/>
+                
+                <Button
+                    Content="Button"
+                    IsEnabled="False"/>
+            </StackPanel>
         </Border>
     </Design.PreviewWith>
     
     
     
-    <Style Selector="Button">
+    <ControlTheme x:Key="{x:Type Button}" TargetType="{x:Type Button}">
         <Setter Property="CornerRadius" Value="{DynamicResource ButtonCornerRadius}"/>
         <Setter Property="ClipToBounds" Value="True"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
@@ -36,31 +48,51 @@
         
         <Setter Property="Template">
             <ControlTemplate>
+                
                 <Border
                     CornerRadius="{TemplateBinding CornerRadius}"
                     ClipToBounds="{TemplateBinding ClipToBounds}"
                     BorderThickness="{TemplateBinding BorderThickness}"
                     BorderBrush="{TemplateBinding BorderBrush}"
-                    Background="{TemplateBinding Background}"
-                    Padding="{TemplateBinding Padding}">
+                    Background="{TemplateBinding Background}">
                     
-                    <ContentPresenter x:Name="PART_ContentPresenter"
-                                      Content="{TemplateBinding Content}"
-                                      ContentTemplate="{TemplateBinding ContentTemplate}"
-                                      HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                      VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
-                                      Foreground="{TemplateBinding Foreground}"
-                                      RecognizesAccessKey="True"/>
+                    <Panel>
+                        <ContentPresenter x:Name="PART_ContentPresenter"
+                                          Content="{TemplateBinding Content}"
+                                          ContentTemplate="{TemplateBinding ContentTemplate}"
+                                          HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          Foreground="{TemplateBinding Foreground}"
+                                          Margin="{TemplateBinding Padding}"
+                                          RecognizesAccessKey="True"/>
+                        
+                        <Rectangle x:Name="HoverRectangle"
+                                   Fill="{DynamicResource ButtonBackgroundBrush}">
+                            
+                            <Rectangle.Transitions>
+                                <Transitions>
+                                    <BrushTransition
+                                        Property="Fill"
+                                        Duration="{StaticResource ShortAnimationDuration}"
+                                        Easing="{StaticResource DefaultEasingOut}"/>
+                                </Transitions>
+                            </Rectangle.Transitions>
+                        </Rectangle>
+                    </Panel>
                 </Border>
             </ControlTemplate>
         </Setter>
         
         <Style Selector="^:pointerover">
-            <Setter Property="Background" Value="{DynamicResource ButtonHoverBackgroundBrush}"/>
+            <Style Selector="^ /template/ Rectangle#HoverRectangle">
+                <Setter Property="Fill" Value="{DynamicResource ButtonHoverBackgroundBrush}"/>
+            </Style>
         </Style>
         
         <Style Selector="^:pressed">
-            <Setter Property="Background" Value="{DynamicResource ButtonPressedBackgroundBrush}"/>
+            <Style Selector="^ /template/ Rectangle#HoverRectangle">
+                <Setter Property="Fill" Value="{DynamicResource ButtonPressedBackgroundBrush}"/>
+            </Style>
         </Style>
         
         <Style Selector="^:focus-visible">
@@ -73,5 +105,5 @@
                 </Template>
             </Setter>
         </Style>
-    </Style>
-</Styles>
+    </ControlTheme>
+</ResourceDictionary>

@@ -22,7 +22,7 @@
         <Easing x:Key="DefaultEasingInOut">QuinticEaseInOut</Easing>
     </Styles.Resources>
     
-    <!-- <SimpleTheme/> -->
+    <SimpleTheme/>
     
     <StyleInclude Source="/Themes/ControlThemes/Controls.axaml"/>
 </Styles>
