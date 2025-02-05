@@ -37,6 +37,7 @@
     <SolidColorBrush x:Key="ButtonHoverBackgroundBrush" Color="{DynamicResource AlpiTransparentColor10}"/>
     <SolidColorBrush x:Key="ButtonPressedBackgroundBrush" Color="{DynamicResource AlpiTransparentColor20}"/>
     <SolidColorBrush x:Key="ButtonFocusAdornerFocusVisibleBorderBrush" Color="{DynamicResource AlpiFocusColor}"/>
+    <SolidColorBrush x:Key="ButtonCardBackgroundBrush" Color="{DynamicResource AlpiTransparentColor10}"/>
     
     <!-- ListBox -->
     <CornerRadius x:Key="ListBoxCornerRadius">0</CornerRadius>
