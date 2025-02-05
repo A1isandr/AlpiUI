@@ -1,4 +1,4 @@
-﻿<Styles xmlns="https://github.com/avaloniaui"
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     
     <Design.PreviewWith>
@@ -27,7 +27,7 @@
 
     
     
-    <Style Selector="ListBoxItem">
+    <ControlTheme x:Key="{x:Type ListBoxItem}" TargetType="{x:Type ListBoxItem}">
         <Setter Property="CornerRadius" Value="{StaticResource ListBoxItemCornerRadius}"/>
         <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
@@ -58,32 +58,52 @@
                                   BorderThickness="{TemplateBinding BorderThickness}"
                                   BorderBrush="{TemplateBinding BorderBrush}"
                                   Background="{TemplateBinding Background}"
-                                  Padding="{TemplateBinding Padding}"/>
+                                  Padding="{TemplateBinding Padding}">
+                    
+                    <ContentPresenter.Transitions>
+                        <Transitions>
+                            <BrushTransition
+                                Property="Background"
+                                Duration="{StaticResource ShortAnimationDuration}"
+                                Easing="{StaticResource DefaultEasingOut}"/>
+                        </Transitions>
+                    </ContentPresenter.Transitions>
+                </ContentPresenter>
             </ControlTemplate>
         </Setter>
         
         <Style Selector="^:pointerover">
-            <Setter Property="Background" Value="{DynamicResource ListBoxItemHoverBackgroundBrush}"/>
+            <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+                <Setter Property="Background" Value="{DynamicResource ListBoxItemHoverBackgroundBrush}"/>
+            </Style>
         </Style>
         
         <Style Selector="^:pressed">
-            <Setter Property="Background" Value="{DynamicResource ListBoxItemPressedBackgroundBrush}"/>
+            <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+                <Setter Property="Background" Value="{DynamicResource ListBoxItemPressedBackgroundBrush}"/>
+            </Style>
         </Style>
         
         <Style Selector="^:selected">
-            <Setter Property="Background" Value="{DynamicResource ListBoxItemSelectedBackgroundBrush}"/>
+            <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+                <Setter Property="Background" Value="{DynamicResource ListBoxItemSelectedBackgroundBrush}"/>
+            </Style>
             
             <Style Selector="^:pointerover">
-                <Setter Property="Background" Value="{DynamicResource ListBoxItemSelectedHoverBackgroundBrush}"/>
+                <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+                    <Setter Property="Background" Value="{DynamicResource ListBoxItemSelectedHoverBackgroundBrush}"/>
+                </Style>
             </Style>
             
             <Style Selector="^:pressed">
-                <Setter Property="Background" Value="{DynamicResource ListBoxItemSelectedPressedBackgroundBrush}"/>
+                <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+                    <Setter Property="Background" Value="{DynamicResource ListBoxItemSelectedPressedBackgroundBrush}"/>
+                </Style>
             </Style>
         </Style>
         
-        <Style Selector="^:disabled /template/ ContentPresenter">
+        <Style Selector="^:disabled /template/ ContentPresenter#PART_ContentPresenter">
             <Setter Property="Foreground" Value="{DynamicResource AlpiDisabledTextBrush}"/>
         </Style>
-    </Style>
-</Styles>
+    </ControlTheme>
+</ResourceDictionary>

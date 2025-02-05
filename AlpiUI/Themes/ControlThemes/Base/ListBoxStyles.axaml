@@ -1,4 +1,4 @@
-﻿<Styles xmlns="https://github.com/avaloniaui"
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     
     <Design.PreviewWith>
@@ -14,7 +14,7 @@
 
     
     
-    <Style Selector="ListBox">
+    <ControlTheme x:Key="{x:Type ListBox}" TargetType="{x:Type ListBox}">
         <Setter Property="CornerRadius" Value="{StaticResource ListBoxCornerRadius}"/>
         <Setter Property="BorderThickness" Value="{StaticResource ListBoxBorderThickness}"/>
         <Setter Property="BorderBrush" Value="Transparent"/>
@@ -54,5 +54,5 @@
                 </Border>
             </ControlTemplate>    
         </Setter>
-    </Style>
-</Styles>
+    </ControlTheme>
+</ResourceDictionary>

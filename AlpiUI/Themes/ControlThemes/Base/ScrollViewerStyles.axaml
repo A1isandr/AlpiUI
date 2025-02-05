@@ -1,4 +1,4 @@
-﻿<Styles xmlns="https://github.com/avaloniaui"
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     
     <Design.PreviewWith>
@@ -25,7 +25,7 @@
         </Border>
     </Design.PreviewWith>
 
-    <Style Selector="ScrollViewer">
+    <ControlTheme x:Key="{x:Type ScrollViewer}" TargetType="{x:Type ScrollViewer}">
         <Setter Property="Background" Value="Transparent"/>
         
         <Setter Property="Template">
@@ -77,61 +77,61 @@
                 <Setter Property="AllowAutoHide" Value="False"/>
             </Style>
         </Style>
-    </Style>
-    
-    <Style Selector="ScrollViewer.ScrollBarsOverContent">
-        <Setter Property="Background" Value="Transparent"/>
         
-        <Setter Property="Template">
-            <ControlTemplate>
-                <Grid 
-                    RowDefinitions="*,Auto"
-                    ColumnDefinitions="*,Auto">
-                    
-                    <ScrollContentPresenter x:Name="PART_ContentPresenter"
-                                            Grid.Row="0"
-                                            Grid.RowSpan="2"
-                                            Grid.Column="0"
-                                            Grid.ColumnSpan="2"
-                                            HorizontalSnapPointsType="{TemplateBinding HorizontalSnapPointsType}"
-                                            VerticalSnapPointsType="{TemplateBinding VerticalSnapPointsType}"
-                                            HorizontalSnapPointsAlignment="{TemplateBinding HorizontalSnapPointsAlignment}"
-                                            VerticalSnapPointsAlignment="{TemplateBinding VerticalSnapPointsAlignment}"
-                                            Background="{TemplateBinding Background}"
-                                            Padding="{TemplateBinding Padding}"
-                                            ScrollViewer.IsScrollInertiaEnabled="{TemplateBinding IsScrollInertiaEnabled}">
+        <Style Selector="^.ScrollBarsOverContent">
+            <Setter Property="Background" Value="Transparent"/>
+            
+            <Setter Property="Template">
+                <ControlTemplate>
+                    <Grid 
+                        RowDefinitions="*,Auto"
+                        ColumnDefinitions="*,Auto">
                         
-                        <ScrollContentPresenter.GestureRecognizers>
-                            <ScrollGestureRecognizer 
-                                CanHorizontallyScroll="{Binding CanHorizontallyScroll, ElementName=PART_ContentPresenter}"
-                                CanVerticallyScroll="{Binding CanVerticallyScroll, ElementName=PART_ContentPresenter}"
-                                IsScrollInertiaEnabled="{Binding (ScrollViewer.IsScrollInertiaEnabled), ElementName=PART_ContentPresenter}"/>
-                        </ScrollContentPresenter.GestureRecognizers>
-                    </ScrollContentPresenter>
-                    
-                    <ScrollBar x:Name="PART_HorizontalScrollBar"
+                        <ScrollContentPresenter x:Name="PART_ContentPresenter"
+                                                Grid.Row="0"
+                                                Grid.RowSpan="2"
+                                                Grid.Column="0"
+                                                Grid.ColumnSpan="2"
+                                                HorizontalSnapPointsType="{TemplateBinding HorizontalSnapPointsType}"
+                                                VerticalSnapPointsType="{TemplateBinding VerticalSnapPointsType}"
+                                                HorizontalSnapPointsAlignment="{TemplateBinding HorizontalSnapPointsAlignment}"
+                                                VerticalSnapPointsAlignment="{TemplateBinding VerticalSnapPointsAlignment}"
+                                                Background="{TemplateBinding Background}"
+                                                Padding="{TemplateBinding Padding}"
+                                                ScrollViewer.IsScrollInertiaEnabled="{TemplateBinding IsScrollInertiaEnabled}">
+                            
+                            <ScrollContentPresenter.GestureRecognizers>
+                                <ScrollGestureRecognizer 
+                                    CanHorizontallyScroll="{Binding CanHorizontallyScroll, ElementName=PART_ContentPresenter}"
+                                    CanVerticallyScroll="{Binding CanVerticallyScroll, ElementName=PART_ContentPresenter}"
+                                    IsScrollInertiaEnabled="{Binding (ScrollViewer.IsScrollInertiaEnabled), ElementName=PART_ContentPresenter}"/>
+                            </ScrollContentPresenter.GestureRecognizers>
+                        </ScrollContentPresenter>
+                        
+                        <ScrollBar x:Name="PART_HorizontalScrollBar"
+                                   Grid.Row="1"
+                                   Grid.Column="0"
+                                   Orientation="Horizontal"/>
+                        
+                        <ScrollBar x:Name="PART_VerticalScrollBar"
+                                   Grid.Row="0"
+                                   Grid.Column="1"
+                                   Orientation="Vertical"/>
+                        
+                        <Panel x:Name="PART_ScrollBarsSeparator"
                                Grid.Row="1"
-                               Grid.Column="0"
-                               Orientation="Horizontal"/>
-                    
-                    <ScrollBar x:Name="PART_VerticalScrollBar"
-                               Grid.Row="0"
                                Grid.Column="1"
-                               Orientation="Vertical"/>
-                    
-                    <Panel x:Name="PART_ScrollBarsSeparator"
-                           Grid.Row="1"
-                           Grid.Column="1"
-                           Background="Transparent"
-                           Opacity="0"/>
-                </Grid>
-            </ControlTemplate>
-        </Setter>
-        
-        <Style Selector="^:pointerover">
-            <Style Selector="^ /template/ ScrollBar">
-                <Setter Property="AllowAutoHide" Value="False"/>
+                               Background="Transparent"
+                               Opacity="0"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter>
+            
+            <Style Selector="^:pointerover">
+                <Style Selector="^ /template/ ScrollBar">
+                    <Setter Property="AllowAutoHide" Value="False"/>
+                </Style>
             </Style>
         </Style>
-    </Style>
-</Styles>
+    </ControlTheme>
+</ResourceDictionary>
