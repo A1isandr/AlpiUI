@@ -20,6 +20,12 @@
     <Thickness x:Key="BlurCardBorderThickness">0</Thickness>
     <Thickness x:Key="BlurCardPadding">10</Thickness>
     
+    <!-- Border -->
+    <CornerRadius x:Key="BorderCardCornerRadius">20</CornerRadius>
+    <Thickness x:Key="BorderCardBorderThickness">0</Thickness>
+    <Thickness x:Key="BorderCardPadding">10</Thickness>
+    <SolidColorBrush x:Key="BorderCardBackgroundBrush" Color="{DynamicResource AlpiTransparentColor50}"/>
+    
     <!-- Button -->
     <x:Double x:Key="ButtonFontSize">14</x:Double>
     <CornerRadius x:Key="ButtonCornerRadius">20</CornerRadius>

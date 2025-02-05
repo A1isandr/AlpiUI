@@ -20,4 +20,5 @@
     <StyleInclude Source="/Themes/ControlThemes/Base/ListBoxStyles.axaml"/>
     <StyleInclude Source="/Themes/ControlThemes/Base/ListBoxItemStyles.axaml"/>
     <StyleInclude Source="/Themes/ControlThemes/Base/ItemsControlStyles.axaml"/>
+    <StyleInclude Source="/Themes/ControlThemes/Base/BorderStyles.axaml"/>
 </Styles>
