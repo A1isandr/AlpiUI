@@ -19,4 +19,5 @@
     </Styles.Resources>
     
     <StyleInclude Source="/Themes/ControlThemes/Base/TextBlockStyles.axaml"/>
+    <StyleInclude Source="/Themes/ControlThemes/Base/BorderStyles.axaml"/>
 </Styles>

@@ -17,18 +17,5 @@
         <Setter Property="BorderBrush" Value="Transparent"/>
         <Setter Property="Background" Value="{DynamicResource BorderCardBackgroundBrush}"/>
         <Setter Property="Padding" Value="{StaticResource BorderCardPadding}"/>
-        
-        <Setter Property="Template">
-            <ControlTemplate>
-                <ContentPresenter x:Name="PART_ContentPresenter"
-                                  Content="{TemplateBinding Content}"
-                                  ContentTemplate="{TemplateBinding ContentTemplate}"
-                                  CornerRadius="{TemplateBinding CornerRadius}"
-                                  BorderThickness="{TemplateBinding BorderThickness}"
-                                  BorderBrush="{TemplateBinding BorderBrush}"
-                                  Background="{TemplateBinding Background}"
-                                  Padding="{TemplateBinding Padding}"/>
-            </ControlTemplate>
-        </Setter>
     </Style>
 </Styles>
