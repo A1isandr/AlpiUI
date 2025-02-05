@@ -57,15 +57,6 @@
                     Background="{TemplateBinding Background}">
                     
                     <Panel>
-                        <ContentPresenter x:Name="PART_ContentPresenter"
-                                          Content="{TemplateBinding Content}"
-                                          ContentTemplate="{TemplateBinding ContentTemplate}"
-                                          HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                          VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
-                                          Foreground="{TemplateBinding Foreground}"
-                                          Margin="{TemplateBinding Padding}"
-                                          RecognizesAccessKey="True"/>
-                        
                         <Rectangle x:Name="HoverRectangle"
                                    Fill="{DynamicResource ButtonBackgroundBrush}">
                             
@@ -78,6 +69,15 @@
                                 </Transitions>
                             </Rectangle.Transitions>
                         </Rectangle>
+                        
+                        <ContentPresenter x:Name="PART_ContentPresenter"
+                                          Content="{TemplateBinding Content}"
+                                          ContentTemplate="{TemplateBinding ContentTemplate}"
+                                          HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          Foreground="{TemplateBinding Foreground}"
+                                          Margin="{TemplateBinding Padding}"
+                                          RecognizesAccessKey="True"/>
                     </Panel>
                 </Border>
             </ControlTemplate>

@@ -9,15 +9,14 @@
                 <MergeResourceInclude Source="/Themes/ControlThemes/ApiControls/TabViewItemStyles.axaml"/>
                 <MergeResourceInclude Source="/Themes/ControlThemes/ApiControls/BlurCard.axaml"/>
                 <MergeResourceInclude Source="/Themes/ControlThemes/Base/ButtonStyles.axaml"/>
+                <MergeResourceInclude Source="/Themes/ControlThemes/Base/ListBoxStyles.axaml"/>
+                <MergeResourceInclude Source="/Themes/ControlThemes/Base/ListBoxItemStyles.axaml"/>
+                <MergeResourceInclude Source="/Themes/ControlThemes/Base/ScrollBarStyles.axaml"/>
+                <MergeResourceInclude Source="/Themes/ControlThemes/Base/ScrollViewerStyles.axaml"/>
+                <MergeResourceInclude Source="/Themes/ControlThemes/Base/TextBoxStyles.axaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Styles.Resources>
     
-    <StyleInclude Source="/Themes/ControlThemes/Base/TextBoxStyles.axaml"/>
     <StyleInclude Source="/Themes/ControlThemes/Base/TextBlockStyles.axaml"/>
-    <StyleInclude Source="/Themes/ControlThemes/Base/ScrollBarStyles.axaml"/>
-    <StyleInclude Source="/Themes/ControlThemes/Base/ScrollViewerStyles.axaml"/>
-    <StyleInclude Source="/Themes/ControlThemes/Base/ListBoxStyles.axaml"/>
-    <StyleInclude Source="/Themes/ControlThemes/Base/ListBoxItemStyles.axaml"/>
-    <StyleInclude Source="/Themes/ControlThemes/Base/ItemsControlStyles.axaml"/>
 </Styles>

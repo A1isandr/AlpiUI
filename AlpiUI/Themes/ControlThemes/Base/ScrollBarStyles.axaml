@@ -1,4 +1,4 @@
-﻿<Styles xmlns="https://github.com/avaloniaui"
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <Design.PreviewWith>
@@ -13,10 +13,10 @@
     
     
     
-    <Style Selector="Thumb">
+    <ControlTheme x:Key="{x:Type Thumb}" TargetType="{x:Type Thumb}">
         <Setter Property="CornerRadius" Value="{StaticResource ScrollBarThumbCornerRadius}"/>
         <Setter Property="Background" Value="{DynamicResource ScrollBarThumbBackgroundBrush}"/>
-        
+    
         <Setter Property="Transitions">
             <Transitions>
                 <BrushTransition
@@ -25,35 +25,35 @@
                     Easing="{StaticResource DefaultEasingOut}"/>
             </Transitions>
         </Setter>
-        
+    
         <Style Selector="^:pointerover">
             <Setter Property="Background" Value="{DynamicResource ScrollBarThumbHoverBackgroundBrush}"/>
         </Style>
-        
+    
         <Style Selector="^:pressed">
             <Setter Property="Background" Value="{DynamicResource ScrollBarThumbPressedBackgroundBrush}"/>
         </Style>
-    </Style>
+    </ControlTheme>
     
     
     
-    <Style Selector="ScrollBar">
+    <ControlTheme x:Key="{x:Type ScrollBar}" TargetType="{x:Type ScrollBar}">
         <Setter Property="ClipToBounds" Value="False"/>
-        
+    
         <Style Selector="^:vertical">
             <Setter Property="Width" Value="{StaticResource ScrollBarVerticalWidth}"/>
-            
+        
             <Setter Property="Template">
                 <ControlTemplate>
                     <Border
                         Width="{TemplateBinding Width}"
                         Background="Transparent"
                         UseLayoutRounding="False">
-                        
-                        <Grid 
+        
+                        <Grid
                             RowDefinitions="Auto,*,Auto">
-
-                            <Track 
+        
+                            <Track
                                 Grid.Row="1"
                                 Value="{TemplateBinding Value, Mode=TwoWay}"
                                 Minimum="{TemplateBinding Minimum}"
@@ -61,7 +61,7 @@
                                 Orientation="{TemplateBinding Orientation}"
                                 ViewportSize="{TemplateBinding ViewportSize}"
                                 IsDirectionReversed="True">
-                                
+        
                                 <Track.Transitions>
                                     <Transitions>
                                         <DoubleTransition
@@ -70,25 +70,25 @@
                                             Easing="{StaticResource DefaultEasingOut}"/>
                                     </Transitions>
                                 </Track.Transitions>
-                                
+        
                                 <Track.DecreaseButton>
                                     <RepeatButton x:Name="PART_PageUpButton"
                                                   Background="Transparent"
                                                   Focusable="False"/>
                                 </Track.DecreaseButton>
-                                
+        
                                 <Track.IncreaseButton>
                                     <RepeatButton x:Name="PART_PageDownButton"
                                                   Background="Transparent"
                                                   Focusable="False"/>
                                 </Track.IncreaseButton>
-                                
+        
                                 <Thumb x:Name="Thumb"
                                        Width="{StaticResource ScrollBarVerticalThumbWidth}"
                                        MinHeight="{StaticResource ScrollBarVerticalThumbMinHeight}"
                                        ClipToBounds="False"
                                        HorizontalAlignment="Right">
-                                    
+        
                                     <Thumb.Transitions>
                                         <Transitions>
                                             <DoubleTransition
@@ -97,13 +97,13 @@
                                                 Easing="{StaticResource DefaultEasingOut}"/>
                                         </Transitions>
                                     </Thumb.Transitions>
-                                    
+        
                                     <Thumb.Template>
                                         <ControlTemplate>
                                             <Border x:Name="HoverBorder"
                                                 Width="{StaticResource ScrollBarVerticalThumbHoverBorderWidth}"
                                                 Background="Transparent">
-                                                
+        
                                                 <Border x:Name="Thumb"
                                                         Width="{TemplateBinding Width}"
                                                         MinHeight="{TemplateBinding MinHeight}"
@@ -112,7 +112,7 @@
                                             </Border>
                                         </ControlTemplate>
                                     </Thumb.Template>
-                                    
+        
                                     <Thumb.Styles>
                                         <Style Selector="Thumb:pointerover">
                                             <Setter Property="Width" Value="{StaticResource ScrollBarVerticalWidth}"/>
@@ -128,17 +128,17 @@
         
         <Style Selector="^:horizontal">
             <Setter Property="Height" Value="{StaticResource ScrollBarHorizontalHeight}"/>
-            
+        
             <Setter Property="Template">
                 <ControlTemplate>
                     <Border
                         Height="{TemplateBinding Height}"
                         UseLayoutRounding="False"
                         HorizontalAlignment="Stretch">
-                        
+        
                         <Grid
                             ColumnDefinitions="Auto, *, Auto">
-                            
+        
                             <Track
                                 Grid.Column="1"
                                 Value="{TemplateBinding Value, Mode=TwoWay}"
@@ -147,7 +147,7 @@
                                 Orientation="{TemplateBinding Orientation}"
                                 ViewportSize="{TemplateBinding ViewportSize}"
                                 IsDirectionReversed="False">
-                                
+        
                                 <Track.Transitions>
                                     <Transitions>
                                         <DoubleTransition
@@ -156,25 +156,27 @@
                                             Easing="{StaticResource DefaultEasingOut}"/>
                                     </Transitions>
                                 </Track.Transitions>
-                                
+        
                                 <Track.DecreaseButton>
                                     <RepeatButton x:Name="PART_PageUpButton"
+                                                  BorderThickness="0"
                                                   Background="Transparent"
                                                   Focusable="False"/>
                                 </Track.DecreaseButton>
-                                
+        
                                 <Track.IncreaseButton>
                                     <RepeatButton x:Name="PART_PageDownButton"
+                                                  BorderThickness="0"
                                                   Background="Transparent"
                                                   Focusable="False"/>
                                 </Track.IncreaseButton>
-                                
+        
                                 <Thumb x:Name="Thumb"
                                        MinWidth="{StaticResource ScrollBarHorizontalThumbMinWidth}"
                                        Height="{StaticResource ScrollBarHorizontalThumbHeight}"
                                        ClipToBounds="False"
                                        VerticalAlignment="Bottom">
-                                    
+        
                                     <Thumb.Transitions>
                                         <Transitions>
                                             <DoubleTransition
@@ -183,13 +185,13 @@
                                                 Easing="{StaticResource DefaultEasingOut}"/>
                                         </Transitions>
                                     </Thumb.Transitions>
-                                    
+        
                                     <Thumb.Template>
                                         <ControlTemplate>
                                             <Border x:Name="HoverBorder"
                                                     Height="{StaticResource ScrollBarHorizontalThumbHoverBorderHeight}"
                                                     Background="Transparent">
-                                                
+        
                                                 <Border x:Name="Thumb"
                                                         MinWidth="{TemplateBinding MinWidth}"
                                                         Height="{TemplateBinding Height}"
@@ -198,7 +200,7 @@
                                             </Border>
                                         </ControlTemplate>
                                     </Thumb.Template>
-                                    
+        
                                     <Thumb.Styles>
                                         <Style Selector="Thumb:pointerover">
                                             <Setter Property="Height" Value="{StaticResource ScrollBarHorizontalHeight}"/>
@@ -211,9 +213,9 @@
                 </ControlTemplate>
             </Setter>
         </Style>
-        
-        <Style Selector="^[AllowAutoHide=True] Track">
+    
+        <Style Selector="^[AllowAutoHide=True] /template/ Track">
             <Setter Property="Opacity" Value="0"/>
         </Style>
-    </Style>
-</Styles>
+    </ControlTheme>
+</ResourceDictionary>

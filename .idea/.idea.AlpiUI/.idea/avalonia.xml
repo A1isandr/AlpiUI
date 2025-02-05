@@ -12,6 +12,7 @@
         <entry key="AlpiUI/Themes/ControlThemes/ApiControls/BlurCard.axaml" value="AlpiUI.Demo/AlpiUI.Demo.csproj" />
         <entry key="AlpiUI/Themes/ControlThemes/ApiControls/TabViewItemStyles.axaml" value="AlpiUI.Demo/AlpiUI.Demo.csproj" />
         <entry key="AlpiUI/Themes/ControlThemes/ApiControls/TabViewStyles.axaml" value="AlpiUI.Demo/AlpiUI.Demo.csproj" />
+        <entry key="AlpiUI/Themes/ControlThemes/Base/BorderStyles.axaml" value="AlpiUI.Demo/AlpiUI.Demo.csproj" />
         <entry key="AlpiUI/Themes/ControlThemes/Base/ButtonStyles.axaml" value="AlpiUI.Demo/AlpiUI.Demo.csproj" />
         <entry key="AlpiUI/Themes/ControlThemes/Base/ItemsControlStyles.axaml" value="AlpiUI.Demo/AlpiUI.Demo.csproj" />
         <entry key="AlpiUI/Themes/ControlThemes/Base/ListBoxItemStyles.axaml" value="AlpiUI.Demo/AlpiUI.Demo.csproj" />
@@ -20,6 +21,7 @@
         <entry key="AlpiUI/Themes/ControlThemes/Base/ScrollViewerStyles.axaml" value="AlpiUI.Demo/AlpiUI.Demo.csproj" />
         <entry key="AlpiUI/Themes/ControlThemes/Base/TextBlockStyles.axaml" value="AlpiUI.Demo/AlpiUI.Demo.csproj" />
         <entry key="AlpiUI/Themes/ControlThemes/Base/TextBoxStyles.axaml" value="AlpiUI.Demo/AlpiUI.Demo.csproj" />
+        <entry key="AlpiUI/Themes/ControlThemes/Controls.axaml" value="AlpiUI.Demo/AlpiUI.Demo.csproj" />
         <entry key="ApiUI.Demo/App.axaml" value="ApiUI.Demo/ApiUI.Demo.csproj" />
         <entry key="ApiUI.Demo/Views/MainWindow.axaml" value="ApiUI.Demo/ApiUI.Demo.csproj" />
         <entry key="ApiUI/Resources/Api.axaml" value="ApiUI.Demo/ApiUI.Demo.csproj" />
