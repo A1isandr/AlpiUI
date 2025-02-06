@@ -33,7 +33,7 @@
     </Style>
     
     <Style Selector="TextBlock.GlyphIcon">
-        <Setter Property="FontFamily" Value="Segoe Fluent Icons"/>
+        <Setter Property="FontFamily" Value="{StaticResource SegoeFluentIcons}"/>
         <Setter Property="FontSize" Value="10"/>
         <Setter Property="FontWeight" Value="Thin"/>
     </Style>
