@@ -28,28 +28,54 @@ public class BackgroundBlur : Control
         set => SetValue(BlurRadiusProperty, value);
     }
 
+    /// <summary>
+    /// Defines the <see cref="TintColor"/> property.
+    /// </summary>
+    public static readonly StyledProperty<Color> TintColorProperty =
+        AvaloniaProperty.Register<BackgroundBlur, Color>(nameof(TintColor), defaultValue: Colors.Transparent);
+
+    /// <summary>
+    /// Color of tint.
+    /// </summary>
+    public Color TintColor
+    {
+        get => GetValue(TintColorProperty);
+        set => SetValue(TintColorProperty, value);
+    }
+    
     static BackgroundBlur()
     {
         AffectsRender<BackgroundBlur>(BlurRadiusProperty);
+        AffectsRender<BackgroundBlur>(TintColorProperty);
     }
     
     /// <inheritdoc/>
     public override void Render(DrawingContext context)
     {
-        context.Custom(new BackdropBlurDrawOperation(Bounds, BlurRadius));
+        context.Custom(new BackdropBlurDrawOperation(
+            Bounds,
+            BlurRadius,
+            TintColor));
         
         base.Render(context);
     }
+    
+    // private static Color GetEffectiveTintColor(Color tintColor, double tintOpacity) => 
+    //     new((byte)(255 * (255.0 / tintColor.A * tintOpacity)), tintColor.R, tintColor.G, tintColor.B);
 }
 
 
 
 // Made with help from
 // https://github.com/kikipoulet/SukiUI/blob/main/SukiUI/Controls/GlassMorphism/BlurBackground.cs
-internal class BackdropBlurDrawOperation(Rect controlBounds, double blurRadius) : ICustomDrawOperation
+internal class BackdropBlurDrawOperation(
+    Rect controlBounds,
+    double blurRadius,
+    Color tintColor) : ICustomDrawOperation
 {
     private readonly Rect _controlBounds = controlBounds;
     private readonly double _blurRadius = blurRadius;
+    private readonly Color _tintColor = tintColor;
 
     public Rect Bounds => _controlBounds;
     
@@ -57,7 +83,8 @@ internal class BackdropBlurDrawOperation(Rect controlBounds, double blurRadius) 
     {
         return other is BackdropBlurDrawOperation operation && 
                operation._controlBounds == _controlBounds &&
-               Math.Abs(operation._blurRadius - _blurRadius) < 1e-6;
+               Math.Abs(operation._blurRadius - _blurRadius) < 1e-6 &&
+               operation._tintColor == _tintColor;
     }
 
     /// <inheritdoc/>
@@ -94,6 +121,8 @@ internal class BackdropBlurDrawOperation(Rect controlBounds, double blurRadius) 
         using var blurPaint = new SKPaint();
         blurPaint.Shader = backgroundShader;
         blurPaint.ImageFilter = blurFilter;
+        blurPaint.ColorFilter = SKColorFilter.CreateBlendMode(_tintColor.ToSKColor(), SKBlendMode.Overlay);
+        blurPaint.Style = SKPaintStyle.Fill;
         
         canvas.DrawRect(0, 0, (float)_controlBounds.Width, (float)_controlBounds.Height, blurPaint);
     }
