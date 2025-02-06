@@ -11,6 +11,10 @@
                 <ResourceInclude Source="/Resources/Colors.axaml"/>
                 <ResourceInclude Source="/Resources/Controls.axaml"/>
             </ResourceDictionary.MergedDictionaries>
+            
+            <FontFamily x:Key="SegoeFluentIcons">
+                avares://AlpiUI/Assets/Fonts#Segoe Fluent Icons
+            </FontFamily>
         </ResourceDictionary>
         
         <x:TimeSpan x:Key="ShortAnimationDuration">  0.2</x:TimeSpan>

@@ -48,7 +48,6 @@
         
         <Setter Property="Template">
             <ControlTemplate>
-                
                 <Border
                     CornerRadius="{TemplateBinding CornerRadius}"
                     ClipToBounds="{TemplateBinding ClipToBounds}"
@@ -75,6 +74,8 @@
                                           ContentTemplate="{TemplateBinding ContentTemplate}"
                                           HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
                                           VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"
                                           Foreground="{TemplateBinding Foreground}"
                                           Margin="{TemplateBinding Padding}"
                                           RecognizesAccessKey="True"/>
@@ -104,6 +105,19 @@
                         BorderBrush="{DynamicResource ButtonFocusAdornerFocusVisibleBorderBrush}"/>
                 </Template>
             </Setter>
+        </Style>
+        
+        <Style Selector="^.Accent">
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource AlpiAccentBrush100}"/>
+        </Style>
+        
+        <Style Selector="^.Primary">
+            <Setter Property="Background" Value="{DynamicResource AlpiAccentBrush100}"/>
+        </Style>
+        
+        <Style Selector="^.Card">
+            <Setter Property="Background" Value="{DynamicResource ButtonCardBackgroundBrush}"/>
         </Style>
     </ControlTheme>
 </ResourceDictionary>
