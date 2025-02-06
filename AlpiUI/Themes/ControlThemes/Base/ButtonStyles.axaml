@@ -48,7 +48,6 @@
         
         <Setter Property="Template">
             <ControlTemplate>
-                
                 <Border
                     CornerRadius="{TemplateBinding CornerRadius}"
                     ClipToBounds="{TemplateBinding ClipToBounds}"
@@ -75,6 +74,7 @@
                                           ContentTemplate="{TemplateBinding ContentTemplate}"
                                           HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
                                           VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          HorizontalAlignment="Center"
                                           VerticalAlignment="Center"
                                           Foreground="{TemplateBinding Foreground}"
                                           Margin="{TemplateBinding Padding}"
