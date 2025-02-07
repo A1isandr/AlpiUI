@@ -1,5 +1,4 @@
-﻿using System.Reactive.Linq;
-using Avalonia;
+﻿using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Controls.Metadata;
@@ -9,7 +8,6 @@ using Avalonia.Input;
 using Avalonia.Interactivity;
 using Avalonia.Layout;
 using Avalonia.Media;
-using Avalonia.Threading;
 
 namespace AlpiUI.Controls
 {
@@ -33,8 +31,6 @@ namespace AlpiUI.Controls
         private const string PartTitleBarControls = "PART_TitleBarControls";
         
         private const string PseudoClassActivated = ":activated";
-        
-        private IDisposable? _subscriptionDisposables;
         
         /// <summary>
         /// Returns the type of the style key for the <see cref="AlpiWindow"/> class.
@@ -167,77 +163,28 @@ namespace AlpiUI.Controls
                 Icon ??= window.Icon;
             }
         }
+
+        /// <inheritdoc />
+        protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs change)
+        {
+            base.OnPropertyChanged(change);
+            
+            if (change.Property == WindowStateProperty && change.NewValue is WindowState state)
+            {
+                OnWindowStateChanged(state);
+            }
+        }
         
         /// <inheritdoc/>
         protected override void OnApplyTemplate(TemplateAppliedEventArgs e)
         {
             base.OnApplyTemplate(e);
-
-            _subscriptionDisposables = this
-                .GetObservable(WindowStateProperty)
-                .ObserveOn(new AvaloniaSynchronizationContext())
-                .Subscribe(OnWindowStateChanged);
-
-            try
+            
+            if (e.NameScope.Get<Button>("PART_MaximizeButton") is { } maximize)
             {
-                if (e.NameScope.Get<Button>("PART_MaximizeButton") is { } maximize)
-                {
-                    maximize.Click += OnMaximizeButtonClicked;
-                    var pointerOnMaxButton = false;
-                    var setter = typeof(Button).GetProperty("IsPointerOver");
-
-                    // Windows Snap Layout
-                    var proc =
-                        (IntPtr hWnd, uint msg, IntPtr wParam, IntPtr lParam, ref bool handled) =>
-                        {
-                            switch (msg)
-                            {
-                                case 533:
-                                    if (!pointerOnMaxButton) break;
-                                    if (!CanResize) break;
-
-                                    WindowState = WindowState == WindowState.Maximized
-                                    ? WindowState.Normal
-                                    : WindowState.Maximized;
-                                    break;
-                                case 0x0084:
-                                    var point = new PixelPoint(
-                                        (short)(ToInt32(lParam) & 0xffff),
-                                        (short)(ToInt32(lParam) >> 16));
-                                    
-                                    var buttonLeftTop = maximize.PointToScreen(new Point(0, 0));
-                                    var x = (point.X - buttonLeftTop.X) / RenderScaling;
-                                    var y = (point.Y - buttonLeftTop.Y) / RenderScaling;
-
-                                    if (new Rect(0, 0,
-                                        maximize.Bounds.Width,
-                                        maximize.Bounds.Height)
-                                        .Contains(new Point(x, y)))
-                                    {
-                                        setter?.SetValue(maximize, true);
-                                        pointerOnMaxButton = true;
-                                        handled = true;
-                                        return 9;
-                                    }
-
-                                    pointerOnMaxButton = false;
-                                    setter?.SetValue(maximize, false);
-                                    break;
-                            }
-
-                            return IntPtr.Zero;
-
-                            static int ToInt32(IntPtr ptr) =>
-                                IntPtr.Size == 4
-                                    ? ptr.ToInt32()
-                                    : (int)(ptr.ToInt64() & 0xffffffff);
-                        };
-
-                    Win32Properties.AddWndProcHookCallback(this,
-                        new Win32Properties.CustomWndProcHookCallback(proc));
-                }
+                maximize.Click += OnMaximizeButtonClicked;
+                HandleWindowsSnapLayout(maximize);
             }
-            catch { }
             
             if (e.NameScope.Get<Button>(PartMinimizeButton) is { } minimize)
             {
@@ -254,6 +201,59 @@ namespace AlpiUI.Controls
                 titleBar.PointerPressed += OnTitleBarPointerPressed;
                 titleBar.DoubleTapped += OnMaximizeButtonClicked;
             }
+        }
+
+        private void HandleWindowsSnapLayout(Button maximize)
+        {
+            var pointerOnMaxButton = false;
+            var setter = typeof(Button).GetProperty("IsPointerOver");
+
+            var proc = (IntPtr hWnd, uint msg, IntPtr wParam, IntPtr lParam, ref bool handled) =>
+            {
+                switch (msg)
+                {
+                    case 533:
+                        if (!pointerOnMaxButton) break;
+                        if (!CanResize) break;
+
+                        WindowState = WindowState == WindowState.Maximized
+                            ? WindowState.Normal
+                            : WindowState.Maximized;
+                        break;
+                    case 0x0084:
+                        var point = new PixelPoint(
+                            (short)(ToInt32(lParam) & 0xffff),
+                            (short)(ToInt32(lParam) >> 16));
+
+                        var buttonLeftTop = maximize.PointToScreen(new Point(0, 0));
+                        var x = (point.X - buttonLeftTop.X) / RenderScaling;
+                        var y = (point.Y - buttonLeftTop.Y) / RenderScaling;
+
+                        if (new Rect(0, 0,
+                                maximize.Bounds.Width,
+                                maximize.Bounds.Height)
+                            .Contains(new Point(x, y)))
+                        {
+                            setter?.SetValue(maximize, true);
+                            pointerOnMaxButton = true;
+                            handled = true;
+                            return (IntPtr)9;
+                        }
+
+                        pointerOnMaxButton = false;
+                        setter?.SetValue(maximize, false);
+                        break;
+                }
+
+                return IntPtr.Zero;
+
+                static int ToInt32(IntPtr ptr) =>
+                    IntPtr.Size == 4
+                        ? ptr.ToInt32()
+                        : (int)(ptr.ToInt64() & 0xffffffff);
+            };
+
+            Win32Properties.AddWndProcHookCallback(this, new Win32Properties.CustomWndProcHookCallback(proc));
         }
 
         /// <summary>
@@ -293,13 +293,6 @@ namespace AlpiUI.Controls
         {
             base.OnPointerPressed(e);
             BeginMoveDrag(e);
-        }
-
-        /// <inheritdoc/>
-        protected override void OnUnloaded(RoutedEventArgs e)
-        {
-            base.OnUnloaded(e);
-            _subscriptionDisposables?.Dispose();
         }
     }
 }
