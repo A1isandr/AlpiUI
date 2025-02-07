@@ -237,7 +237,7 @@ namespace AlpiUI.Controls
                             setter?.SetValue(maximize, true);
                             pointerOnMaxButton = true;
                             handled = true;
-                            return 9;
+                            return (IntPtr)9;
                         }
 
                         pointerOnMaxButton = false;
