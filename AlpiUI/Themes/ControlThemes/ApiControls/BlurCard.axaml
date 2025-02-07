@@ -23,7 +23,7 @@
                     <Panel>
                         <alpi:BackgroundBlur x:Name="PART_BackgroundBlur"
                                              BlurRadius="{TemplateBinding BlurRadius}"
-                                             TintColor="{DynamicResource AlpiTransparentColor50}"/>
+                                             TintColor="{DynamicResource AlpiTransparentColor100}"/>
                     
                         <ContentPresenter x:Name="PART_ContentPresenter"
                                           Content="{TemplateBinding Content}"
