@@ -73,12 +73,14 @@
         
                                 <Track.DecreaseButton>
                                     <RepeatButton x:Name="PART_PageUpButton"
+                                                  BorderThickness="0"
                                                   Background="Transparent"
                                                   Focusable="False"/>
                                 </Track.DecreaseButton>
         
                                 <Track.IncreaseButton>
                                     <RepeatButton x:Name="PART_PageDownButton"
+                                                  BorderThickness="0"
                                                   Background="Transparent"
                                                   Focusable="False"/>
                                 </Track.IncreaseButton>
