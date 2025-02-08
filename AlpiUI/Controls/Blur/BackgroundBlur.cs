@@ -6,6 +6,7 @@ using Avalonia.Rendering.SceneGraph;
 using Avalonia.Skia;
 using SkiaSharp;
 
+// ReSharper disable CheckNamespace
 namespace AlpiUI.Controls;
 
 /// <summary>
