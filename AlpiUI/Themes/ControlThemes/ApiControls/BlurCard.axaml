@@ -10,7 +10,7 @@
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="BorderThickness" Value="{StaticResource BlurCardBorderThickness}"/>
         <Setter Property="Padding" Value="{StaticResource BlurCardPadding}"/>
-        <Setter Property="alpi:BackgroundBlur.TintColor" Value="{DynamicResource AlpiTransparentColor100}"/>
+        <Setter Property="alpi:BackgroundBlur.TintColor" Value="{DynamicResource AlpiTransparentColor0}"/>
         
         <Setter Property="Template">
             <ControlTemplate>
