@@ -76,20 +76,20 @@
 							            </ItemsControl>
 									        
 							            <Border x:Name="DragIsland"
-								            Grid.Column="2"
-								            Width="{StaticResource AlpiWindowDragIslandWidth}"/>
+									            Grid.Column="2"
+									            Width="{StaticResource AlpiWindowDragIslandWidth}"/>
 									        
 							            <StackPanel x:Name="WindowButtons"
 							                        Grid.Column="3"
 							                        Orientation="Horizontal">
 
 								            <Button x:Name="PART_MinimizeButton" Classes="ChromeButton">
-									            <TextBlock Classes="GlyphIcon"
+									            <TextBlock Classes="GlyphIcon Small"
 									                       Text=""/>
 								            </Button>
 
 								            <Button x:Name="PART_MaximizeButton" Classes="ChromeButton">
-									            <TextBlock Classes="GlyphIcon"
+									            <TextBlock Classes="GlyphIcon Small"
 									                       Text=""/>
 								            </Button>
 
@@ -104,7 +104,7 @@
 										            </Style>
 									            </Button.Styles>
 									            
-									            <TextBlock Classes="GlyphIcon"
+									            <TextBlock Classes="GlyphIcon Small"
 									                       Text=""/>
 								            </Button>
 							            </StackPanel>
