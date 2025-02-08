@@ -2,6 +2,7 @@
 using Avalonia.Controls;
 using Avalonia.Controls.Metadata;
 
+// ReSharper disable CheckNamespace
 namespace AlpiUI.Controls;
 
 /// <summary>
