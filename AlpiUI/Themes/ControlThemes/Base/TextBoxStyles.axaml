@@ -12,6 +12,43 @@
     
 	
 	
+	<ContextMenu x:Key="DefaultTextBoxContextFlyout">
+		<MenuItem Header="Cut"
+		          Command="{Binding $parent[TextBox].Cut}"
+		          IsEnabled="{Binding $parent[TextBox].CanCut}"
+		          InputGesture="{x:Static TextBox.CutGesture}">
+			
+			<MenuItem.Icon>
+				<TextBlock Classes="GlyphIcon"
+				           Text=""/>
+			</MenuItem.Icon>
+		</MenuItem>
+		
+		<MenuItem Header="Copy"
+		          Command="{Binding $parent[TextBox].Copy}"
+		          IsEnabled="{Binding $parent[TextBox].CanCopy}"
+		          InputGesture="{x:Static TextBox.CopyGesture}">
+			
+			<MenuItem.Icon>
+				<TextBlock Classes="GlyphIcon"
+				           Text=""/>
+			</MenuItem.Icon>
+		</MenuItem>
+		
+		<MenuItem Header="Paste"
+		          Command="{Binding $parent[TextBox].Paste}"
+		          IsEnabled="{Binding $parent[TextBox].CanPaste}"
+		          InputGesture="{x:Static TextBox.PasteGesture}">
+			
+			<MenuItem.Icon>
+				<TextBlock Classes="GlyphIcon"
+				           Text=""/>
+			</MenuItem.Icon>
+		</MenuItem>
+	</ContextMenu>
+	
+	
+	
     <ControlTheme x:Key="{x:Type TextBox}" TargetType="{x:Type TextBox}">
 	    <Setter Property="MinHeight" Value="{StaticResource TextBoxMinHeight}"/>
 	    <Setter Property="CornerRadius" Value="{StaticResource TextBoxCornerRadius}"/>
@@ -27,6 +64,7 @@
 	    <Setter Property="BorderBrush" Value="{DynamicResource TextBoxBorderBrush}"/>
 	    <Setter Property="Background" Value="{DynamicResource TextBoxBackgroundBrush}"/>
 	    <Setter Property="Padding" Value="{StaticResource TextBoxPadding}"/>
+	    <Setter Property="ContextMenu" Value="{StaticResource DefaultTextBoxContextFlyout}"/>
 	    
 	    <Setter Property="Template">
 		    <ControlTemplate>
