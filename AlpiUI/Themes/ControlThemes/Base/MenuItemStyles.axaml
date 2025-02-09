@@ -1,0 +1,283 @@
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:converters="clr-namespace:Avalonia.Controls.Converters;assembly=Avalonia.Controls">
+    
+    <Design.PreviewWith>
+        <Border
+            Width="250"
+            Padding="10">
+            
+            <StackPanel
+                Orientation="Vertical"
+                Spacing="5">
+                
+                <MenuItem Header="Item"/>
+                
+                <MenuItem Header="Icon">
+	                <MenuItem.Icon>
+		                <TextBlock
+			                Text="🔥"/>
+	                </MenuItem.Icon>
+                </MenuItem>
+                
+                <MenuItem Header="CheckBox">
+	                <MenuItem.Icon>
+		                <CheckBox IsChecked="True"/>
+	                </MenuItem.Icon>
+                </MenuItem>
+                
+                <MenuItem Header="Selected" IsSelected="True"/>
+                <MenuItem Header="Input Gesture" InputGesture="Ctrl+V"/>
+                <MenuItem Header="Disabled" IsEnabled="False"/>
+                
+                <MenuItem Header="Submenu" IsSubMenuOpen="True">
+                    <MenuItem Header="Item 1"/>
+                    <MenuItem Header="Item 2"/>
+                    <MenuItem Header="Item 3"/>
+                    <MenuItem Header="Item 4"/>
+                    <Separator/>
+                    <MenuItem Header="Item 5"/>
+                    <MenuItem Header="Item 6"/>
+                    <MenuItem Header="Item 7"/>
+                    <MenuItem Header="Item 8"/>
+                </MenuItem>
+            </StackPanel>
+        </Border>
+    </Design.PreviewWith>
+    
+    <ControlTheme x:Key="{x:Type MenuItem}" TargetType="{x:Type MenuItem}">
+		<ControlTheme.Resources>
+			<StreamGeometry x:Key="MenuItemChevronPathData">M 1,0 10,10 l -9,10 -1,-1 L 8,10 -0,1 Z</StreamGeometry>
+			<converters:PlatformKeyGestureConverter x:Key="KeyGestureConverter"/>
+		</ControlTheme.Resources>
+	    
+		<Setter Property="CornerRadius" Value="{StaticResource MenuItemCornerRadius}"/>
+		<Setter Property="Background" Value="{DynamicResource MenuItemBackgroundBrush}"/>
+		<Setter Property="Padding" Value="{StaticResource MenuItemPadding}"/>
+
+		<Setter Property="Template">
+			<ControlTemplate>
+				<Panel>
+					<Border x:Name="PART_LayoutRoot"
+							MinHeight="{TemplateBinding MinHeight}"
+                            CornerRadius="{TemplateBinding CornerRadius}"
+							BorderBrush="{TemplateBinding BorderBrush}"
+							BorderThickness="{TemplateBinding BorderThickness}"
+                            Background="{TemplateBinding Background}"
+                            Padding="{TemplateBinding Padding}">
+
+						<Border.Transitions>
+							<Transitions>
+								<BrushTransition
+									Property="Background"
+									Duration="{StaticResource ShortAnimationDuration}"
+									Easing="{StaticResource DefaultEasingOut}"/>
+							</Transitions>
+						</Border.Transitions>
+						
+						<Grid>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="Auto"
+												  SharedSizeGroup="ToggleIcon"/>
+
+								<ColumnDefinition Width="Auto"
+												  SharedSizeGroup="MenuItemIcon"/>
+
+								<ColumnDefinition Width="*"/>
+
+								<ColumnDefinition Width="Auto"
+												  SharedSizeGroup="MenuItemIGT"/>
+
+								<ColumnDefinition Width="Auto"
+												  SharedSizeGroup="MenuItemChevron"/>
+							</Grid.ColumnDefinitions>
+
+							<ContentControl x:Name="PART_ToggleIconPresenter"
+                                            Grid.Column="0"
+                                            IsVisible="False"
+                                            Margin="0, 0, 5, 0"/>
+
+							<ContentControl x:Name="PART_IconPresenter"
+                                            Grid.Column="1"
+                                            Content="{TemplateBinding Icon}"
+                                            VerticalAlignment="Center"
+											Margin="0, 0, 10, 0"/>
+
+							<ContentPresenter x:Name="PART_HeaderPresenter"
+                                              Grid.Column="2"
+											  Content="{TemplateBinding Header}"
+											  ContentTemplate="{TemplateBinding HeaderTemplate}"
+                                              HorizontalAlignment="Left"
+                                              VerticalAlignment="Center"
+                                              Foreground="{DynamicResource AlpiTextBrush}"
+											  RecognizesAccessKey="True"/>
+
+							<TextBlock x:Name="PART_InputGestureText"
+									   Grid.Column="3"
+									   Text="{TemplateBinding InputGesture, Converter={StaticResource KeyGestureConverter}}"
+									   FontWeight="Light"
+									   HorizontalAlignment="Right"
+									   VerticalAlignment="Center"
+									   Margin="10, 0, 0, 0"/>
+
+							<Path x:Name="PART_ChevronPath"
+                                  Grid.Column="4"
+								  Width="8"
+								  Height="16"
+								  Data="{StaticResource MenuItemChevronPathData}"
+                                  Stretch="Uniform"
+                                  VerticalAlignment="Center"
+								  Fill="{DynamicResource AlpiTextBrush}"/>
+						</Grid>
+					</Border>
+
+					<Popup x:Name="PART_Popup"
+						   WindowManagerAddShadowHint="False"
+						   Placement="RightEdgeAlignedTop"
+						   HorizontalOffset="7"
+						   IsLightDismissEnabled="False"
+						   IsOpen="{TemplateBinding IsSubMenuOpen, Mode=TwoWay}">
+
+						<LayoutTransformControl x:Name="LayoutTransform"
+						                        RenderTransformOrigin="0% 0%">
+							<Border
+								MinWidth="200"
+								MaxWidth="500"
+								MinHeight="30"
+								CornerRadius="10"
+								BorderThickness="2"
+								BorderBrush="{DynamicResource AlpiTransparentColor50}"
+								Background="{DynamicResource AlpiBackgroundBrush100}"
+								Padding="5">
+
+								<ScrollViewer>
+									<ItemsPresenter x:Name="PART_ItemsPresenter"
+									                Grid.IsSharedSizeScope="True"
+									                ItemsPanel="{TemplateBinding ItemsPanel}"/>
+								</ScrollViewer>
+							</Border>
+						</LayoutTransformControl>
+					</Popup>
+				</Panel>
+			</ControlTemplate>
+		</Setter>
+
+		<Style Selector="^:icon /template/ ContentControl#PART_IconPresenter">
+			<Setter Property="IsVisible" Value="True"/>
+		</Style>
+		
+	    <Style Selector="^:selected">
+		    <Style Selector="^ /template/ Border#PART_LayoutRoot">
+			    <Setter Property="Background" Value="{DynamicResource MenuItemSelectedBackgroundBrush}"/>
+		    </Style>
+	    </Style>
+		
+	    <Style Selector="^:pressed /template/ Border#PART_LayoutRoot:pointerover">
+			<Setter Property="Background" Value="{DynamicResource MenuItemPressedBackgroundBrush}"/>
+	    </Style>
+
+	    <Style Selector="^:disabled">
+		    <Style Selector="^ /template/ ContentControl#PART_IconPresenter">
+			    <Setter Property="Foreground" Value="{DynamicResource AlpiDisabledTextBrush}"/>
+		    </Style>
+		    
+		    <Style Selector="^ /template/ ContentPresenter#PART_HeaderPresenter">
+				<Setter Property="Foreground" Value="{DynamicResource AlpiDisabledTextBrush}"/>
+			</Style>
+		    
+			<Style Selector="^ /template/ TextBlock#PART_InputGestureText">
+				<Setter Property="Foreground" Value="{DynamicResource AlpiDisabledTextBrush}"/>
+			</Style>
+		    
+			<Style Selector="^ /template/ Path#PART_ChevronPath">
+				<Setter Property="Fill" Value="{DynamicResource AlpiDisabledTextBrush}"/>
+			</Style>
+	    </Style>
+
+		<Style Selector="^:open /template/ LayoutTransformControl#PART_LayoutTransform">
+			<Style.Animations>
+				<Animation 
+					Duration="{StaticResource MediumAnimationDuration}"
+					FillMode="Forward"
+					Easing="{StaticResource DefaultEasingInOut}">
+					
+					<KeyFrame Cue="0%">
+						<Setter Property="Opacity" Value="0"/>
+						<Setter Property="ScaleTransform.ScaleY" Value="0"/>
+						<Setter Property="ScaleTransform.ScaleX" Value="0"/>
+					</KeyFrame>
+					
+					<KeyFrame Cue="100%">
+						<Setter Property="Opacity" Value="1"/>
+						<Setter Property="ScaleTransform.ScaleY" Value="1"/>
+						<Setter Property="ScaleTransform.ScaleX" Value="1"/>
+					</KeyFrame>
+				</Animation>
+			</Style.Animations>
+		</Style>
+
+	    <Style Selector="^:empty /template/ Path#PART_ChevronPath">
+		    <Setter Property="IsVisible" Value="False"/>
+	    </Style>
+
+	    <Style Selector="^:separator">
+		    <Setter Property="Template">
+		        <ControlTemplate>
+			        <Separator/>
+		        </ControlTemplate>
+			</Setter>
+	    </Style>
+    
+	    <Style Selector="^ /template/ Image#PART_ToggleIconImage">
+		    <Setter Property="IsVisible" Value="True"/>
+	    </Style>
+
+	    <Style Selector="^:checked:toggle /template/ ContentControl#PART_ToggleIconPresenter">
+			<Setter Property="IsVisible" Value="True"/>
+			
+			<Setter Property="Content">
+				<Template>
+					<TextBlock Classes="GlyphIcon"
+						Width="16"
+						Text=""/>
+				</Template>
+			</Setter>
+	    </Style>
+		
+	    <Style Selector="^:checked:radio /template/ ContentControl#PART_ToggleIconPresenter">
+			<Setter Property="IsVisible" Value="True"/>
+			
+			<Setter Property="Content">
+				<Template>
+					<Ellipse
+						Width="8"
+						Height="8"
+						Fill="{Binding $parent[MenuItem].Foreground}"
+						Margin="5"/>
+				</Template>
+			</Setter>
+	    </Style>
+		
+		<Style Selector="^:not(:nth-last-child(1))">
+			<Setter Property="Margin" Value="0, 0, 0, 5"/>
+		</Style>
+		
+		<Style Selector="^">
+			<Style.Animations>
+				<Animation
+					Duration="{StaticResource ShortAnimationDuration}"
+					FillMode="Forward"
+					IterationCount="1">
+					
+					<KeyFrame Cue="0%">
+						<Setter Property="Opacity" Value="0"/>
+					</KeyFrame>
+					
+					<KeyFrame Cue="100%">
+						<Setter Property="Opacity" Value="1"/>
+					</KeyFrame>
+				</Animation>
+			</Style.Animations>
+		</Style>
+	</ControlTheme>
+</ResourceDictionary>

@@ -1,0 +1,24 @@
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <ControlTheme x:Key="{x:Type Menu}" TargetType="Menu">
+        <Setter Property="Background" Value="Transparent"/>
+        
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Border 
+                    CornerRadius="{TemplateBinding CornerRadius}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    Background="{TemplateBinding Background}"
+                    Padding="{TemplateBinding Padding}">
+                    
+                    <ItemsPresenter x:Name="PART_ItemsPresenter"
+                                    ItemsPanel="{TemplateBinding ItemsPanel}"
+                                    VerticalAlignment="Stretch"
+                                    KeyboardNavigation.TabNavigation="Continue"/>
+                </Border>
+            </ControlTemplate>
+        </Setter>
+    </ControlTheme>
+</ResourceDictionary>
