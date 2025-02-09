@@ -1,0 +1,64 @@
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <ControlTheme x:Key="{x:Type ContextMenu}" TargetType="ContextMenu">
+        <Setter Property="MinWidth" Value="{StaticResource ContextMenuMinWidth}"/>
+        <Setter Property="MinHeight" Value="{StaticResource ContextMenuMinHeight}"/>
+        <Setter Property="CornerRadius" Value="{StaticResource ContextMenuCornerRadius}"/>
+        <Setter Property="ClipToBounds" Value="True"/>
+        <Setter Property="BorderThickness" Value="{StaticResource ContextMenuBorderThickness}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource ContextMenuBorderBrush}"/>
+        <Setter Property="Background" Value="{DynamicResource ContextMenuBackgroundBrush}"/>
+        <Setter Property="RenderTransformOrigin" Value="0% 0%"/>
+        <Setter Property="Padding" Value="{StaticResource ContextMenuPadding}"/>
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+        
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Border
+                    MinWidth="{TemplateBinding MinWidth}"
+                    MaxWidth="{TemplateBinding MaxWidth}"
+                    MinHeight="{TemplateBinding MinHeight}"
+                    CornerRadius="{TemplateBinding CornerRadius}"
+                    ClipToBounds="{TemplateBinding ClipToBounds}"
+                    HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    Background="{TemplateBinding Background}"
+                    Padding="{TemplateBinding Padding}">
+                    
+                    <ScrollViewer Classes="ScrollBarsOverContent"
+                                  HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}"
+                                  VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}">
+                        
+                        <ItemsPresenter x:Name="PART_ItemsPresenter"
+                                        ItemsPanel="{TemplateBinding ItemsPanel}"
+                                        Opacity="{TemplateBinding IsOpen}"
+                                        Grid.IsSharedSizeScope="True" 
+                                        KeyboardNavigation.TabNavigation="Continue"/>
+                    </ScrollViewer>
+                </Border>
+            </ControlTemplate>
+        </Setter>
+        
+        <Style Selector="^[IsOpen=True]">
+            <Style.Animations>
+                <Animation
+                    Duration="{StaticResource MediumAnimationDuration}"
+                    Easing="{StaticResource DefaultEasingInOut}"
+                    FillMode="Forward"
+                    IterationCount="1">
+                    
+                    <KeyFrame Cue="0%">
+                        <Setter Property="Opacity" Value="0"/>
+                    </KeyFrame>
+            
+                    <KeyFrame Cue="100%">
+                        <Setter Property="Opacity" Value="1"/>
+                    </KeyFrame>
+                </Animation>
+            </Style.Animations>
+        </Style>
+    </ControlTheme>
+</ResourceDictionary>

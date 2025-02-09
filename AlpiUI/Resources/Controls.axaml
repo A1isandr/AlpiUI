@@ -39,6 +39,15 @@
     <SolidColorBrush x:Key="ButtonFocusAdornerFocusVisibleBorderBrush" Color="{DynamicResource AlpiFocusColor}"/>
     <SolidColorBrush x:Key="ButtonCardBackgroundBrush" Color="{DynamicResource AlpiTransparentColor10}"/>
     
+    <!-- ContextMenu -->
+    <x:Double x:Key="ContextMenuMinWidth">100</x:Double>
+    <x:Double x:Key="ContextMenuMinHeight">30</x:Double>
+    <CornerRadius x:Key="ContextMenuCornerRadius">10</CornerRadius>
+    <Thickness x:Key="ContextMenuBorderThickness">2</Thickness>
+    <Thickness x:Key="ContextMenuPadding">5</Thickness>
+    <SolidColorBrush x:Key="ContextMenuBorderBrush" Color="{DynamicResource AlpiTransparentColor50}"/>
+    <SolidColorBrush x:Key="ContextMenuBackgroundBrush" Color="{DynamicResource AlpiBackgroundColor100}"/>
+    
     <!-- ListBox -->
     <CornerRadius x:Key="ListBoxCornerRadius">0</CornerRadius>
     <Thickness x:Key="ListBoxBorderThickness">0</Thickness>
@@ -53,6 +62,24 @@
     <SolidColorBrush x:Key="ListBoxItemSelectedBackgroundBrush" Color="{DynamicResource AlpiAccentColor50}"/>
     <SolidColorBrush x:Key="ListBoxItemSelectedHoverBackgroundBrush" Color="{DynamicResource AlpiAccentColor80}"/>
     <SolidColorBrush x:Key="ListBoxItemSelectedPressedBackgroundBrush" Color="{DynamicResource AlpiAccentColor100}"/>
+    
+    <!-- MenuFlyoutPresenter -->
+    <x:Double x:Key="MenuFlyoutPresenterMinWidth">100</x:Double>
+    <x:Double x:Key="MenuFlyoutPresenterMinHeight">30</x:Double>
+    <CornerRadius x:Key="MenuFlyoutPresenterCornerRadius">10</CornerRadius>
+    <Thickness x:Key="MenuFlyoutPresenterBorderThickness">2</Thickness>
+    <Thickness x:Key="MenuFlyoutPresenterPadding">5</Thickness>
+    <SolidColorBrush x:Key="MenuFlyoutPresenterBorderBrush" Color="{DynamicResource AlpiTransparentColor50}"/>
+    <SolidColorBrush x:Key="MenuFlyoutPresenterBackgroundBrush" Color="{DynamicResource AlpiBackgroundColor100}"/>
+    
+    <!-- MenuItem -->
+    <CornerRadius x:Key="MenuItemCornerRadius">10</CornerRadius>
+    <Thickness x:Key="MenuItemPadding">10, 5</Thickness>
+    <SolidColorBrush x:Key="MenuItemBackgroundBrush" Color="{DynamicResource AlpiTransparentColor0}"/>
+    <SolidColorBrush x:Key="MenuItemSelectedBackgroundBrush" Color="{DynamicResource AlpiTransparentColor10}"/>
+    <SolidColorBrush x:Key="MenuItemPressedBackgroundBrush" Color="{DynamicResource AlpiTransparentColor20}"/>
+    
+    
     
     <!-- ScrollBar -->
     <x:Double x:Key="ScrollBarVerticalWidth">15</x:Double>

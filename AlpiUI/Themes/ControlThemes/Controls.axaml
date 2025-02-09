@@ -14,6 +14,10 @@
                 <MergeResourceInclude Source="/Themes/ControlThemes/Base/ScrollBarStyles.axaml"/>
                 <MergeResourceInclude Source="/Themes/ControlThemes/Base/ScrollViewerStyles.axaml"/>
                 <MergeResourceInclude Source="/Themes/ControlThemes/Base/TextBoxStyles.axaml"/>
+                <MergeResourceInclude Source="/Themes/ControlThemes/Base/ContextMenuStyles.axaml"/>
+                <MergeResourceInclude Source="/Themes/ControlThemes/Base/MenuFlyoutPresenterStyles.axaml"/>
+                <MergeResourceInclude Source="/Themes/ControlThemes/Base/MenuStyles.axaml"/>
+                <MergeResourceInclude Source="/Themes/ControlThemes/Base/MenuItemStyles.axaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Styles.Resources>

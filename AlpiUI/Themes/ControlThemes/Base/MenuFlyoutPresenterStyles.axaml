@@ -1,0 +1,39 @@
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <ControlTheme x:Key="{x:Type MenuFlyoutPresenter}" TargetType="{x:Type MenuFlyoutPresenter}">
+        <Setter Property="MinWidth" Value="{StaticResource MenuFlyoutPresenterMinWidth}"/>
+        <Setter Property="MinHeight" Value="{StaticResource MenuFlyoutPresenterMinHeight}"/>
+        <Setter Property="CornerRadius" Value="{StaticResource MenuFlyoutPresenterCornerRadius}"/>
+        <Setter Property="ClipToBounds" Value="True"/>
+        <Setter Property="BorderThickness" Value="{StaticResource MenuFlyoutPresenterBorderThickness}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource MenuFlyoutPresenterBorderBrush}"/>
+        <Setter Property="Background" Value="{DynamicResource MenuFlyoutPresenterBackgroundBrush}"/>
+        <Setter Property="Padding" Value="{StaticResource MenuFlyoutPresenterPadding}"/>
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+        
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Border x:Name="LayoutRoot"
+                        CornerRadius="{TemplateBinding CornerRadius}"
+                        ClipToBounds="{TemplateBinding ClipToBounds}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        Background="{TemplateBinding Background}"
+                        Padding="{TemplateBinding Padding}">
+                    
+                    <ScrollViewer Classes="ScrollBarsOverContent"
+                                  HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}"
+                                  VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}">
+                    
+                        <ItemsPresenter x:Name="PART_ItemsPresenter"
+                                        ItemsPanel="{TemplateBinding ItemsPanel}"
+                                        Grid.IsSharedSizeScope="True"
+                                        KeyboardNavigation.TabNavigation="Continue"/>
+                    </ScrollViewer>  
+                </Border>
+            </ControlTemplate>
+        </Setter>
+    </ControlTheme>
+</ResourceDictionary>
