@@ -1,3 +1,24 @@
-<h1 align="center">Alpi UI</h1>
-<p align="center"><i>A controls library for <a href="https://avaloniaui.net/">Avalonia UI</a></i></p>
-<br/>
+# _`Alpi UI`_
+[![publish](https://github.com/A1isandr/AlpiUI/actions/workflows/nuget-deploy.yml/badge.svg)](https://github.com/A1isandr/AlpiUI/actions/workflows/nuget-deploy.yml)
+
+#### A `simple` yet ***beautiful*** UI library for Avalonia.
+
+## 🚀 `Quick start`
+- Install NuGet package
+``` bash 
+Install-Package AlpiUI
+```
+- Reference AlpiUI in your application
+``` xaml
+<Application
+    ...
+    xmlns:alpi="https://github.com/A1isandr/AlpiUI">
+
+    <Application.Styles>
+        <alpi:AlpiUITheme/>
+    </Application.Styles>
+</Application>
+```
+- You are good to go!
+
+## 
