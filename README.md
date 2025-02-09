@@ -1,7 +1,7 @@
 # _`Alpi UI`_
 [![publish](https://github.com/A1isandr/AlpiUI/actions/workflows/nuget-deploy.yml/badge.svg)](https://github.com/A1isandr/AlpiUI/actions/workflows/nuget-deploy.yml)
 
-#### A `simple` yet ***beautiful*** UI library for Avalonia.
+#### A `simple` yet ***beautiful*** UI library for [Avalonia](https://avaloniaui.net/).
 
 ## 🚀 `Quick start`
 - Install NuGet package
