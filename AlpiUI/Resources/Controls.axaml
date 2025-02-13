@@ -12,7 +12,7 @@
     <SolidColorBrush x:Key="AlpiWindowTitleBarBackgroundBrush" Color="{DynamicResource AlpiBackgroundColor100}"/>
     <SolidColorBrush x:Key="AlpiWindowActivatedTitleBarBackgroundBrush" Color="{DynamicResource AlpiBackgroundColor0}"/>
     <SolidColorBrush x:Key="AlpiWindowChromeCloseButtonBackgroundBrush" Color="{DynamicResource AlpiDangerColor0}"/>
-    <SolidColorBrush x:Key="AlpiWindowChromeCloseButtonHoverBackgroundBrush" Color="{DynamicResource AlpiDangerColor}"/>
+    <SolidColorBrush x:Key="AlpiWindowChromeCloseButtonHoverBackgroundBrush" Color="{DynamicResource AlpiDangerColor100}"/>
     
     <!-- BlurCard -->
     <x:Double x:Key="BlurCardBlurRadius">20</x:Double>
@@ -126,7 +126,7 @@
     <SolidColorBrush x:Key="TextBoxBorderBrush" Color="{DynamicResource AlpiTransparentColor50}"/>
     <SolidColorBrush x:Key="TextBoxHoverBorderBrush" Color="{DynamicResource AlpiTransparentColor100}"/>
     <SolidColorBrush x:Key="TextBoxCardBorderBrush" Color="{DynamicResource AlpiTransparentColor0}"/>
-    <SolidColorBrush x:Key="TextBoxValidationErrorBorderBrush" Color="{DynamicResource AlpiDangerColor}"/>
+    <SolidColorBrush x:Key="TextBoxValidationErrorBorderBrush" Color="{DynamicResource AlpiDangerColor100}"/>
     <SolidColorBrush x:Key="TextBoxBackgroundBrush" Color="{DynamicResource AlpiTransparentColor0}"/>
     <SolidColorBrush x:Key="TextBoxCardBackgroundBrush" Color="{DynamicResource AlpiTransparentColor10}"/>
     <SolidColorBrush x:Key="TextBoxCardHoverBackgroundBrush" Color="{DynamicResource AlpiTransparentColor30}"/>
