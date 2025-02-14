@@ -79,8 +79,6 @@
     <SolidColorBrush x:Key="MenuItemSelectedBackgroundBrush" Color="{DynamicResource AlpiTransparentColor10}"/>
     <SolidColorBrush x:Key="MenuItemPressedBackgroundBrush" Color="{DynamicResource AlpiTransparentColor20}"/>
     
-    
-    
     <!-- ScrollBar -->
     <x:Double x:Key="ScrollBarVerticalWidth">15</x:Double>
     <x:Double x:Key="ScrollBarHorizontalHeight">15</x:Double>
