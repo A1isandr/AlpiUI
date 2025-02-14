@@ -75,8 +75,21 @@
     <Color x:Key="AlpiAccentColor10">  #1A9046FF</Color>
     <Color x:Key="AlpiAccentColor0">   #009046FF</Color>
     
-    <Color x:Key="AlpiDangerColor"> #FFFF2821</Color>
+    <Color x:Key="AlpiDangerColor100"> #FFFF2821</Color>
+    <Color x:Key="AlpiDangerColor40"> #66FF2821</Color>
     <Color x:Key="AlpiDangerColor0">#00FF2821</Color>
+    
+    <Color x:Key="AlpiWarningColor100">#FFFF721F</Color>
+    <Color x:Key="AlpiWarningColor40">#66FF721F</Color>
+    <Color x:Key="AlpiWarningColor0">#00FF721F</Color>
+    
+    <Color x:Key="AlpiSuccessColor100">#FF12D214</Color>
+    <Color x:Key="AlpiSuccessColor40">#6612D214</Color>
+    <Color x:Key="AlpiSuccessColor0">#0012D214</Color>
+    
+    <Color x:Key="AlpiInfoColor100">#FF4844FF</Color>
+    <Color x:Key="AlpiInfoColor40">#664844FF</Color>
+    <Color x:Key="AlpiInfoColor0">#004844FF</Color>
     
     <SolidColorBrush x:Key="AlpiAccentBrush100" Color="{DynamicResource AlpiAccentColor100}"/>
     <SolidColorBrush x:Key="AlpiAccentBrush90" Color="{DynamicResource AlpiAccentColor90}"/>
@@ -102,7 +115,22 @@
     <SolidColorBrush x:Key="AlpiBackgroundBrush10" Color="{DynamicResource AlpiBackgroundColor10}"/>
     <SolidColorBrush x:Key="AlpiBackgroundBrush0" Color="{DynamicResource AlpiBackgroundColor0}"/>
     
-    <SolidColorBrush x:Key="AlpiDangerBrush" Color="{DynamicResource AlpiDangerColor}"/>
+    <SolidColorBrush x:Key="AlpiDangerBrush100" Color="{DynamicResource AlpiDangerColor100}"/>
+    <SolidColorBrush x:Key="AlpiDangerBrush40" Color="{DynamicResource AlpiDangerColor40}"/>
+    <SolidColorBrush x:Key="AlpiDangerBrush0" Color="{DynamicResource AlpiDangerColor0}"/>
+    
+    <SolidColorBrush x:Key="AlpiWarningBrush100" Color="{DynamicResource AlpiWarningColor100}"/>
+    <SolidColorBrush x:Key="AlpiWarningBrush40" Color="{DynamicResource AlpiWarningColor40}"/>
+    <SolidColorBrush x:Key="AlpiWarningBrush0" Color="{DynamicResource AlpiWarningColor0}"/>
+    
+    <SolidColorBrush x:Key="AlpiSuccessBrush100" Color="{DynamicResource AlpiSuccessColor100}"/>
+    <SolidColorBrush x:Key="AlpiSuccessBrush40" Color="{DynamicResource AlpiSuccessColor40}"/>
+    <SolidColorBrush x:Key="AlpiSuccessBrush0" Color="{DynamicResource AlpiSuccessColor0}"/>
+    
+    <SolidColorBrush x:Key="AlpiInfoBrush100" Color="{DynamicResource AlpiInfoColor100}"/>
+    <SolidColorBrush x:Key="AlpiInfoBrush40" Color="{DynamicResource AlpiInfoColor40}"/>
+    <SolidColorBrush x:Key="AlpiInfoBrush0" Color="{DynamicResource AlpiInfoColor0}"/>
+    
     <SolidColorBrush x:Key="AlpiTextBrush" Color="{DynamicResource AlpiTextColor}"/>
     <SolidColorBrush x:Key="AlpiDisabledTextBrush" Color="{DynamicResource AlpiDisabledTextColor}"/>
 </ResourceDictionary>

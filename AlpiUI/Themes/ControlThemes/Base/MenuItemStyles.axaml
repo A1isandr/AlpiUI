@@ -137,26 +137,22 @@
 						   HorizontalOffset="7"
 						   IsLightDismissEnabled="False"
 						   IsOpen="{TemplateBinding IsSubMenuOpen, Mode=TwoWay}">
+						
+						<Border
+							MinWidth="{StaticResource ContextMenuMinWidth}"
+							MinHeight="{StaticResource ContextMenuMinHeight}"
+							CornerRadius="{StaticResource ContextMenuCornerRadius}"
+							BorderThickness="{StaticResource ContextMenuBorderThickness}"
+							BorderBrush="{DynamicResource AlpiTransparentColor50}"
+							Background="{DynamicResource AlpiBackgroundBrush100}"
+							Padding="{StaticResource ContextMenuPadding}">
 
-						<LayoutTransformControl x:Name="LayoutTransform"
-						                        RenderTransformOrigin="0% 0%">
-							<Border
-								MinWidth="200"
-								MaxWidth="500"
-								MinHeight="30"
-								CornerRadius="10"
-								BorderThickness="2"
-								BorderBrush="{DynamicResource AlpiTransparentColor50}"
-								Background="{DynamicResource AlpiBackgroundBrush100}"
-								Padding="5">
-
-								<ScrollViewer>
-									<ItemsPresenter x:Name="PART_ItemsPresenter"
-									                Grid.IsSharedSizeScope="True"
-									                ItemsPanel="{TemplateBinding ItemsPanel}"/>
-								</ScrollViewer>
-							</Border>
-						</LayoutTransformControl>
+							<ScrollViewer>
+								<ItemsPresenter x:Name="PART_ItemsPresenter"
+								                Grid.IsSharedSizeScope="True"
+								                ItemsPanel="{TemplateBinding ItemsPanel}"/>
+							</ScrollViewer>
+						</Border>
 					</Popup>
 				</Panel>
 			</ControlTemplate>
@@ -194,7 +190,7 @@
 			</Style>
 	    </Style>
 
-		<Style Selector="^:open /template/ LayoutTransformControl#PART_LayoutTransform">
+		<Style Selector="^:open /template/ Popup#PART_Popup">
 			<Style.Animations>
 				<Animation 
 					Duration="{StaticResource MediumAnimationDuration}"
@@ -203,14 +199,10 @@
 					
 					<KeyFrame Cue="0%">
 						<Setter Property="Opacity" Value="0"/>
-						<Setter Property="ScaleTransform.ScaleY" Value="0"/>
-						<Setter Property="ScaleTransform.ScaleX" Value="0"/>
 					</KeyFrame>
 					
 					<KeyFrame Cue="100%">
 						<Setter Property="Opacity" Value="1"/>
-						<Setter Property="ScaleTransform.ScaleY" Value="1"/>
-						<Setter Property="ScaleTransform.ScaleX" Value="1"/>
 					</KeyFrame>
 				</Animation>
 			</Style.Animations>

@@ -3,10 +3,40 @@
     
     <Design.PreviewWith>
         <Border Padding="20">
-            <Border Classes="Card">
-                <TextBlock
-                    Text="A card."/>
-            </Border>
+            <StackPanel
+                Orientation="Horizontal"
+                Spacing="5">
+                
+                <Border Classes="Card">
+                    <TextBlock
+                        Text="card"/>
+                </Border>
+                
+                <Border Classes="Card Accent">
+                    <TextBlock
+                        Text="accent"/>
+                </Border>
+                
+                <Border Classes="Card Danger">
+                    <TextBlock
+                        Text="danger"/>
+                </Border>
+                
+                <Border Classes="Card Warning">
+                    <TextBlock
+                        Text="warning"/>
+                </Border>
+                
+                <Border Classes="Card Success">
+                    <TextBlock
+                        Text="success"/>
+                </Border>
+                
+                <Border Classes="Card Info">
+                    <TextBlock
+                        Text="info"/>
+                </Border>
+            </StackPanel>
         </Border>
     </Design.PreviewWith>
 
@@ -17,5 +47,30 @@
         <Setter Property="BorderBrush" Value="Transparent"/>
         <Setter Property="Background" Value="{DynamicResource BorderCardBackgroundBrush}"/>
         <Setter Property="Padding" Value="{StaticResource BorderCardPadding}"/>
+        
+        <Style Selector="^.Accent">
+            <Setter Property="TextBlock.Foreground" Value="{DynamicResource AlpiAccentBrush100}"/>
+            <Setter Property="Background" Value="{DynamicResource AlpiAccentBrush40}"/>
+        </Style>
+        
+        <Style Selector="^.Danger">
+            <Setter Property="TextBlock.Foreground" Value="{DynamicResource AlpiDangerBrush100}"/>
+            <Setter Property="Background" Value="{DynamicResource AlpiDangerBrush40}"/>
+        </Style>
+        
+        <Style Selector="^.Warning">
+            <Setter Property="TextBlock.Foreground" Value="{DynamicResource AlpiWarningBrush100}"/>
+            <Setter Property="Background" Value="{DynamicResource AlpiWarningBrush40}"/>
+        </Style>
+        
+        <Style Selector="^.Success">
+            <Setter Property="TextBlock.Foreground" Value="{DynamicResource AlpiSuccessBrush100}"/>
+            <Setter Property="Background" Value="{DynamicResource AlpiSuccessBrush40}"/>
+        </Style>
+        
+        <Style Selector="^.Info">
+            <Setter Property="TextBlock.Foreground" Value="{DynamicResource AlpiInfoBrush100}"/>
+            <Setter Property="Background" Value="{DynamicResource AlpiInfoBrush40}"/>
+        </Style>
     </Style>
 </Styles>
