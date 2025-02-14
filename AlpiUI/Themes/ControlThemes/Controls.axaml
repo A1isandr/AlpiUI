@@ -7,7 +7,7 @@
                 <MergeResourceInclude Source="/Themes/ControlThemes/ApiControls/AlpiWndowStyles.axaml"/>
                 <MergeResourceInclude Source="/Themes/ControlThemes/ApiControls/TabViewStyles.axaml"/>
                 <MergeResourceInclude Source="/Themes/ControlThemes/ApiControls/TabViewItemStyles.axaml"/>
-                <MergeResourceInclude Source="/Themes/ControlThemes/ApiControls/BlurCard.axaml"/>
+                <MergeResourceInclude Source="/Themes/ControlThemes/ApiControls/BlurBorderStyles.axaml"/>
                 <MergeResourceInclude Source="/Themes/ControlThemes/Base/ButtonStyles.axaml"/>
                 <MergeResourceInclude Source="/Themes/ControlThemes/Base/ListBoxStyles.axaml"/>
                 <MergeResourceInclude Source="/Themes/ControlThemes/Base/ListBoxItemStyles.axaml"/>
