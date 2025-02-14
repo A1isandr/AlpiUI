@@ -9,13 +9,13 @@ namespace AlpiUI.Controls;
 /// Card with blurred background.
 /// </summary>
 [TemplatePart("PART_BackgroundBlur", typeof(BackgroundBlur), IsRequired = true)]
-public class BlurCard : ContentControl
+public class BlurBorder : ContentControl
 {
     /// <summary>
     /// Defines the <see cref="BlurRadius"/> property.
     /// </summary>
     public static readonly StyledProperty<double> BlurRadiusProperty =
-        AvaloniaProperty.Register<BlurCard, double>(nameof(BlurRadius));
+        AvaloniaProperty.Register<BlurBorder, double>(nameof(BlurRadius));
 
     /// <summary>
     /// Background blur radius.
