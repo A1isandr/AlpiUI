@@ -14,17 +14,18 @@
     <SolidColorBrush x:Key="AlpiWindowChromeCloseButtonBackgroundBrush" Color="{DynamicResource AlpiDangerColor0}"/>
     <SolidColorBrush x:Key="AlpiWindowChromeCloseButtonHoverBackgroundBrush" Color="{DynamicResource AlpiDangerColor100}"/>
     
-    <!-- BlurCard -->
-    <x:Double x:Key="BlurCardBlurRadius">20</x:Double>
-    <CornerRadius x:Key="BlurCardCornerRadius">20</CornerRadius>
-    <Thickness x:Key="BlurCardBorderThickness">0</Thickness>
-    <Thickness x:Key="BlurCardPadding">10</Thickness>
+    <!-- BlurBorder -->
+    <x:Double x:Key="BlurBorderBlurRadius">20</x:Double>
+    <CornerRadius x:Key="BlurBorderCornerRadius">20</CornerRadius>
+    <Thickness x:Key="BlurBorderBorderThickness">0</Thickness>
+    <Thickness x:Key="BlurBorderPadding">10, 5</Thickness>
+    <SolidColorBrush x:Key="BlurBorderCardBackgroundBrush" Color="{DynamicResource AlpiTransparentColor40}"/>
     
     <!-- Border -->
     <CornerRadius x:Key="BorderCardCornerRadius">20</CornerRadius>
     <Thickness x:Key="BorderCardBorderThickness">0</Thickness>
-    <Thickness x:Key="BorderCardPadding">10</Thickness>
-    <SolidColorBrush x:Key="BorderCardBackgroundBrush" Color="{DynamicResource AlpiTransparentColor50}"/>
+    <Thickness x:Key="BorderCardPadding">10, 5</Thickness>
+    <SolidColorBrush x:Key="BorderCardBackgroundBrush" Color="{DynamicResource AlpiTransparentColor40}"/>
     
     <!-- Button -->
     <x:Double x:Key="ButtonFontSize">14</x:Double>
@@ -73,7 +74,7 @@
     <SolidColorBrush x:Key="MenuFlyoutPresenterBackgroundBrush" Color="{DynamicResource AlpiBackgroundColor100}"/>
     
     <!-- MenuItem -->
-    <CornerRadius x:Key="MenuItemCornerRadius">10</CornerRadius>
+    <CornerRadius x:Key="MenuItemCornerRadius">5</CornerRadius>
     <Thickness x:Key="MenuItemPadding">10, 5</Thickness>
     <SolidColorBrush x:Key="MenuItemBackgroundBrush" Color="{DynamicResource AlpiTransparentColor0}"/>
     <SolidColorBrush x:Key="MenuItemSelectedBackgroundBrush" Color="{DynamicResource AlpiTransparentColor10}"/>
