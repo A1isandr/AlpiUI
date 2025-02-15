@@ -105,5 +105,28 @@
         <Style Selector="^:disabled /template/ ContentPresenter#PART_ContentPresenter">
             <Setter Property="Foreground" Value="{DynamicResource AlpiDisabledTextBrush}"/>
         </Style>
+        
+        <Style Selector="^">
+            <Style.Animations>
+                <Animation
+                    Duration="{StaticResource MediumAnimationDuration}"
+                    Easing="{StaticResource DefaultEasingOut}"
+                    FillMode="Forward"
+                    IterationCount="1">
+                    
+                    <KeyFrame Cue="0%">
+                        <Setter Property="Opacity" Value="0"/>
+                        <Setter Property="ScaleTransform.ScaleX" Value="0"/>
+                        <Setter Property="ScaleTransform.ScaleY" Value="0"/>
+                    </KeyFrame>
+                    
+                    <KeyFrame Cue="100%">
+                        <Setter Property="Opacity" Value="1"/>
+                        <Setter Property="ScaleTransform.ScaleX" Value="1"/>
+                        <Setter Property="ScaleTransform.ScaleY" Value="1"/>
+                    </KeyFrame>
+                </Animation>
+            </Style.Animations>
+        </Style>
     </ControlTheme>
 </ResourceDictionary>
