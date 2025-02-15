@@ -4,7 +4,7 @@
     <ControlTheme x:Key="{x:Type ContextMenu}" TargetType="ContextMenu">
         <Setter Property="MinWidth" Value="{StaticResource ContextMenuMinWidth}"/>
         <Setter Property="MinHeight" Value="{StaticResource ContextMenuMinHeight}"/>
-        <Setter Property="CornerRadius" Value="{StaticResource ContextMenuCornerRadius}"/>
+        <Setter Property="CornerRadius" Value="{StaticResource SecondaryCornerRadius}"/>
         <Setter Property="ClipToBounds" Value="True"/>
         <Setter Property="BorderThickness" Value="{StaticResource ContextMenuBorderThickness}"/>
         <Setter Property="BorderBrush" Value="{DynamicResource ContextMenuBorderBrush}"/>

@@ -41,7 +41,7 @@
     </Design.PreviewWith>
 
     <Style Selector="Border.Card">
-        <Setter Property="CornerRadius" Value="{StaticResource BorderCardCornerRadius}"/>
+        <Setter Property="CornerRadius" Value="{StaticResource PrimaryCornerRadius}"/>
         <Setter Property="ClipToBounds" Value="True"/>
         <Setter Property="BorderThickness" Value="{StaticResource BorderCardBorderThickness}"/>
         <Setter Property="BorderBrush" Value="Transparent"/>

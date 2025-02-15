@@ -51,7 +51,7 @@
 			<converters:PlatformKeyGestureConverter x:Key="KeyGestureConverter"/>
 		</ControlTheme.Resources>
 	    
-		<Setter Property="CornerRadius" Value="{StaticResource MenuItemCornerRadius}"/>
+		<Setter Property="CornerRadius" Value="{StaticResource SecondaryCornerRadius}"/>
 		<Setter Property="Background" Value="{DynamicResource MenuItemBackgroundBrush}"/>
 		<Setter Property="Padding" Value="{StaticResource MenuItemPadding}"/>
 
@@ -141,7 +141,7 @@
 						<Border
 							MinWidth="{StaticResource ContextMenuMinWidth}"
 							MinHeight="{StaticResource ContextMenuMinHeight}"
-							CornerRadius="{StaticResource ContextMenuCornerRadius}"
+							CornerRadius="{StaticResource SecondaryCornerRadius}"
 							BorderThickness="{StaticResource ContextMenuBorderThickness}"
 							BorderBrush="{DynamicResource AlpiTransparentColor50}"
 							Background="{DynamicResource AlpiBackgroundBrush100}"

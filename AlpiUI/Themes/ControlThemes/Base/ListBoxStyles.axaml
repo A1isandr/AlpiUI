@@ -15,7 +15,7 @@
     
     
     <ControlTheme x:Key="{x:Type ListBox}" TargetType="{x:Type ListBox}">
-        <Setter Property="CornerRadius" Value="{StaticResource ListBoxCornerRadius}"/>
+        <Setter Property="CornerRadius" Value="{StaticResource ZeroCornerRadius}"/>
         <Setter Property="BorderThickness" Value="{StaticResource ListBoxBorderThickness}"/>
         <Setter Property="BorderBrush" Value="Transparent"/>
         <Setter Property="Background" Value="Transparent"/>

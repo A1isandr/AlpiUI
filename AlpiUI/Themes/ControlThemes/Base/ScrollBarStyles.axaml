@@ -14,7 +14,7 @@
     
     
     <ControlTheme x:Key="{x:Type Thumb}" TargetType="{x:Type Thumb}">
-        <Setter Property="CornerRadius" Value="{StaticResource ScrollBarThumbCornerRadius}"/>
+        <Setter Property="CornerRadius" Value="{StaticResource ZeroCornerRadius}"/>
         <Setter Property="Background" Value="{DynamicResource ScrollBarThumbBackgroundBrush}"/>
     
         <Setter Property="Transitions">

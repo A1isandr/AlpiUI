@@ -13,7 +13,7 @@
     </Design.PreviewWith>
     
     <ControlTheme x:Key="{x:Type alpi:TabView}" TargetType="{x:Type alpi:TabView}">
-        <Setter Property="CornerRadius" Value="{StaticResource TabViewCornerRadius}"/>
+        <Setter Property="CornerRadius" Value="{StaticResource ZeroCornerRadius}"/>
         <Setter Property="ClipToBounds" Value="True"/>
         <Setter Property="BorderThickness" Value="{StaticResource TabViewBorderThickness}"/>
         <Setter Property="BorderBrush" Value="Transparent"/>

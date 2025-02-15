@@ -44,7 +44,7 @@
     </Design.PreviewWith>
     
     <ControlTheme x:Key="{x:Type alpi:BlurBorder}" TargetType="{x:Type alpi:BlurBorder}">
-        <Setter Property="CornerRadius" Value="{StaticResource BlurBorderCornerRadius}"/>
+        <Setter Property="CornerRadius" Value="{StaticResource PrimaryCornerRadius}"/>
         <Setter Property="ClipToBounds" Value="True"/>
         <Setter Property="BlurRadius" Value="{StaticResource BlurBorderBlurRadius}"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>

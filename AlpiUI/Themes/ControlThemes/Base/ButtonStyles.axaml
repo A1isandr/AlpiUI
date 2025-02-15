@@ -25,7 +25,7 @@
     
     
     <ControlTheme x:Key="{x:Type Button}" TargetType="{x:Type Button}">
-        <Setter Property="CornerRadius" Value="{DynamicResource ButtonCornerRadius}"/>
+        <Setter Property="CornerRadius" Value="{DynamicResource PrimaryCornerRadius}"/>
         <Setter Property="ClipToBounds" Value="True"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
@@ -100,7 +100,7 @@
             <Setter Property="FocusAdorner">
                 <Template>
                     <Border
-                        CornerRadius="{StaticResource ButtonFocusAdornerCornerRadius}"
+                        CornerRadius="{StaticResource TertiaryCornerRadius}"
                         BorderThickness="{StaticResource ButtonFocusAdornerBorderThickness}"
                         BorderBrush="{DynamicResource ButtonFocusAdornerFocusVisibleBorderBrush}"/>
                 </Template>
