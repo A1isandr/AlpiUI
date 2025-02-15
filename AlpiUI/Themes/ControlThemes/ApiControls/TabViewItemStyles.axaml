@@ -3,7 +3,7 @@
                     xmlns:alpi="clr-namespace:AlpiUI.Controls">
     
     <ControlTheme x:Key="{x:Type alpi:TabViewItem}" TargetType="{x:Type alpi:TabViewItem}">
-        <Setter Property="CornerRadius" Value="{StaticResource TabViewItemCornerRadius}"/>
+        <Setter Property="CornerRadius" Value="{StaticResource PrimaryCornerRadius}"/>
         <Setter Property="ClipToBounds" Value="True"/>
         <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>

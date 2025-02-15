@@ -51,7 +51,7 @@
 	
     <ControlTheme x:Key="{x:Type TextBox}" TargetType="{x:Type TextBox}">
 	    <Setter Property="MinHeight" Value="{StaticResource TextBoxMinHeight}"/>
-	    <Setter Property="CornerRadius" Value="{StaticResource TextBoxCornerRadius}"/>
+	    <Setter Property="CornerRadius" Value="{StaticResource PrimaryCornerRadius}"/>
 	    <Setter Property="HorizontalContentAlignment" Value="Left"/>
 	    <Setter Property="VerticalContentAlignment" Value="Center"/>
 	    <Setter Property="FontSize" Value="{StaticResource TextBoxFontSize}"/>

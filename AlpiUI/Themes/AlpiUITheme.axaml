@@ -17,6 +17,11 @@
             </FontFamily>
         </ResourceDictionary>
         
+        <CornerRadius x:Key="PrimaryCornerRadius">20</CornerRadius>
+        <CornerRadius x:Key="SecondaryCornerRadius">10</CornerRadius>
+        <CornerRadius x:Key="TertiaryCornerRadius">5</CornerRadius>
+        <CornerRadius x:Key="ZeroCornerRadius">0</CornerRadius>
+        
         <x:TimeSpan x:Key="ShortAnimationDuration">  0.2</x:TimeSpan>
         <x:TimeSpan x:Key="MediumAnimationDuration"> 0.3</x:TimeSpan>
         <x:TimeSpan x:Key="LongAnimationDuration">   0.5</x:TimeSpan>
