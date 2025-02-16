@@ -1,6 +1,7 @@
 ﻿using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Controls.Metadata;
+using Avalonia.Media;
 
 // ReSharper disable CheckNamespace
 namespace AlpiUI.Controls;
@@ -24,5 +25,20 @@ public class BlurBorder : ContentControl
     {
         get => GetValue(BlurRadiusProperty);
         set => SetValue(BlurRadiusProperty, value);
+    }
+    
+    /// <summary>
+    /// Defines the <see cref="TintColor"/> property.
+    /// </summary>
+    public static readonly StyledProperty<Color> TintColorProperty =
+        AvaloniaProperty.Register<BlurBorder, Color>(nameof(TintColor));
+    
+    /// <summary>
+    /// Color of tint.
+    /// </summary>
+    public Color TintColor
+    {
+        get => GetValue(TintColorProperty);
+        set => SetValue(TintColorProperty, value);
     }
 }
