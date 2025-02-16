@@ -15,7 +15,7 @@
     <!-- BlurBorder -->
     <x:Double x:Key="BlurBorderBlurRadius">20</x:Double>
     <Thickness x:Key="BlurBorderBorderThickness">0</Thickness>
-    <Thickness x:Key="BlurBorderPadding">10, 5</Thickness>
+    <Thickness x:Key="BlurBorderPadding">10</Thickness>
     <SolidColorBrush x:Key="BlurBorderCardBackgroundBrush" Color="{DynamicResource AlpiTransparentColor40}"/>
     
     <!-- Border -->

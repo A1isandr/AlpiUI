@@ -4,6 +4,7 @@ using Avalonia.Media;
 using Avalonia.Platform;
 using Avalonia.Rendering.SceneGraph;
 using Avalonia.Skia;
+using Avalonia.Threading;
 using SkiaSharp;
 
 // ReSharper disable CheckNamespace
@@ -54,6 +55,7 @@ public class BackgroundBlur : Control
     public override void Render(DrawingContext context)
     {
         context.Custom(new BackdropBlurDrawOperation(
+            this,
             Bounds,
             BlurRadius,
             TintColor));
@@ -69,27 +71,42 @@ public class BackgroundBlur : Control
 
 // Made with help from
 // https://github.com/kikipoulet/SukiUI/blob/main/SukiUI/Controls/GlassMorphism/BlurBackground.cs
+// and
+// https://gist.github.com/StefanKoell/b7dd1c847984a9a9ae75ed4a96fbc4b5
 internal class BackdropBlurDrawOperation(
+    Control backgroundBlur,
     Rect controlBounds,
     double blurRadius,
     Color tintColor) : ICustomDrawOperation
 {
+    private readonly Control _backgroundBlur = backgroundBlur;
     private readonly Rect _controlBounds = controlBounds;
     private readonly double _blurRadius = blurRadius;
     private readonly Color _tintColor = tintColor;
+    
+    private SKImage? _backgroundSnapshot;
+    private bool _disposed;
 
     public Rect Bounds => _controlBounds;
     
     public bool Equals(ICustomDrawOperation? other)
     {
-        return other is BackdropBlurDrawOperation operation && 
+        return other is BackdropBlurDrawOperation operation &&
+               operation._backgroundBlur == _backgroundBlur &&
                operation._controlBounds == _controlBounds &&
-               Math.Abs(operation._blurRadius - _blurRadius) < 1e-6 &&
+               Math.Abs(operation._blurRadius - _blurRadius) < double.Epsilon &&
                operation._tintColor == _tintColor;
     }
 
     /// <inheritdoc/>
-    public void Dispose() { }
+    public void Dispose()
+    {
+        if (_disposed)
+            return;
+
+        _backgroundSnapshot?.Dispose();
+        _disposed = true;
+    }
 
     /// <inheritdoc/>
     public bool HitTest(Point p) => _controlBounds.Contains(p);
@@ -105,11 +122,25 @@ internal class BackdropBlurDrawOperation(
 
         if (!canvas.TotalMatrix.TryInvert(out var invertedTransform)) return;
         
-        using var backgroundSnapshot = lease.SkSurface?.Snapshot();
-        if (backgroundSnapshot is null) return;
+        if (canvas.GetLocalClipBounds(out var bounds) && 
+            !bounds.Contains(SKRect.Create(
+                bounds.Left,
+                bounds.Top,
+                (float)_backgroundBlur.Bounds.Width,
+                (float)_backgroundBlur.Bounds.Height)))
+        {
+            Dispatcher.UIThread.Post(() => _backgroundBlur.InvalidateVisual());
+        }
+        else
+        {
+            _backgroundSnapshot?.Dispose();
+            _backgroundSnapshot = lease.SkSurface?.Snapshot();
+        }
+        
+        _backgroundSnapshot ??= lease.SkSurface?.Snapshot();
 
         using var backgroundShader = SKShader.CreateImage(
-            backgroundSnapshot,
+            _backgroundSnapshot,
             SKShaderTileMode.Clamp,
             SKShaderTileMode.Clamp,
             invertedTransform);
