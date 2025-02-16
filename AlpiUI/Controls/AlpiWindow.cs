@@ -280,9 +280,9 @@ namespace AlpiUI.Controls
             if (state == WindowState.FullScreen)
                 CanResize = false;
 
-            Margin = state == WindowState.Maximized 
-                ? new Thickness(5)
-                : new Thickness(0);
+            // Margin = state == WindowState.Maximized 
+            //     ? new Thickness(5)
+            //     : new Thickness(0);
         }
 
         /// <summary>

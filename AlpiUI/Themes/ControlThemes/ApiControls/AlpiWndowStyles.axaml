@@ -33,7 +33,9 @@
 	    
         <Setter Property="Template">
             <ControlTemplate>
-	            <Panel>
+	            <Panel
+		            Margin="{TemplateBinding OffScreenMargin}">
+		            
 		            <VisualLayerManager x:Name="PART_VisualLayerManager"
 		                                IsHitTestVisible="True">
 			            
