@@ -31,9 +31,9 @@
     </ItemGroup>
     
     <ItemGroup>
-      <PackageReference Include="Avalonia" Version="11.2.3" />
-      <PackageReference Include="Avalonia.Skia" Version="11.2.3" />
-      <PackageReference Include="Avalonia.Themes.Simple" Version="11.2.3" />
+      <PackageReference Include="Avalonia" Version="11.2.4" />
+      <PackageReference Include="Avalonia.Skia" Version="11.2.4" />
+      <PackageReference Include="Avalonia.Themes.Simple" Version="11.2.4" />
       <PackageReference Include="MinVer" Version="6.0.0">
         <PrivateAssets>all</PrivateAssets>
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
