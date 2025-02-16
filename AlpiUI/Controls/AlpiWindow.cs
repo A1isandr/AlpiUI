@@ -124,6 +124,7 @@ namespace AlpiUI.Controls
         
         /// <summary>
         /// Make title bar opaque on window deactivation.
+        /// Works only if <see cref="TitleBarBackground"/> is not set.
         /// </summary>
         public bool MakeTitleBarOpaqueOnDeactivation
         {

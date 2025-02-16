@@ -139,7 +139,7 @@
 
 		<Style Selector="^ /template/ Button.ChromeButton">
 			<Setter Property="Width" Value="{StaticResource AlpiWindowChromeButtonWidth}"/>
-			<Setter Property="CornerRadius" Value="{StaticResource AlpiWindowChromeButtonCornerRadius}"/>
+			<Setter Property="CornerRadius" Value="{StaticResource ZeroCornerRadius}"/>
 		</Style>
 		
 	    <Style Selector="^[MakeTitleBarOpaqueOnDeactivation=True]">
