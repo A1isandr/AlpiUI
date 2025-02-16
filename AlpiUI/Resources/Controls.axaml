@@ -6,8 +6,6 @@
     <x:Double x:Key="AlpiWindowChromeButtonWidth">50</x:Double>
     <x:Double x:Key="AlpiWindowDragIslandWidth">50</x:Double>
     <x:Double x:Key="AlpiWindowTitleBarHeight">40</x:Double>
-    <CornerRadius x:Key="AlpiWindowChromeButtonCornerRadius">0</CornerRadius>
-    <CornerRadius x:Key="AlpiWindowCornerRadius">0</CornerRadius>
     <Thickness x:Key="AlpiWindowPadding">0</Thickness>
     <SolidColorBrush x:Key="AlpiWindowTitleBarBackgroundBrush" Color="{DynamicResource AlpiBackgroundColor100}"/>
     <SolidColorBrush x:Key="AlpiWindowActivatedTitleBarBackgroundBrush" Color="{DynamicResource AlpiBackgroundColor0}"/>
@@ -16,21 +14,17 @@
     
     <!-- BlurBorder -->
     <x:Double x:Key="BlurBorderBlurRadius">20</x:Double>
-    <CornerRadius x:Key="BlurBorderCornerRadius">20</CornerRadius>
     <Thickness x:Key="BlurBorderBorderThickness">0</Thickness>
     <Thickness x:Key="BlurBorderPadding">10, 5</Thickness>
     <SolidColorBrush x:Key="BlurBorderCardBackgroundBrush" Color="{DynamicResource AlpiTransparentColor40}"/>
     
     <!-- Border -->
-    <CornerRadius x:Key="BorderCardCornerRadius">20</CornerRadius>
     <Thickness x:Key="BorderCardBorderThickness">0</Thickness>
     <Thickness x:Key="BorderCardPadding">10, 5</Thickness>
     <SolidColorBrush x:Key="BorderCardBackgroundBrush" Color="{DynamicResource AlpiTransparentColor40}"/>
     
     <!-- Button -->
     <x:Double x:Key="ButtonFontSize">14</x:Double>
-    <CornerRadius x:Key="ButtonCornerRadius">20</CornerRadius>
-    <CornerRadius x:Key="ButtonFocusAdornerCornerRadius">5</CornerRadius>
     <Thickness x:Key="ButtonBorderThickness">0</Thickness>
     <Thickness x:Key="ButtonPadding">20, 5</Thickness>
     <Thickness x:Key="ButtonFocusAdornerBorderThickness">2</Thickness>
@@ -43,18 +37,15 @@
     <!-- ContextMenu -->
     <x:Double x:Key="ContextMenuMinWidth">100</x:Double>
     <x:Double x:Key="ContextMenuMinHeight">30</x:Double>
-    <CornerRadius x:Key="ContextMenuCornerRadius">10</CornerRadius>
     <Thickness x:Key="ContextMenuBorderThickness">2</Thickness>
     <Thickness x:Key="ContextMenuPadding">5</Thickness>
     <SolidColorBrush x:Key="ContextMenuBorderBrush" Color="{DynamicResource AlpiTransparentColor50}"/>
     <SolidColorBrush x:Key="ContextMenuBackgroundBrush" Color="{DynamicResource AlpiBackgroundColor100}"/>
     
     <!-- ListBox -->
-    <CornerRadius x:Key="ListBoxCornerRadius">0</CornerRadius>
     <Thickness x:Key="ListBoxBorderThickness">0</Thickness>
     
     <!-- ListBoxItem -->
-    <CornerRadius x:Key="ListBoxItemCornerRadius">20</CornerRadius>
     <Thickness x:Key="ListBoxItemBorderThickness">0</Thickness>
     <Thickness x:Key="ListBoxItemPadding">20, 10</Thickness>
     <SolidColorBrush x:Key="ListBoxItemBackgroundBrush" Color="{DynamicResource ApiTransparentColor}"/>
@@ -67,14 +58,12 @@
     <!-- MenuFlyoutPresenter -->
     <x:Double x:Key="MenuFlyoutPresenterMinWidth">100</x:Double>
     <x:Double x:Key="MenuFlyoutPresenterMinHeight">30</x:Double>
-    <CornerRadius x:Key="MenuFlyoutPresenterCornerRadius">10</CornerRadius>
     <Thickness x:Key="MenuFlyoutPresenterBorderThickness">2</Thickness>
     <Thickness x:Key="MenuFlyoutPresenterPadding">5</Thickness>
     <SolidColorBrush x:Key="MenuFlyoutPresenterBorderBrush" Color="{DynamicResource AlpiTransparentColor50}"/>
     <SolidColorBrush x:Key="MenuFlyoutPresenterBackgroundBrush" Color="{DynamicResource AlpiBackgroundColor100}"/>
     
     <!-- MenuItem -->
-    <CornerRadius x:Key="MenuItemCornerRadius">5</CornerRadius>
     <Thickness x:Key="MenuItemPadding">10, 5</Thickness>
     <SolidColorBrush x:Key="MenuItemBackgroundBrush" Color="{DynamicResource AlpiTransparentColor0}"/>
     <SolidColorBrush x:Key="MenuItemSelectedBackgroundBrush" Color="{DynamicResource AlpiTransparentColor10}"/>
@@ -89,18 +78,15 @@
     <x:Double x:Key="ScrollBarHorizontalThumbMinWidth">20</x:Double>
     <x:Double x:Key="ScrollBarVerticalThumbHoverBorderWidth">40</x:Double>
     <x:Double x:Key="ScrollBarHorizontalThumbHoverBorderHeight">40</x:Double>
-    <CornerRadius x:Key="ScrollBarThumbCornerRadius">0</CornerRadius>
     <SolidColorBrush x:Key="ScrollBarThumbBackgroundBrush" Color="{DynamicResource AlpiTransparentColor50}"/>
     <SolidColorBrush x:Key="ScrollBarThumbHoverBackgroundBrush" Color="{DynamicResource AlpiTransparentColor70}"/>
     <SolidColorBrush x:Key="ScrollBarThumbPressedBackgroundBrush" Color="{DynamicResource AlpiTransparentColor80}"/>
     
     <!-- TabView -->
-    <CornerRadius x:Key="TabViewCornerRadius">0</CornerRadius>
     <Thickness x:Key="TabViewBorderThickness">0</Thickness>
     <Thickness x:Key="TabViewPadding">0</Thickness>
     
     <!-- TabViewItem -->
-    <CornerRadius x:Key="TabViewItemCornerRadius">20</CornerRadius>
     <Thickness x:Key="TabViewItemBorderThickness">0</Thickness>
     <Thickness x:Key="TabViewItemPadding">20, 5</Thickness>
     <SolidColorBrush x:Key="TabViewItemBackgroundBrush" Color="{DynamicResource AlpiTransparentColor0}"/>
@@ -118,7 +104,6 @@
     <x:Double x:Key="TextBoxWatermarkHoverOpacity">1</x:Double>
     <x:Double x:Key="TextBoxFocusWatermarkOpacity">0</x:Double>
     <x:Double x:Key="TextBoxFocusFloatingWatermarkOpacity">0.3</x:Double>
-    <CornerRadius x:Key="TextBoxCornerRadius">20</CornerRadius>
     <Thickness x:Key="TextBoxBorderThickness">1.5</Thickness>
     <Thickness x:Key="TextBoxPadding">20, 5</Thickness>
     <SolidColorBrush x:Key="TextBoxCaretBrush" Color="{DynamicResource AlpiTextColor}"/>

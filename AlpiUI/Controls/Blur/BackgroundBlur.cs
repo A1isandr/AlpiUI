@@ -123,7 +123,6 @@ internal class BackdropBlurDrawOperation(
         blurPaint.Shader = backgroundShader;
         blurPaint.ImageFilter = blurFilter;
         blurPaint.ColorFilter = SKColorFilter.CreateBlendMode(_tintColor.ToSKColor(), SKBlendMode.Overlay);
-        blurPaint.Style = SKPaintStyle.Fill;
         
         canvas.DrawRect(0, 0, (float)_controlBounds.Width, (float)_controlBounds.Height, blurPaint);
     }

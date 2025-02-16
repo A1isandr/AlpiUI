@@ -9,6 +9,7 @@
         <entry key="AlpiUI/Resources/Controls.axaml" value="AlpiUI.Demo/AlpiUI.Demo.csproj" />
         <entry key="AlpiUI/Themes/AlpiUITheme.axaml" value="AlpiUI.Demo/AlpiUI.Demo.csproj" />
         <entry key="AlpiUI/Themes/ControlThemes/ApiControls/AlpiWndowStyles.axaml" value="AlpiUI.Demo/AlpiUI.Demo.csproj" />
+        <entry key="AlpiUI/Themes/ControlThemes/ApiControls/BlurBorderStyles.axaml" value="AlpiUI.Demo/AlpiUI.Demo.csproj" />
         <entry key="AlpiUI/Themes/ControlThemes/ApiControls/BlurCard.axaml" value="AlpiUI.Demo/AlpiUI.Demo.csproj" />
         <entry key="AlpiUI/Themes/ControlThemes/ApiControls/TabViewItemStyles.axaml" value="AlpiUI.Demo/AlpiUI.Demo.csproj" />
         <entry key="AlpiUI/Themes/ControlThemes/ApiControls/TabViewStyles.axaml" value="AlpiUI.Demo/AlpiUI.Demo.csproj" />
