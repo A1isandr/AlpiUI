@@ -1,0 +1,285 @@
+<alpi:AlpiWindow xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:AlpiUI.Demo.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:alpi="https://github.com/A1isandr/AlpiUI"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AlpiUI.Demo.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="AlpiUI.Demo"
+        Width="1200"
+        Height="700">
+    
+    <alpi:AlpiWindow.Styles>
+        <Style Selector="TextBlock">
+            <!-- <Setter Property="Foreground" Value="{DynamicResource AlpiTextColor}"/> -->
+            
+            <Style Selector="^.Title">
+                <Setter Property="FontSize" Value="24"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="Foreground" Value="{DynamicResource AlpiTextColor}"/>
+            </Style>
+            
+            <Style Selector="^.Header">
+                
+            </Style>
+        </Style>
+        
+        <Style Selector="StackPanel">
+            <Style Selector="^.Section">
+                <Setter Property="Orientation" Value="Vertical"/>
+                <Setter Property="Spacing" Value="20"/>
+            </Style>
+            
+            <Style Selector="^.Group">
+                <Setter Property="Orientation" Value="Vertical"/>
+                <Setter Property="Spacing" Value="10"/>
+            </Style>
+        </Style>
+    </alpi:AlpiWindow.Styles>
+    
+    <alpi:AlpiWindow.BackgroundAcrylicMaterial>
+        <ExperimentalAcrylicMaterial
+            BackgroundSource="Digger"
+            TintOpacity="0.4"
+            MaterialOpacity="0"
+            TintColor="{DynamicResource AlpiBackgroundColor100}"
+            FallbackColor="{DynamicResource AlpiBackgroundColor100}"/>
+    </alpi:AlpiWindow.BackgroundAcrylicMaterial>
+    
+    <ScrollViewer>
+        <StackPanel
+            Orientation="Vertical"
+            Spacing="20"
+            Margin="20, 0">
+            
+            <StackPanel Classes="Section">
+                <TextBlock Classes="Title"
+                    Text="Border"/>
+                
+                <StackPanel
+                    Orientation="Horizontal"
+                    Spacing="10">
+                    
+                    <Border Classes="Card Item"
+                            Width="150"
+                            Height="70">
+                        
+                        <TextBlock
+                            Text="Card"/>
+                    </Border>
+                    
+                    <Border Classes="Card Accent Item"
+                            Width="150"
+                            Height="70">
+                        
+                        <TextBlock
+                            Text="Card Accent"/>
+                    </Border>
+                    
+                    <Border Classes="Card Warning Item"
+                            Width="150"
+                            Height="70">
+                        
+                        <TextBlock
+                            Text="Card Warning"/>
+                    </Border>
+                    
+                    <Border Classes="Card Danger Item"
+                            Width="150"
+                            Height="70">
+                        
+                        <TextBlock
+                            Text="Card Danger"/>
+                    </Border>
+                    
+                    <Border Classes="Card Success Item"
+                            Width="150"
+                            Height="70">
+                        
+                        <TextBlock
+                            Text="Card Success"/>
+                    </Border>
+                    
+                    <Border Classes="Card Info Item"
+                            Width="150"
+                            Height="70">
+                        
+                        <TextBlock
+                            Text="Card Info"/>
+                    </Border>
+                </StackPanel>
+            </StackPanel>
+            
+            <StackPanel Classes="Section">
+                <TextBlock Classes="Title"
+                    Text="Blur Border"/>
+                
+                <Panel>
+                    <Image
+                        Height="150"
+                        Source="../Assets/Images/background.png"
+                        Stretch="UniformToFill"/>
+                    
+                    <StackPanel
+                        Orientation="Horizontal"
+                        Spacing="10"
+                        VerticalAlignment="Center">
+                        
+                        <alpi:BlurBorder
+                            Width="150"
+                            Height="70">
+                            
+                            <TextBlock
+                                Text="Default"/>
+                        </alpi:BlurBorder>
+                        
+                        <alpi:BlurBorder Classes="Card"
+                                         Width="150"
+                                         Height="70">
+                            
+                            <TextBlock
+                                Text="Card"/>
+                        </alpi:BlurBorder>
+                        
+                        <alpi:BlurBorder Classes="Card Accent"
+                                         Width="150"
+                                         Height="70">
+                            
+                            <TextBlock
+                                Text="Card Accebt"/>
+                        </alpi:BlurBorder>
+                        
+                        <alpi:BlurBorder Classes="Card Warning"
+                                         Width="150"
+                                         Height="70">
+                            
+                            <TextBlock
+                                Text="Card Warning"/>
+                        </alpi:BlurBorder>
+                        
+                        <alpi:BlurBorder Classes="Card Danger"
+                                         Width="150"
+                                         Height="70">
+                            
+                            <TextBlock
+                                Text="Card Danger"/>
+                        </alpi:BlurBorder>
+                        
+                        <alpi:BlurBorder Classes="Card Success"
+                                         Width="150"
+                                         Height="70">
+                            
+                            <TextBlock
+                                Text="Card Success"/>
+                        </alpi:BlurBorder>
+                        
+                        <alpi:BlurBorder Classes="Card Info"
+                                         Width="150"
+                                         Height="70">
+                            
+                            <TextBlock
+                                Text="Card Info"/>
+                        </alpi:BlurBorder>
+                    </StackPanel>
+                </Panel>
+            </StackPanel>
+            
+           <StackPanel Classes="Section">
+               <TextBlock Classes="Title"
+                   Text="Button"/>
+               
+               <StackPanel
+                   Orientation="Horizontal"
+                   Spacing="10">
+                   
+                   <Border Classes="Card Item">
+                       <StackPanel Classes="Group">
+                           <TextBlock
+                               Text="Default"/>
+                           
+                           <Button
+                               Content="Default Button"/>
+                       </StackPanel>
+                   </Border>
+                   
+                   <Border Classes="Card Item">
+                       <StackPanel Classes="Group">
+                           <TextBlock
+                               Text="Accent"/>
+                           
+                           <Button Classes="Accent"
+                               Content="Accent Button"/>
+                       </StackPanel>
+                   </Border>
+                   
+                   <Border Classes="Card Item">
+                       <StackPanel Classes="Group">
+                           <TextBlock
+                               Text="Primary"/>
+                           
+                           <Button Classes="Primary"
+                                   Content="Primary Button"/>
+                       </StackPanel>
+                   </Border>
+                   
+                   <Border Classes="Card Item">
+                       <StackPanel Classes="Group">
+                           <TextBlock
+                               Text="Card"/>
+                           
+                           <Button Classes="Card"
+                                   Content="Card Button"/>
+                       </StackPanel>
+                   </Border>
+               </StackPanel>
+           </StackPanel>
+            
+            <StackPanel Classes="Section">
+                <TextBlock Classes="Title"
+                    Text="Text Box"/>
+                
+                <StackPanel
+                    Orientation="Horizontal"
+                    Spacing="10">
+                    
+                    <Border Classes="Card Item">
+                        <StackPanel Classes="Group">
+                            <TextBlock
+                                Text="Default"/>
+                            
+                            <TextBox
+                                Width="150"
+                                Watermark="Some text"/>
+                        </StackPanel>
+                    </Border>
+                    
+                    <Border Classes="Card Item">
+                        <StackPanel Classes="Group">
+                            <TextBlock
+                                Text="Card"/>
+                            
+                            <TextBox Classes="Card"
+                                Width="150"
+                                Watermark="Some text"/>
+                        </StackPanel>
+                    </Border>
+                    
+                    <Border Classes="Card Item">
+                        <StackPanel Classes="Group">
+                            <TextBlock
+                                Text="Floating Watermark"/>
+                            
+                            <TextBox
+                                Width="150"
+                                Watermark="Some text"
+                                UseFloatingWatermark="True"/>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</alpi:AlpiWindow>
